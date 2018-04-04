@@ -10,45 +10,52 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="438"/>
+                        <viewControllerLayoutGuide type="bottom" id="439"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a Phoneword:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="197" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES" ambiguous="YES">
-                                <rect key="frame" x="39" y="160" width="326" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a Phoneword:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="197" translatesAutoresizingMaskIntoConstraints="NO" layoutMarginsFollowReadableWidth="YES">
+                                <rect key="frame" x="44" y="273" width="326" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="198" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES" ambiguous="YES" text="1-855-XAMARIN">
-                                <rect key="frame" x="39" y="197" width="326" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="198" translatesAutoresizingMaskIntoConstraints="NO" text="1-855-XAMARIN">
+                                <rect key="frame" x="44" y="310" width="326" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="201" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES" ambiguous="YES">
-                                <rect key="frame" x="39" y="274" width="326" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="201" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="44" y="387" width="326" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="Translate"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="206" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                <rect key="frame" x="39" y="320" width="326" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="206" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="44" y="433" width="326" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="Call"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </button>
                         </subviews>
                         <constraints>
-                            <constraint id="199" firstItem="198" firstAttribute="leading" secondItem="197" secondAttribute="leading"/>
-                            <constraint id="200" firstItem="198" firstAttribute="width" secondItem="197" secondAttribute="width"/>
-                            <constraint id="202" firstItem="198" firstAttribute="width" secondItem="197" secondAttribute="width"/>
-                            <constraint id="203" firstItem="201" firstAttribute="width" secondItem="197" secondAttribute="width"/>
-                            <constraint id="204" firstItem="198" firstAttribute="centerX" secondItem="197" secondAttribute="centerX"/>
-                            <constraint id="205" firstItem="201" firstAttribute="centerX" secondItem="197" secondAttribute="centerX"/>
+                            <constraint id="431" firstItem="201" firstAttribute="width" secondItem="206" secondAttribute="width"/>
+                            <constraint id="432" firstItem="198" firstAttribute="width" secondItem="206" secondAttribute="width"/>
+                            <constraint id="433" firstItem="197" firstAttribute="width" secondItem="206" secondAttribute="width"/>
+                            <constraint id="434" firstItem="201" firstAttribute="leading" secondItem="206" secondAttribute="leading"/>
+                            <constraint id="435" firstItem="198" firstAttribute="leading" secondItem="206" secondAttribute="leading"/>
+                            <constraint id="436" firstItem="197" firstAttribute="leading" secondItem="206" secondAttribute="leading"/>
+                            <constraint id="440" firstItem="197" firstAttribute="top" secondItem="438" secondAttribute="bottom" constant="253"/>
+                            <constraint id="441" firstItem="197" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="24"/>
+                            <constraint id="442" firstItem="198" firstAttribute="top" secondItem="438" secondAttribute="bottom" constant="290"/>
+                            <constraint id="443" firstItem="201" firstAttribute="top" secondItem="438" secondAttribute="bottom" constant="367"/>
+                            <constraint id="444" firstItem="439" firstAttribute="top" secondItem="206" secondAttribute="bottom" constant="273"/>
+                            <constraint id="445" firstItem="201" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="24"/>
+                            <constraint id="446" firstItem="8bC-Xf-vdC" firstAttribute="trailingMargin" secondItem="201" secondAttribute="trailing" constant="24"/>
+                            <constraint id="447" firstItem="8bC-Xf-vdC" firstAttribute="trailingMargin" secondItem="198" secondAttribute="trailing" constant="24"/>
                         </constraints>
                     </view>
                     <connections>
