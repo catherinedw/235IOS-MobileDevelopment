@@ -19,7 +19,15 @@ namespace RomanConversion
             {
                 // Convert the phone number with text to a number
                 // using PhoneTranslator.cs
-                resultLabel.Text = ConversionClass.toRoman();
+                resultLabel.Text = ConversionClass.ToRoman();
+                // Dismiss the keyboard if text field was tapped
+                usrTextView.ResignFirstResponder();
+            };
+            ToDecimalButton.TouchUpInside += (object sender, EventArgs e) =>
+            {
+                // Convert the phone number with text to a number
+                // using PhoneTranslator.cs
+                resultLabel.Text = ConversionClass.ToDecimal();
                 // Dismiss the keyboard if text field was tapped
                 usrTextView.ResignFirstResponder();
             };
