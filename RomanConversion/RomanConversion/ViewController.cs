@@ -23,7 +23,7 @@ namespace RomanConversion
                 // Dismiss the keyboard if text field was tapped
                 usrTextView.ResignFirstResponder();
             };
-            ToDecimalButton.TouchUpInside += (object sender, EventArgs e) =>
+            toDecimalButton.TouchUpInside += (object sender, EventArgs e) =>
             {
                 // Convert the phone number with text to a number
                 // using PhoneTranslator.cs
