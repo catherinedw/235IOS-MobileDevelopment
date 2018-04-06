@@ -13,7 +13,6 @@ namespace RomanConversion
             UIApplication.Main(args, null, "AppDelegate");
 
             // Create a new dictionary of strings, with string keys.
-            //
             Dictionary<int, string> convert = new Dictionary<int, string>();
 
             // Add elements to the dictionary. 
@@ -29,7 +28,6 @@ namespace RomanConversion
             convert.Add(10, "X");
 
 
-            Button toRomanButton = FindViewById<Button>(Resource.Id.toRomanButton);
 
         }
     }
