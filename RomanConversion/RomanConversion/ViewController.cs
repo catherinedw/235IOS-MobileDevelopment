@@ -15,6 +15,14 @@ namespace RomanConversion
         {
             base.ViewDidLoad();
             // Perform any additional setup after loading the view, typically from a nib.
+            toRomanButton.TouchUpInside += (object sender, EventArgs e) =>
+            {
+                // Convert the phone number with text to a number
+                // using PhoneTranslator.cs
+                resultLabel.Text = ConversionClass.toRoman();
+                // Dismiss the keyboard if text field was tapped
+                usrTextView.ResignFirstResponder();
+            };
         }
 
         public override void DidReceiveMemoryWarning()
