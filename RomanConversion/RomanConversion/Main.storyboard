@@ -18,41 +18,60 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter the value you would like to convert" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="197" translatesAutoresizingMaskIntoConstraints="NO" numberOfLines="2" misplaced="YES" ambiguous="YES">
-                                <rect key="frame" x="99" y="108" width="241" height="65"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter the value of the roman numeral or the decimal number you would like to convert." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="197" translatesAutoresizingMaskIntoConstraints="NO" numberOfLines="3">
+                                <rect key="frame" x="73" y="82" width="267" height="91"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="427" firstAttribute="width" constant="267"/>
+                                    <constraint id="428" firstAttribute="height" constant="91"/>
+                                </constraints>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" id="199" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES" ambiguous="YES">
-                                <rect key="frame" x="92" y="256" width="112" height="59"/>
-                                <state key="normal" title="Convert to romanl numeral"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" id="199" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="50" y="256" width="154" height="59"/>
+                                <state key="normal" title="Convert to roman numeral"/>
+                                <constraints>
+                                    <constraint id="431" firstAttribute="width" constant="154"/>
+                                    <constraint id="432" firstAttribute="height" constant="59"/>
+                                </constraints>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" id="200" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES" ambiguous="YES">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" id="200" translatesAutoresizingMaskIntoConstraints="NO" layoutMarginsFollowReadableWidth="YES">
                                 <rect key="frame" x="234" y="256" width="112" height="59"/>
                                 <state key="normal" title="Convert to decimal number"/>
+                                <constraints>
+                                    <constraint id="435" firstAttribute="width" constant="112"/>
+                                    <constraint id="436" firstAttribute="height" constant="59"/>
+                                </constraints>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="201" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES" ambiguous="YES">
-                                <rect key="frame" x="99" y="181" width="241" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="201" translatesAutoresizingMaskIntoConstraints="NO" textAlignment="center">
+                                <rect key="frame" x="73" y="181" width="267" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <constraints>
+                                    <constraint id="439" firstAttribute="width" constant="267"/>
+                                </constraints>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="202" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="202" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" text="Answer: ">
                                 <rect key="frame" x="135" y="353" width="144" height="73"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
-                                <color key="backgroundColor" colorSpace="calibratedWhite" white="0.666666666666667" alpha="1"/>
                             </label>
                         </subviews>
                         <constraints>
-                            <constraint id="203" firstItem="201" firstAttribute="leading" secondItem="197" secondAttribute="leading"/>
                             <constraint id="204" firstItem="201" firstAttribute="width" secondItem="197" secondAttribute="width"/>
-                            <constraint id="205" firstItem="199" firstAttribute="top" secondItem="200" secondAttribute="top"/>
-                            <constraint id="206" firstItem="199" firstAttribute="width" secondItem="200" secondAttribute="width"/>
                             <constraint id="207" firstItem="199" firstAttribute="height" secondItem="200" secondAttribute="height"/>
+                            <constraint id="425" firstItem="197" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="73"/>
+                            <constraint id="426" firstItem="197" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="82"/>
+                            <constraint id="429" firstItem="199" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50"/>
+                            <constraint id="430" firstItem="199" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="256"/>
+                            <constraint id="433" firstItem="8bC-Xf-vdC" firstAttribute="trailing" secondItem="200" secondAttribute="trailing" constant="68"/>
+                            <constraint id="434" firstItem="200" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="256"/>
+                            <constraint id="437" firstItem="201" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="73"/>
+                            <constraint id="438" firstItem="201" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="181"/>
                         </constraints>
                     </view>
                     <connections>

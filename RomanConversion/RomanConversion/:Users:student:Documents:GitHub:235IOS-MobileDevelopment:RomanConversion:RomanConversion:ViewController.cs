@@ -17,17 +17,19 @@ namespace RomanConversion
             convertMe = new ConversionClass();
             base.ViewDidLoad();
             // Perform any additional setup after loading the view, typically from a nib.
-            // Button to convert from decimal(int) to roman(string)
             toRomanButton.TouchUpInside += (object sender, EventArgs e) =>
             {
-                resultLabel.Text = "Answer: " + convertMe.ToRoman(Int32.Parse(usrTextView.Text));
+                // Convert the phone number with text to a number
+                // using PhoneTranslator.cs
+                resultLabel.Text = convertMe.ToRoman(Int32.Parse(usrTextView.Text));
                 // Dismiss the keyboard if text field was tapped
                 usrTextView.ResignFirstResponder();
             };
-            // Button to convert from roman(string) to decimal(int)
             toDecimalButton.TouchUpInside += (object sender, EventArgs e) =>
             {
-                resultLabel.Text = "Answer: " + convertMe.ToDecimal(usrTextView.Text).ToString();
+                // Convert the phone number with text to a number
+                // using PhoneTranslator.cs
+                resultLabel.Text = convertMe.ToDecimal(usrTextView.Text).ToString();
                 // Dismiss the keyboard if text field was tapped
                 usrTextView.ResignFirstResponder();
             };

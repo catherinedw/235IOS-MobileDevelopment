@@ -28,12 +28,17 @@ namespace RomanConversion
             convert.Add(10, "X");
         }
 
+
         /*
         public toDecimal(string key, string value)
         {
             this.Key= key;
             this.Value = value;
         }  
+        public override string ToString()
+        {
+            return Spanish;
+        }
         */
 
         public string ToRoman(int dNum)
@@ -54,4 +59,3 @@ namespace RomanConversion
         }
     }
 }
-
