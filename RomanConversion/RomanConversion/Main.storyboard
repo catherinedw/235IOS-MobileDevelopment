@@ -60,7 +60,7 @@
                         <outlet property="usrTextView" destination="201" id="name-outlet-201"/>
                         <outlet property="resultLabel" destination="202" id="name-outlet-202"/>
                         <outlet property="toRomanButton" destination="199" id="name-outlet-199"/>
-                        <outlet property="ToDecimalButton" destination="200" id="name-outlet-200"/>
+                        <outlet property="toDecimalButton" destination="200" id="name-outlet-200"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

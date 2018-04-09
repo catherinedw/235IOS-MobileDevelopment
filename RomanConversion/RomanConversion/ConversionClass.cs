@@ -1,41 +1,63 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace RomanConversion
 {
     public class ConversionClass
     {
-        public string decimalNum { get; set; }
-        public string romanNum { get; set; }
+        Dictionary<int, string> convert;
+        public string DecimalNum { get; set; }
+        public string RomanNum { get; set; }
 
         //constructor
-        public ConversionClass(string dN, string rN)
+        public ConversionClass()
         {
-            decimalNum = dN;
-            romanNum = rN;
+            // Create a new dictionary of strings, with string keys.
+            convert = new Dictionary<int, string>();
+
+            // Add elements to the dictionary. 
+            convert.Add(1, "I");
+            convert.Add(2, "II");
+            convert.Add(3, "III");
+            convert.Add(4, "IV");
+            convert.Add(5, "V");
+            convert.Add(6, "VI");
+            convert.Add(7, "VII");
+            convert.Add(8, "VIII");
+            convert.Add(9, "IX");
+            convert.Add(10, "X");
         }
 
-        //public override string ToString()
-        //{
-        //    return Spanish;
-        //}
 
+        /*
+        public toDecimal(string key, string value)
+        {
+            this.Key= key;
+            this.Value = value;
+        }  
 
-            /*
-            public toDecimal(string key, string value)
+        public override string ToString()
+        {
+            return Spanish;
+        }
+        */
+
+        public string ToRoman(int dNum)
+        {
+            return convert[dNum];
+        }
+
+        public int ToDecimal(string rNum)
+        {
+            foreach (KeyValuePair<int, string> pair in convert)
             {
-                this.Key= key;
-                this.Value = value;
-            }  
-            */
-            public override string toRoman(int key)
-            {
-                if (convert.ContainsKey(key))
+                if (pair.Value == rNum)
                 {
-                    string value = convert[key];
-
+                    return pair.Key;
                 }
-                return value;
             }
+            return -1;
         }
     }
 }
+

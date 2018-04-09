@@ -23,7 +23,7 @@ namespace RomanConversion
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton ToDecimalButton { get; set; }
+        UIKit.UIButton toDecimalButton { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -45,9 +45,9 @@ namespace RomanConversion
                 resultLabel = null;
             }
 
-            if (ToDecimalButton != null) {
-                ToDecimalButton.Dispose ();
-                ToDecimalButton = null;
+            if (toDecimalButton != null) {
+                toDecimalButton.Dispose ();
+                toDecimalButton = null;
             }
 
             if (toRomanButton != null) {
