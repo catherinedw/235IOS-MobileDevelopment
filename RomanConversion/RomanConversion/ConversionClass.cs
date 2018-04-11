@@ -47,7 +47,7 @@ namespace RomanConversion
             } 
             else 
             {
-                result = convert[dNum];
+                result = convert[toUpper(dNum)];
             }
             return result;
         }
