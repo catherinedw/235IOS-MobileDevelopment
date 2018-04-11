@@ -21,14 +21,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="197" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="197" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
                                 <rect key="frame" x="120" y="359" width="79" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="StartGame"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="397" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" selected="YES">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="397" translatesAutoresizingMaskIntoConstraints="NO" selected="YES" misplaced="YES">
                                 <rect key="frame" x="77" y="174" width="57" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="A1"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="399" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" selected="YES">
@@ -41,27 +39,23 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="A3"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="401" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" selected="YES">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="401" translatesAutoresizingMaskIntoConstraints="NO" selected="YES" misplaced="YES">
                                 <rect key="frame" x="131" y="174" width="57" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="B1"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="402" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" selected="YES">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="402" translatesAutoresizingMaskIntoConstraints="NO" selected="YES" misplaced="YES">
                                 <rect key="frame" x="131" y="220" width="57" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="B2"/>
                                 <connections>
                                     <action selector="UIButton402_TouchUpInside:" destination="BYZ-38-t0r" id="407" eventType="touchUpInside"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="403" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" selected="YES">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="403" translatesAutoresizingMaskIntoConstraints="NO" selected="YES" misplaced="YES">
                                 <rect key="frame" x="131" y="266" width="57" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="B3"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="404" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" selected="YES">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="404" translatesAutoresizingMaskIntoConstraints="NO" selected="YES" misplaced="YES">
                                 <rect key="frame" x="186" y="174" width="57" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="C1"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="405" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" selected="YES">
@@ -74,28 +68,50 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="C3"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please pick a button where you want to play" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" id="408" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" adjustsFontForContentSizeCategory="YES" textAlignment="center" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" numberOfLines="0">
-                                <rect key="frame" x="69" y="100" width="205" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please pick a button where you want to play" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" id="408" translatesAutoresizingMaskIntoConstraints="NO" adjustsFontForContentSizeCategory="YES" textAlignment="center" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" numberOfLines="0">
+                                <rect key="frame" x="58" y="101" width="205" height="55"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="889" firstAttribute="width" constant="205"/>
+                                    <constraint id="890" firstAttribute="height" constant="55"/>
+                                </constraints>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tic Tac Toe" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="420" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" adjustsFontForContentSizeCategory="YES" textAlignment="center" numberOfLines="0">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tic Tac Toe" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="420" translatesAutoresizingMaskIntoConstraints="NO" adjustsFontForContentSizeCategory="YES" textAlignment="center" numberOfLines="0" misplaced="YES">
                                 <rect key="frame" x="116" y="63" width="89" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Turn: " lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="640" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Turn: " lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="640" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
                                 <rect key="frame" x="62" y="324" width="197" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <constraints>
+                            <constraint id="884" firstItem="8bC-Xf-vdC" firstAttribute="centerY" secondItem="420" secondAttribute="centerY" constant="166"/>
+                            <constraint id="885" firstItem="420" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX"/>
+                            <constraint id="926" firstItem="408" firstAttribute="top" secondItem="420" secondAttribute="bottom" constant="17"/>
+                            <constraint id="927" firstItem="408" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX"/>
+                            <constraint id="928" firstItem="401" firstAttribute="top" secondItem="408" secondAttribute="bottom" constant="18"/>
+                            <constraint id="929" firstItem="402" firstAttribute="top" secondItem="401" secondAttribute="bottom" constant="5"/>
+                            <constraint id="930" firstItem="403" firstAttribute="top" secondItem="402" secondAttribute="bottom" constant="5"/>
+                            <constraint id="931" firstItem="640" firstAttribute="top" secondItem="403" secondAttribute="bottom" constant="17"/>
+                            <constraint id="932" firstItem="197" firstAttribute="top" secondItem="640" secondAttribute="bottom" constant="14"/>
+                            <constraint id="933" firstItem="640" firstAttribute="centerX" secondItem="197" secondAttribute="centerX"/>
+                            <constraint id="934" firstItem="403" firstAttribute="centerX" secondItem="197" secondAttribute="centerX"/>
+                            <constraint id="935" firstItem="402" firstAttribute="centerX" secondItem="197" secondAttribute="centerX"/>
+                            <constraint id="936" firstItem="401" firstAttribute="centerX" secondItem="197" secondAttribute="centerX"/>
+                            <constraint id="937" firstItem="408" firstAttribute="centerX" secondItem="197" secondAttribute="centerX"/>
+                            <constraint id="938" firstItem="420" firstAttribute="centerX" secondItem="197" secondAttribute="centerX"/>
+                            <constraint id="941" firstItem="397" firstAttribute="trailing" secondItem="401" secondAttribute="leading" constant="3"/>
+                            <constraint id="942" firstItem="401" firstAttribute="top" secondItem="397" secondAttribute="top"/>
+                            <constraint id="943" firstItem="404" firstAttribute="top" secondItem="397" secondAttribute="top"/>
+                            <constraint id="944" firstItem="401" firstAttribute="trailing" secondItem="404" secondAttribute="leading" constant="2"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="startButton" destination="197" id="name-outlet-197"/>
