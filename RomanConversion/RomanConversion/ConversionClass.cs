@@ -47,7 +47,7 @@ namespace RomanConversion
             } 
             else 
             {
-                result = convert[toUpper(dNum)];
+                result = convert[dNum];
             }
             return result;
         }
@@ -57,7 +57,7 @@ namespace RomanConversion
         {
             foreach (KeyValuePair<int, string> pair in convert)
             {
-                if (pair.Value == rNum)
+                if (pair.Value == rNum.ToUpper())
                 {
                     return pair.Key;
                 }
