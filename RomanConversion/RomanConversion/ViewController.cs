@@ -20,16 +20,49 @@ namespace RomanConversion
             // Button to convert from decimal(int) to roman(string)
             toRomanButton.TouchUpInside += (object sender, EventArgs e) =>
             {
-                resultLabel.Text = "Answer: " + convertMe.ToRoman(Int32.Parse(usrTextView.Text));
-                // Dismiss the keyboard if text field was tapped
-                usrTextView.ResignFirstResponder();
+                try                 {
+                    string resultR = convertMe.ToRoman(Int32.Parse(usrTextView.Text));
+                    if (resultR == "-1")
+                    {
+                        resultLabel.Text = "Please enter a valid decimal number";
+                    }
+                    else
+                    {
+                        resultLabel.Text = string.Format("The roman numeral conversion of {0} is {1}", usrTextView.Text, resultR);
+                        // Dismiss the keyboard if text field was tapped
+                        usrTextView.ResignFirstResponder();
+                        //clear user input
+                        usrTextView.Text = ""; 
+                    }
+                }                 catch (Exception ex)
+                {
+                    Console.WriteLine("Error");                 }
             };
             // Button to convert from roman(string) to decimal(int)
             toDecimalButton.TouchUpInside += (object sender, EventArgs e) =>
             {
-                resultLabel.Text = "Answer: " + convertMe.ToDecimal(usrTextView.Text).ToString();
-                // Dismiss the keyboard if text field was tapped
-                usrTextView.ResignFirstResponder();
+                try 
+                {
+                    //this catches if the 
+                    int resultD = convertMe.ToDecimal(usrTextView.Text);
+                    if (resultD == -1){
+                        resultLabel.Text = "Please enter a valid roman numeral";
+                    }
+                    else
+                    {   
+                        
+                        resultLabel.Text = string.Format("{0} in decimal is {1}", usrTextView.Text, resultD);
+                        // Dismiss the keyboard if text field was tapped
+                        usrTextView.ResignFirstResponder();
+                        //clear user input
+                        usrTextView.Text = "";
+                    }
+                }
+                //This catches values outside of the scope
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error");
+                }
             };
         }
 

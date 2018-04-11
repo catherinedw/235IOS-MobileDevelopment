@@ -39,7 +39,17 @@ namespace RomanConversion
         //This function takes the int decimal number (the key) and returns the string roman numeral (the value) 
         public string ToRoman(int dNum)
         {
-            return convert[dNum];
+            //validate that a number is entered and that it is greater than 0 
+            string result;
+            if (dNum<=0)
+            {
+                result = "-1";
+            } 
+            else 
+            {
+                result = convert[dNum];
+            }
+            return result;
         }
 
         //This function turns the string roman numeral and returns an int decimal number
