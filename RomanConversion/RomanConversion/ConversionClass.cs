@@ -36,6 +36,7 @@ namespace RomanConversion
             this.Value = value;
         }*/  
 
+        //This function takes the int decimal number (the key) and returns the string roman numeral (the value) 
         public string ToRoman(int dNum)
         {
             return convert[dNum];
