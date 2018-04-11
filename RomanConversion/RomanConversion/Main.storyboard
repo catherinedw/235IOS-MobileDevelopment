@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -14,12 +17,12 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter the value of the roman numeral or the decimal number you would like to convert." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="197" translatesAutoresizingMaskIntoConstraints="NO" numberOfLines="3">
-                                <rect key="frame" x="73" y="82" width="267" height="91"/>
+                                <rect key="frame" x="29.5" y="82.5" width="267" height="91"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -28,24 +31,23 @@
                                     <constraint id="428" firstAttribute="height" constant="91"/>
                                 </constraints>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" id="199" translatesAutoresizingMaskIntoConstraints="NO">
-                                <rect key="frame" x="50" y="256" width="154" height="59"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" id="199" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="50" y="256" width="97" height="59"/>
                                 <state key="normal" title="Convert to roman numeral"/>
                                 <constraints>
-                                    <constraint id="431" firstAttribute="width" constant="154"/>
                                     <constraint id="432" firstAttribute="height" constant="59"/>
                                 </constraints>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" id="200" translatesAutoresizingMaskIntoConstraints="NO" layoutMarginsFollowReadableWidth="YES">
-                                <rect key="frame" x="234" y="256" width="112" height="59"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" id="200" translatesAutoresizingMaskIntoConstraints="NO" layoutMarginsFollowReadableWidth="YES" misplaced="YES">
+                                <rect key="frame" x="174" y="256" width="108" height="59"/>
                                 <state key="normal" title="Convert to decimal number"/>
                                 <constraints>
                                     <constraint id="435" firstAttribute="width" constant="112"/>
                                     <constraint id="436" firstAttribute="height" constant="59"/>
                                 </constraints>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="201" translatesAutoresizingMaskIntoConstraints="NO" textAlignment="center">
-                                <rect key="frame" x="73" y="181" width="267" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="201" translatesAutoresizingMaskIntoConstraints="NO" textAlignment="center" misplaced="YES">
+                                <rect key="frame" x="50" y="181" width="229" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -53,9 +55,8 @@
                                     <constraint id="439" firstAttribute="width" constant="267"/>
                                 </constraints>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="202" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" text="Answer: ">
-                                <rect key="frame" x="135" y="353" width="144" height="73"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="202" translatesAutoresizingMaskIntoConstraints="NO" text="Answer: " misplaced="YES" adjustsFontForContentSizeCategory="YES" minimumFontSize="9">
+                                <rect key="frame" x="88" y="353" width="144" height="73"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -64,14 +65,18 @@
                         <constraints>
                             <constraint id="204" firstItem="201" firstAttribute="width" secondItem="197" secondAttribute="width"/>
                             <constraint id="207" firstItem="199" firstAttribute="height" secondItem="200" secondAttribute="height"/>
-                            <constraint id="425" firstItem="197" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="73"/>
-                            <constraint id="426" firstItem="197" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="82"/>
                             <constraint id="429" firstItem="199" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50"/>
-                            <constraint id="430" firstItem="199" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="256"/>
-                            <constraint id="433" firstItem="8bC-Xf-vdC" firstAttribute="trailing" secondItem="200" secondAttribute="trailing" constant="68"/>
-                            <constraint id="434" firstItem="200" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="256"/>
-                            <constraint id="437" firstItem="201" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="73"/>
-                            <constraint id="438" firstItem="201" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="181"/>
+                            <constraint id="1139" firstItem="201" firstAttribute="top" secondItem="197" secondAttribute="bottom" constant="8"/>
+                            <constraint id="1140" firstItem="199" firstAttribute="top" secondItem="201" secondAttribute="bottom" constant="45"/>
+                            <constraint id="1141" firstItem="200" firstAttribute="top" secondItem="201" secondAttribute="bottom" constant="45"/>
+                            <constraint id="1144" firstItem="197" firstAttribute="leading" secondItem="201" secondAttribute="leading"/>
+                            <constraint id="1145" firstItem="200" firstAttribute="width" secondItem="199" secondAttribute="width"/>
+                            <constraint id="1146" firstItem="200" firstAttribute="leading" secondItem="199" secondAttribute="trailing" constant="27"/>
+                            <constraint id="1387" firstItem="197" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="3"/>
+                            <constraint id="1388" firstItem="8bC-Xf-vdC" firstAttribute="centerY" secondItem="197" secondAttribute="centerY" constant="112"/>
+                            <constraint id="1389" firstItem="201" firstAttribute="centerY" secondItem="197" secondAttribute="bottom" constant="23"/>
+                            <constraint id="2070" firstItem="202" firstAttribute="centerX" secondItem="199" secondAttribute="centerX" constant="61"/>
+                            <constraint id="2071" firstItem="202" firstAttribute="centerY" secondItem="200" secondAttribute="bottom" constant="74"/>
                         </constraints>
                     </view>
                     <connections>
