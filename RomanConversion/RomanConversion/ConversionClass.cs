@@ -28,19 +28,20 @@ namespace RomanConversion
             convert.Add(10, "X");
         }
 
+
         /*
         public toDecimal(string key, string value)
         {
             this.Key= key;
             this.Value = value;
-        }  
-        */
+        }*/  
 
         public string ToRoman(int dNum)
         {
             return convert[dNum];
         }
 
+        //This function turns the string roman numeral and returns an int decimal number
         public int ToDecimal(string rNum)
         {
             foreach (KeyValuePair<int, string> pair in convert)
