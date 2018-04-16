@@ -69,7 +69,7 @@
                                 <state key="normal" title="C3"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please pick a button where you want to play" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" id="408" translatesAutoresizingMaskIntoConstraints="NO" adjustsFontForContentSizeCategory="YES" textAlignment="center" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" numberOfLines="0">
-                                <rect key="frame" x="58" y="101" width="205" height="55"/>
+                                <rect key="frame" x="57.5" y="101.5" width="205" height="55"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
