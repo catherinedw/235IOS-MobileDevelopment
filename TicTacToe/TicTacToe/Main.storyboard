@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina3_5" orientation="portrait">
+    <device id="retina3_5" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -17,59 +17,62 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="197" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
-                                <rect key="frame" x="120" y="359" width="79" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="197" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="200.5" y="203" width="79" height="30"/>
                                 <state key="normal" title="StartGame"/>
+                                <constraints>
+                                    <constraint id="1671" firstAttribute="width" constant="79"/>
+                                </constraints>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="397" translatesAutoresizingMaskIntoConstraints="NO" selected="YES" misplaced="YES">
-                                <rect key="frame" x="77" y="174" width="57" height="41"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="397" translatesAutoresizingMaskIntoConstraints="NO" selected="YES">
+                                <rect key="frame" x="158" y="62.5" width="57" height="41"/>
                                 <state key="normal" title="A1"/>
+                                <constraints>
+                                    <constraint id="1600" firstItem="397" firstAttribute="height" constant="41"/>
+                                    <constraint id="1601" firstItem="397" firstAttribute="width" constant="57"/>
+                                </constraints>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="399" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" selected="YES">
-                                <rect key="frame" x="77" y="220" width="57" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="399" translatesAutoresizingMaskIntoConstraints="NO" selected="YES">
+                                <rect key="frame" x="158" y="108" width="57" height="41"/>
                                 <state key="normal" title="A2"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="400" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" selected="YES">
-                                <rect key="frame" x="77" y="266" width="57" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="400" translatesAutoresizingMaskIntoConstraints="NO" selected="YES">
+                                <rect key="frame" x="158" y="154" width="57" height="41"/>
                                 <state key="normal" title="A3"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="401" translatesAutoresizingMaskIntoConstraints="NO" selected="YES" misplaced="YES">
-                                <rect key="frame" x="131" y="174" width="57" height="41"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="401" translatesAutoresizingMaskIntoConstraints="NO" selected="YES">
+                                <rect key="frame" x="211.5" y="62.5" width="57" height="41"/>
                                 <state key="normal" title="B1"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="402" translatesAutoresizingMaskIntoConstraints="NO" selected="YES" misplaced="YES">
-                                <rect key="frame" x="131" y="220" width="57" height="41"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="402" translatesAutoresizingMaskIntoConstraints="NO" selected="YES">
+                                <rect key="frame" x="211.5" y="108" width="57" height="41"/>
                                 <state key="normal" title="B2"/>
                                 <connections>
                                     <action selector="UIButton402_TouchUpInside:" destination="BYZ-38-t0r" id="407" eventType="touchUpInside"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="403" translatesAutoresizingMaskIntoConstraints="NO" selected="YES" misplaced="YES">
-                                <rect key="frame" x="131" y="266" width="57" height="41"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="403" translatesAutoresizingMaskIntoConstraints="NO" selected="YES">
+                                <rect key="frame" x="211.5" y="154" width="57" height="41"/>
                                 <state key="normal" title="B3"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="404" translatesAutoresizingMaskIntoConstraints="NO" selected="YES" misplaced="YES">
-                                <rect key="frame" x="186" y="174" width="57" height="41"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="404" translatesAutoresizingMaskIntoConstraints="NO" selected="YES">
+                                <rect key="frame" x="265" y="62.5" width="57" height="41"/>
                                 <state key="normal" title="C1"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="405" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" selected="YES">
-                                <rect key="frame" x="186" y="220" width="57" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="405" translatesAutoresizingMaskIntoConstraints="NO" selected="YES">
+                                <rect key="frame" x="265" y="108" width="57" height="41"/>
                                 <state key="normal" title="C2"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="406" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" selected="YES">
-                                <rect key="frame" x="186" y="266" width="57" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="406" translatesAutoresizingMaskIntoConstraints="NO" selected="YES">
+                                <rect key="frame" x="265" y="154" width="57" height="41"/>
                                 <state key="normal" title="C3"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please pick a button where you want to play" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" id="408" translatesAutoresizingMaskIntoConstraints="NO" adjustsFontForContentSizeCategory="YES" textAlignment="center" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" numberOfLines="0">
-                                <rect key="frame" x="57.5" y="101.5" width="205" height="55"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please pick a button where you want to play" lineBreakMode="wordWrap" id="408" translatesAutoresizingMaskIntoConstraints="NO" adjustsFontForContentSizeCategory="YES" textAlignment="center" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" numberOfLines="0">
+                                <rect key="frame" x="137.5" y="-0.5" width="205" height="55"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -78,39 +81,53 @@
                                     <constraint id="890" firstAttribute="height" constant="55"/>
                                 </constraints>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tic Tac Toe" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="420" translatesAutoresizingMaskIntoConstraints="NO" adjustsFontForContentSizeCategory="YES" textAlignment="center" numberOfLines="0" misplaced="YES">
-                                <rect key="frame" x="116" y="63" width="89" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Turn: " lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="640" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
-                                <rect key="frame" x="62" y="324" width="197" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <constraints>
-                            <constraint id="884" firstItem="8bC-Xf-vdC" firstAttribute="centerY" secondItem="420" secondAttribute="centerY" constant="166"/>
-                            <constraint id="885" firstItem="420" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX"/>
-                            <constraint id="926" firstItem="408" firstAttribute="top" secondItem="420" secondAttribute="bottom" constant="17"/>
-                            <constraint id="927" firstItem="408" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX"/>
-                            <constraint id="928" firstItem="401" firstAttribute="top" secondItem="408" secondAttribute="bottom" constant="18"/>
-                            <constraint id="929" firstItem="402" firstAttribute="top" secondItem="401" secondAttribute="bottom" constant="5"/>
-                            <constraint id="930" firstItem="403" firstAttribute="top" secondItem="402" secondAttribute="bottom" constant="5"/>
-                            <constraint id="931" firstItem="640" firstAttribute="top" secondItem="403" secondAttribute="bottom" constant="17"/>
-                            <constraint id="932" firstItem="197" firstAttribute="top" secondItem="640" secondAttribute="bottom" constant="14"/>
-                            <constraint id="933" firstItem="640" firstAttribute="centerX" secondItem="197" secondAttribute="centerX"/>
-                            <constraint id="934" firstItem="403" firstAttribute="centerX" secondItem="197" secondAttribute="centerX"/>
-                            <constraint id="935" firstItem="402" firstAttribute="centerX" secondItem="197" secondAttribute="centerX"/>
-                            <constraint id="936" firstItem="401" firstAttribute="centerX" secondItem="197" secondAttribute="centerX"/>
-                            <constraint id="937" firstItem="408" firstAttribute="centerX" secondItem="197" secondAttribute="centerX"/>
-                            <constraint id="938" firstItem="420" firstAttribute="centerX" secondItem="197" secondAttribute="centerX"/>
-                            <constraint id="941" firstItem="397" firstAttribute="trailing" secondItem="401" secondAttribute="leading" constant="3"/>
-                            <constraint id="942" firstItem="401" firstAttribute="top" secondItem="397" secondAttribute="top"/>
-                            <constraint id="943" firstItem="404" firstAttribute="top" secondItem="397" secondAttribute="top"/>
-                            <constraint id="944" firstItem="401" firstAttribute="trailing" secondItem="404" secondAttribute="leading" constant="2"/>
+                            <constraint id="1599" firstItem="8bC-Xf-vdC" firstAttribute="centerY" secondItem="401" secondAttribute="centerY" constant="77"/>
+                            <constraint id="1602" firstItem="401" firstAttribute="width" secondItem="397" secondAttribute="width"/>
+                            <constraint id="1603" firstItem="404" firstAttribute="width" secondItem="397" secondAttribute="width"/>
+                            <constraint id="1604" firstItem="405" firstAttribute="width" secondItem="397" secondAttribute="width"/>
+                            <constraint id="1605" firstItem="402" firstAttribute="width" secondItem="397" secondAttribute="width"/>
+                            <constraint id="1606" firstItem="399" firstAttribute="width" secondItem="397" secondAttribute="width"/>
+                            <constraint id="1607" firstItem="400" firstAttribute="width" secondItem="397" secondAttribute="width"/>
+                            <constraint id="1608" firstItem="403" firstAttribute="width" secondItem="397" secondAttribute="width"/>
+                            <constraint id="1609" firstItem="406" firstAttribute="width" secondItem="397" secondAttribute="width"/>
+                            <constraint id="1610" firstItem="401" firstAttribute="height" secondItem="397" secondAttribute="height"/>
+                            <constraint id="1611" firstItem="404" firstAttribute="height" secondItem="397" secondAttribute="height"/>
+                            <constraint id="1612" firstItem="405" firstAttribute="height" secondItem="397" secondAttribute="height"/>
+                            <constraint id="1613" firstItem="402" firstAttribute="height" secondItem="397" secondAttribute="height"/>
+                            <constraint id="1614" firstItem="399" firstAttribute="height" secondItem="397" secondAttribute="height"/>
+                            <constraint id="1615" firstItem="400" firstAttribute="height" secondItem="397" secondAttribute="height"/>
+                            <constraint id="1616" firstItem="403" firstAttribute="height" secondItem="397" secondAttribute="height"/>
+                            <constraint id="1617" firstItem="406" firstAttribute="height" secondItem="397" secondAttribute="height"/>
+                            <constraint id="1619" firstItem="401" firstAttribute="centerX" secondItem="403" secondAttribute="centerX"/>
+                            <constraint id="1620" firstItem="408" firstAttribute="centerX" secondItem="403" secondAttribute="centerX"/>
+                            <constraint id="1624" firstItem="408" firstAttribute="centerX" secondItem="403" secondAttribute="centerX"/>
+                            <constraint id="1628" firstItem="408" firstAttribute="centerX" secondItem="403" secondAttribute="centerX"/>
+                            <constraint id="1630" firstItem="402" firstAttribute="centerX" secondItem="403" secondAttribute="centerX"/>
+                            <constraint id="1632" firstItem="408" firstAttribute="centerX" secondItem="403" secondAttribute="centerX"/>
+                            <constraint id="1634" firstItem="397" firstAttribute="centerY" secondItem="401" secondAttribute="centerY"/>
+                            <constraint id="1635" firstItem="404" firstAttribute="centerY" secondItem="401" secondAttribute="centerY"/>
+                            <constraint id="1636" firstItem="399" firstAttribute="centerY" secondItem="402" secondAttribute="centerY"/>
+                            <constraint id="1638" firstItem="403" firstAttribute="centerY" secondItem="406" secondAttribute="centerY"/>
+                            <constraint id="1639" firstItem="400" firstAttribute="centerY" secondItem="406" secondAttribute="centerY"/>
+                            <constraint id="1640" firstItem="405" firstAttribute="centerX" secondItem="406" secondAttribute="centerX"/>
+                            <constraint id="1641" firstItem="404" firstAttribute="centerX" secondItem="406" secondAttribute="centerX"/>
+                            <constraint id="1642" firstItem="402" firstAttribute="centerY" secondItem="405" secondAttribute="centerY"/>
+                            <constraint id="1643" firstItem="399" firstAttribute="centerY" secondItem="405" secondAttribute="centerY"/>
+                            <constraint id="1644" firstItem="403" firstAttribute="centerY" secondItem="400" secondAttribute="centerY"/>
+                            <constraint id="1645" firstItem="406" firstAttribute="centerY" secondItem="400" secondAttribute="centerY"/>
+                            <constraint id="1646" firstItem="404" firstAttribute="centerX" secondItem="401" secondAttribute="trailing" constant="25"/>
+                            <constraint id="1647" firstItem="405" firstAttribute="top" secondItem="404" secondAttribute="centerY" constant="25"/>
+                            <constraint id="1648" firstItem="401" firstAttribute="leading" secondItem="397" secondAttribute="centerX" constant="25"/>
+                            <constraint id="1650" firstItem="400" firstAttribute="centerX" secondItem="397" secondAttribute="centerX"/>
+                            <constraint id="1651" firstItem="406" firstAttribute="top" secondItem="405" secondAttribute="bottom" constant="5"/>
+                            <constraint id="1664" firstItem="8bC-Xf-vdC" firstAttribute="centerY" secondItem="408" secondAttribute="centerY" constant="133"/>
+                            <constraint id="1665" firstItem="408" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX"/>
+                            <constraint id="1667" firstItem="399" firstAttribute="centerX" secondItem="397" secondAttribute="centerX"/>
+                            <constraint id="1668" firstItem="400" firstAttribute="centerX" secondItem="397" secondAttribute="centerX"/>
+                            <constraint id="1675" firstItem="197" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="58"/>
+                            <constraint id="1676" firstItem="197" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX"/>
                         </constraints>
                     </view>
                     <connections>
@@ -125,7 +142,6 @@
                         <outlet property="c2Button" destination="405" id="name-outlet-405"/>
                         <outlet property="c3Button" destination="406" id="name-outlet-406"/>
                         <outlet property="instructorLabel" destination="408" id="name-outlet-408"/>
-                        <outlet property="turnLabel" destination="640" id="name-outlet-640"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

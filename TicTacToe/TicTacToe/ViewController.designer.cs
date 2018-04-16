@@ -57,10 +57,6 @@ namespace TicTacToe
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton startButton { get; set; }
 
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UILabel turnLabel { get; set; }
-
         [Action ("UIButton402_TouchUpInside:")]
         [GeneratedCode ("iOS Designer", "1.0")]
         partial void UIButton402_TouchUpInside (UIKit.UIButton sender);
@@ -120,11 +116,6 @@ namespace TicTacToe
             if (startButton != null) {
                 startButton.Dispose ();
                 startButton = null;
-            }
-
-            if (turnLabel != null) {
-                turnLabel.Dispose ();
-                turnLabel = null;
             }
         }
     }
