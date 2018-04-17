@@ -1,4 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using System.Text;
+
+
 namespace TicTacToe
 {
     public class GameLogic
@@ -37,77 +43,89 @@ namespace TicTacToe
                 // Repeat steps again for placing mark and checking game status...
             }
         }*/
+        /*** variables ***/
+
         public class TicTacToe
         {
+            /*** variables ***/
+            public char[,] board;
+            const int MAXROW = 3;
+            const int MAXCOLUMN = 3;
 
-            private char[,] board;
-            private char currentPlayerMark;
+            //private char currentPlayerMark;
             private char[] posn;
+            int turn = 1;
+            int count= 0;
 
             public TicTacToe()
             {
-                board = new char[3, 3];
-                currentPlayerMark = 'x';
+                board = new char[MAXROW, MAXCOLUMN];
                 initializeBoard();
             }
 
+            /*
+            public enum Player
+            {
+                X = 1 ,O
+            }
+            */
+
+            public void SetChoice(int turn, int i, int j)
+            {
+                if (turn == 1)
+                {
+                    board[i, j] = 'X';
+                }
+                else
+                {
+                    board[i, j] = 'O';
+                }
+            }
+                                 
 
             // Set/Reset the board back to all empty values.
             public void initializeBoard()
             {
-
                 // Loop through rows
                 int n = 0;
-                for (int i = 0; i < 3; i++)
+                for (int i = 0; i < MAXROW; i++)
                 {
-
                     // Loop through columns
-                    for (int j = 0; j < 3; j++)
+                    for (int j = 0; j < MAXCOLUMN; j++)
                     {
                         n++;
-                        board[i, j] = n.ToString();
+                        board[i, j] = (char)n;
                     }
                 }
-                posn = new char[] { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+                //This fills the array with 1-9
+                posn = new char[] { '1', '2', '3', '4', '5', '6', '7', '8', '9'  };
             }
 
 
-            // Print the current board (may be replaced by GUI implementation later)
-            public void printBoard()
+            private int computerChoice()
             {
-                Console.WriteLine("-------------");
-
-                for (int i = 0; i < 3; i++)
+                Random rand = new Random(); //importing the random number generator class
+                int row = 0;
+                int column = 0;
+                do
                 {
-                    Console.WriteLine("| ");
-                    for (int j = 0; j < 3; j++)
-                    {
-                        Console.WriteLine(board[i, j] + " | ");
-                    }
-                    Console.WriteLine();
-                    Console.WriteLine("-------------");
-                }
+                    row = rand.Next(1, MAXROW);
+                    column = rand.Next(1, MAXCOLUMN);
+                } while (!checkChoice(row ,column));
+
+                SetChoice(2, row, column);
+                return row;
+                return column;
+
             }
 
-
-            // Loop through all cells of the board and if one is found to be empty (contains char '-') then return false.
-            // Otherwise the board is full.
-            public bool isBoardFull()
+            private bool checkChoice(int i, int j)
             {
-                bool isFull = true;
-
-                for (int i = 0; i < 3; i++)
+                if (board[i,j] != '0' && board[i,j] != 'X')
                 {
-                    for (int j = 0; j < 3; j++)
-                    {
-                        if (board[i, j] == '-')
-                        {
-                            isFull = false;
-                        }
-                    }
+                    return true;
                 }
-
-                return isFull;
+                    return false;
             }
 
 
@@ -132,7 +150,6 @@ namespace TicTacToe
                 return false;
             }
 
-
             // Loop through columns and see if any are winners.
             private bool checkColumnsForWin()
             {
@@ -146,58 +163,18 @@ namespace TicTacToe
                 return false;
             }
 
-
             // Check the two diagonals to see if either is a win. Return true if either wins.
             private bool checkDiagonalsForWin()
             {
                 return ((checkRowCol(board[0, 0], board[1, 1], board[2, 2]) == true) || (checkRowCol(board[0, 2], board[1, 1], board[2, 0]) == true));
             }
 
-
             // Check to see if all three values are the same (and not empty) indicating a win.
             private bool checkRowCol(char c1, char c2, char c3)
             {
-                return ((c1 != '-') && (c1 == c2) && (c2 == c3));
+                return ((c1 == c2) && (c2 == c3));
             }
 
-
-            // Change player marks back and forth.
-            public void changePlayer()
-            {
-                if (currentPlayerMark == 'x')
-                {
-                    currentPlayerMark = 'o';
-                }
-                else
-                {
-                    currentPlayerMark = 'x';
-                }
-            }
-
-
-            // Places a mark at the cell specified by row and col with the mark of the current player.
-            public bool placeMark(int row, int col)
-            {
-
-                // Make sure that row and column are in bounds of the board.
-                if ((row >= 0) && (row < 3))
-                {
-                    if ((col >= 0) && (col < 3))
-                    {
-                        if (board[row, col] == '-')
-                        {
-                            board[row, col] = currentPlayerMark;
-                            return true;
-                        }
-                    }
-                }
-
-                return false;
-            }
-            public void play()
-            {
-
-            }
         }
     }       
 }
