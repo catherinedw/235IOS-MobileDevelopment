@@ -43,9 +43,9 @@ namespace TicTacToe
 
         partial void A1Button_TouchUpInside(UIButton sender)
         {
-            game.SetChoice((int)sender.Tag);
+            game.PlayerChoice((int)sender.Tag);
             //sender.SetTitle(game.NumberToPlace, UIControlState.Normal);
-                
+            sender.SetTitle("X", UIControlState.Normal);    
         }
     }
 }
