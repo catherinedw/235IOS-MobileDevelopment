@@ -22,5 +22,23 @@ namespace TipCalculator
             base.DidReceiveMemoryWarning();
             // Release any cached data, images, etc that aren't in use.
         }
+        //changename
+        partial void valueChanged_serviceslider(UISlider sender)
+        {
+            throw new NotImplementedException();
+        }
+        //change name
+        partial void valueChanged_taxSwitch(UISwitch sender)
+        {
+            throw new NotImplementedException();
+        }
+
+        partial void CalculateButton_TouchUpInside(UIButton sender)
+        {
+
+            //create controller
+
+            //create AlertAction
+        }
     }
 }
