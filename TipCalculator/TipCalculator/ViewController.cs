@@ -33,12 +33,11 @@ namespace TipCalculator
             throw new NotImplementedException();
         }
 
-        partial void CalculateButton_TouchUpInside(UIButton sender)
+        partial void TaxSwitch_ActionSheet(UISwitch sender)
         {
+            //Conroller
+            //ActionSheet
 
-            //create controller
-
-            //create AlertAction
         }
     }
 }

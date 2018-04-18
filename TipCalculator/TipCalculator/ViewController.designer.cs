@@ -23,10 +23,6 @@ namespace TipCalculator
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton calculateButton { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel excellentLabel { get; set; }
 
         [Outlet]
@@ -85,9 +81,9 @@ namespace TipCalculator
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextField totalText { get; set; }
 
-        [Action ("CalculateButton_TouchUpInside:")]
+        [Action ("TaxSwitch_ActionSheet:")]
         [GeneratedCode ("iOS Designer", "1.0")]
-        partial void CalculateButton_TouchUpInside (UIKit.UIButton sender);
+        partial void TaxSwitch_ActionSheet (UIKit.UISwitch sender);
 
         [Action ("valueChanged_serviceslider:")]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -107,11 +103,6 @@ namespace TipCalculator
             if (amountTextView != null) {
                 amountTextView.Dispose ();
                 amountTextView = null;
-            }
-
-            if (calculateButton != null) {
-                calculateButton.Dispose ();
-                calculateButton = null;
             }
 
             if (excellentLabel != null) {
