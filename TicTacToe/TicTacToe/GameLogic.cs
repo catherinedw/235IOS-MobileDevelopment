@@ -23,9 +23,12 @@ namespace TicTacToe
         public string ClickCount { get { return clickCount.ToString(); } }
 
         //Marks down the players symbol
-        public void SetChoice(int turn, int i, int j)
+        public void SetChoice(int buttonNumber)
         {
-            if (turn == 1)
+            playerTurn++;
+            int i = (buttonNumber) / MAXCOLUMN;
+            int j = (buttonNumber) % MAXROW;
+            if (playerTurn % 2 == 1)
             {
                 board[i, j] = 'X';
             }

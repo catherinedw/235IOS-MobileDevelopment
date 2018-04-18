@@ -40,63 +40,62 @@
                                 </constraints>
                                 <connections>
                                     <action selector="UIButton402_TouchUpInside:" destination="BYZ-38-t0r" id="2057"/>
+                                    <action selector="A1Button_TouchUpInside:" destination="BYZ-38-t0r" id="2510" eventType="touchUpInside"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="399" translatesAutoresizingMaskIntoConstraints="NO" selected="YES">
                                 <rect key="frame" x="158" y="108" width="57" height="41"/>
                                 <state key="normal" title="A2"/>
                                 <connections>
-                                    <action selector="UIButton402_TouchUpInside:" destination="BYZ-38-t0r" id="2061"/>
+                                    <action selector="A1Button_TouchUpInside:" destination="BYZ-38-t0r" id="2574" eventType="touchUpInside"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="400" translatesAutoresizingMaskIntoConstraints="NO" selected="YES">
                                 <rect key="frame" x="158" y="154" width="57" height="41"/>
                                 <state key="normal" title="A3"/>
                                 <connections>
-                                    <action selector="UIButton402_TouchUpInside:" destination="BYZ-38-t0r" id="2063"/>
+                                    <action selector="A1Button_TouchUpInside:" destination="BYZ-38-t0r" id="2638" eventType="touchUpInside"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="401" translatesAutoresizingMaskIntoConstraints="NO" selected="YES">
                                 <rect key="frame" x="211.5" y="62.5" width="57" height="41"/>
                                 <state key="normal" title="B1"/>
                                 <connections>
-                                    <action selector="UIButton402_TouchUpInside:" destination="BYZ-38-t0r" id="2059"/>
+                                    <action selector="A1Button_TouchUpInside:" destination="BYZ-38-t0r" id="2511" eventType="touchUpInside"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="402" translatesAutoresizingMaskIntoConstraints="NO" selected="YES">
                                 <rect key="frame" x="211.5" y="108" width="57" height="41"/>
                                 <state key="normal" title="B2"/>
                                 <connections>
-                                    <action selector="UIButton402_TouchUpInside:" destination="BYZ-38-t0r" id="407" eventType="touchUpInside"/>
+                                    <action selector="A1Button_TouchUpInside:" destination="BYZ-38-t0r" id="2575" eventType="touchUpInside"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="403" translatesAutoresizingMaskIntoConstraints="NO" selected="YES">
                                 <rect key="frame" x="211.5" y="154" width="57" height="41"/>
                                 <state key="normal" title="B3"/>
                                 <connections>
-                                    <action selector="UIButton402_TouchUpInside:" destination="BYZ-38-t0r" id="2064"/>
+                                    <action selector="A1Button_TouchUpInside:" destination="BYZ-38-t0r" id="2639" eventType="touchUpInside"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="404" translatesAutoresizingMaskIntoConstraints="NO" selected="YES">
                                 <rect key="frame" x="265" y="62.5" width="57" height="41"/>
                                 <state key="normal" title="C1"/>
                                 <connections>
-                                    <action selector="UIButton402_TouchUpInside:" destination="BYZ-38-t0r" id="2060"/>
+                                    <action selector="A1Button_TouchUpInside:" destination="BYZ-38-t0r" id="2512" eventType="touchUpInside"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="405" translatesAutoresizingMaskIntoConstraints="NO" selected="YES">
                                 <rect key="frame" x="265" y="108" width="57" height="41"/>
                                 <state key="normal" title="C2"/>
                                 <connections>
-                                    <action selector="UIButton402_TouchUpInside:" destination="BYZ-38-t0r" id="2062"/>
+                                    <action selector="A1Button_TouchUpInside:" destination="BYZ-38-t0r" id="2637" eventType="touchUpInside"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="406" translatesAutoresizingMaskIntoConstraints="NO" selected="YES">
                                 <rect key="frame" x="265" y="154" width="57" height="41"/>
                                 <state key="normal" title="C3"/>
-                                <connections>
-                                    <action selector="UIButton402_TouchUpInside:" destination="BYZ-38-t0r" id="2065"/>
-                                </connections>
+                                <connections/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please pick a button where you want to play" lineBreakMode="wordWrap" id="408" translatesAutoresizingMaskIntoConstraints="NO" adjustsFontForContentSizeCategory="YES" textAlignment="center" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" numberOfLines="0">
                                 <rect key="frame" x="137.5" y="-0.5" width="205" height="55"/>
