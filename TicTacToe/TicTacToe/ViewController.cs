@@ -46,6 +46,23 @@ namespace TicTacToe
             game.PlayerChoice((int)sender.Tag);
             //sender.SetTitle(game.NumberToPlace, UIControlState.Normal);
             sender.SetTitle("X", UIControlState.Normal);    
+            sender.SetTitle("X", UIControlState.Disabled);
+            sender.Enabled = false;
+            bool result = game.CheckForWin();
+            if (result)
+            {
+                messageLabel.Text = ("{0} win!", player);
+            }
+            else
+            {
+                if (playerTurn == 9)
+                {
+                    messageLabel.Text = "Draw";
+                }
+                messageLabel.Text = "Draw";
+            }
+                
+
         }
     }
 }

@@ -31,7 +31,10 @@ namespace TicTacToe
             {
                 board[i, j] = 'X';
                 playerTurn++;
-                ComputerChoice(buttonNumber);
+                if (!CheckForWin())
+                {
+                    ComputerChoice(buttonNumber);   
+                }
             }
         }
                              
@@ -61,6 +64,7 @@ namespace TicTacToe
             } while (!CheckChoice(row, column));
             playerTurn++;
             board[row, column] = 'O';
+            CheckForWin();
         }
 
         //This makes sure that the button isnt already taken 
