@@ -41,29 +41,11 @@ namespace TicTacToe
             c3Button.SetTitle("", UIControlState.Normal);
         }
 
-        partial void TouchUpInsideGridButton(UIButton sender)
+        partial void A1Button_TouchUpInside(UIButton sender)
         {
-            bool isRight = game.SetChoice((int)sender.Tag);
-            /*
-            if (isRight)
-            {
-                sender.SetTitle(game.NumberToPlace, UIControlState.Normal);
-                /*
-                if (game.Done)
-                {
-                    MessageLabel.Text = "You did it in " + game.ClickCount + " clicks!";
-                }
-                else
-                {
-                    MessageLabel.Text = "Right! Place another number now";
-                    NumberLabel.Text = game.GetNewNumberToPlace();
-                }
-            }
-            else
-            {
-                MessageLabel.Text = "Sorry, try again";
-            }
-            */
+            game.SetChoice((int)sender.Tag);
+            //sender.SetTitle(game.NumberToPlace, UIControlState.Normal);
+                
         }
     }
 }

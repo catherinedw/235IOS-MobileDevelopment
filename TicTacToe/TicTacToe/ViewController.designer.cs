@@ -65,10 +65,6 @@ namespace TicTacToe
         [GeneratedCode ("iOS Designer", "1.0")]
         partial void NewGameButton_TouchUpInside (UIKit.UIButton sender);
 
-        [Action ("UIButton402_TouchUpInside:")]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        partial void UIButton402_TouchUpInside (UIKit.UIButton sender);
-
         void ReleaseDesignerOutlets ()
         {
             if (a1Button != null) {

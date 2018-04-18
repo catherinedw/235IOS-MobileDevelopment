@@ -15,19 +15,19 @@ namespace TicTacToe
         private bool[,] openBoard = new bool[MAXROW, MAXCOLUMN];  // keep track of which squares have been filled
         public Random rand = new Random();  // Random number generator
         int playerTurn = 1;
-        private int clickCount = 0;
-        private int numberToPlace = 0;
+        //private int clickCount = 0;
+        //private int numberToPlace = 0;
 
-        public string NumberToPlace { get { return numberToPlace.ToString(); } }
+        //public string NumberToPlace { get { return numberToPlace.ToString(); } }
         //public bool Done { get { return matchesMade == ROWS * COLUMNS; } }
-        public string ClickCount { get { return clickCount.ToString(); } }
+        //public string ClickCount { get { return clickCount.ToString(); } }
 
         //Marks down the players symbol
         public void SetChoice(int buttonNumber)
         {
             playerTurn++;
-            int i = (buttonNumber) / MAXCOLUMN;
-            int j = (buttonNumber) % MAXROW;
+            int i = (buttonNumber - 1) / MAXCOLUMN;
+            int j = (buttonNumber - 1) % MAXROW;
             if (playerTurn % 2 == 1)
             {
                 board[i, j] = 'X';
@@ -41,7 +41,7 @@ namespace TicTacToe
         // Reset the board.
         public void NewGame()
         {
-            clickCount = 0;
+            playerTurn = 1;
             // Set all the squares as open (no number placed)
             for (int i = 0; i < MAXROW; i++) // Loop through rows
             {
@@ -53,7 +53,7 @@ namespace TicTacToe
         }
 
         //This marks a the computers randomly selected button
-        void ComputerChoice()//char[,] board)
+        void ComputerChoice(int buttonNumber)//char[,] board)
         {
             //var rand = new Random();  // Random number generator
 
@@ -64,15 +64,17 @@ namespace TicTacToe
             {
                 row = rand.Next(MAXROW);
                 column = rand.Next(MAXCOLUMN);
-            } while (!CheckChoice(row ,column));
-
-            SetChoice(2, row, column);
-            //board[row, column] = 'O';
+            } while (!CheckChoice(buttonNumber));
+            playerTurn++;
+            //SetChoice(2, row, column);
+            board[row, column] = 'O';
         }
 
         //This makes sure that the button isnt already taken 
-        private bool CheckChoice(int i, int j)
+        private bool CheckChoice(int buttonNumber)
         {
+            int i = (buttonNumber - 1) / MAXCOLUMN;
+            int j = (buttonNumber - 1) % MAXROW;
             if (board[i,j] != '0' && board[i,j] != 'X')
             {
                 return true;
@@ -116,7 +118,8 @@ namespace TicTacToe
         // Check the two diagonals to see if either is a win. Return true if either wins.
         private bool CheckDiagonalsForWin()
         {
-            return ((CheckRowCol(board[0, 0], board[1, 1], board[2, 2]) == true) || (checkRowCol(board[0, 2], board[1, 1], board[2, 0]) == true));
+            return ((CheckRowCol(board[0, 0], board[1, 1], board[2, 2]) == true) 
+                    || (CheckRowCol(board[0, 2], board[1, 1], board[2, 0]) == true));
         }
 
         // Check to see if all three values are the same (and not empty) indicating a win.
