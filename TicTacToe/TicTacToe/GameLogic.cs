@@ -16,19 +16,19 @@ namespace TicTacToe
         public Random rand = new Random();  // Random number generator
         int playerTurn = 1;
         //private int clickCount = 0;
-        //private string playerMark;
+        //public string playerMark;
 
-        //public string SetChoice { get { return Set.ToString(); } }
+        //public string PlayerMark { get { return Set.ToString(); } }
         //public bool Done { get { return matchesMade == ROWS * COLUMNS; } }
         //public string ClickCount { get { return clickCount.ToString(); } }
 
         //Marks down the players symbol
         public void PlayerChoice(int buttonNumber)
         {
-            if (CheckChoice(buttonNumber))
+            int i = (buttonNumber - 1) / MAXCOLUMN;
+            int j = (buttonNumber - 1) % MAXROW;
+            if (CheckChoice(i, j))
             {
-                int i = (buttonNumber - 1) / MAXCOLUMN;
-                int j = (buttonNumber - 1) % MAXROW;
                 board[i, j] = 'X';
                 playerTurn++;
                 ComputerChoice(buttonNumber);
@@ -58,16 +58,14 @@ namespace TicTacToe
             {
                 row = rand.Next(MAXROW);
                 column = rand.Next(MAXCOLUMN);
-            } while (!CheckChoice(buttonNumber));
+            } while (!CheckChoice(row, column));
             playerTurn++;
             board[row, column] = 'O';
         }
 
         //This makes sure that the button isnt already taken 
-        private bool CheckChoice(int buttonNumber)
+        private bool CheckChoice(int i, int j)
         {
-            int i = (buttonNumber - 1) / MAXCOLUMN;
-            int j = (buttonNumber - 1) % MAXROW;
             if (board[i,j] != '0' && board[i,j] != 'X')
             {
                 return true;
