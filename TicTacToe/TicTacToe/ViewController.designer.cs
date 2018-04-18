@@ -55,11 +55,11 @@ namespace TicTacToe
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton startButton { get; set; }
+        UIKit.UIButton newGameButton { get; set; }
 
-        [Action ("UIButton402_TouchUpInside:")]
+        [Action ("NewGameButton_TouchUpInside:")]
         [GeneratedCode ("iOS Designer", "1.0")]
-        partial void UIButton402_TouchUpInside (UIKit.UIButton sender);
+        partial void NewGameButton_TouchUpInside (UIKit.UIButton sender);
 
         void ReleaseDesignerOutlets ()
         {
@@ -113,9 +113,9 @@ namespace TicTacToe
                 instructorLabel = null;
             }
 
-            if (startButton != null) {
-                startButton.Dispose ();
-                startButton = null;
+            if (newGameButton != null) {
+                newGameButton.Dispose ();
+                newGameButton = null;
             }
         }
     }
