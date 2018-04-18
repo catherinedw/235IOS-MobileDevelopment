@@ -85,9 +85,16 @@
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Yoshi120.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Yoshi180.png" />
+    <ImageAsset Include="Assets.xcassets\TipImage.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\TipImage.imageset\tipImage100.jpeg" />
+    <ImageAsset Include="Assets.xcassets\TipImage.imageset\tipImage150.jpeg" />
+    <ImageAsset Include="Assets.xcassets\TipImage.imageset\tipImage50.jpeg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="Assets.xcassets\TipImage.imageset\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
