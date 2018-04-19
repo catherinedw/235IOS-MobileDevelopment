@@ -42,7 +42,6 @@
                                 <rect key="frame" x="151" y="105.5" width="57" height="41"/>
                                 <color key="backgroundColor" colorSpace="calibratedRGB" red="0.49803921568627452" green="0" blue="0.49803921568627452" alpha="1"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <state key="normal" title="A1"/>
                                 <constraints>
                                     <constraint id="1600" firstItem="397" firstAttribute="height" constant="41"/>
                                     <constraint id="1601" firstItem="397" firstAttribute="width" constant="57"/>
@@ -55,7 +54,6 @@
                                 <rect key="frame" x="151" y="151" width="57" height="41"/>
                                 <color key="backgroundColor" colorSpace="calibratedRGB" red="0.49803921568627452" green="0" blue="0.49803921568627452" alpha="1"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <state key="normal" title="B1"/>
                                 <connections>
                                     <action selector="A1Button_TouchUpInside:" destination="BYZ-38-t0r" id="2574" eventType="touchUpInside"/>
                                 </connections>
@@ -64,7 +62,6 @@
                                 <rect key="frame" x="151" y="197" width="57" height="41"/>
                                 <color key="backgroundColor" colorSpace="calibratedRGB" red="0.49803921568627452" green="0" blue="0.49803921568627452" alpha="1"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <state key="normal" title="C1"/>
                                 <connections>
                                     <action selector="A1Button_TouchUpInside:" destination="BYZ-38-t0r" id="2638" eventType="touchUpInside"/>
                                 </connections>
@@ -73,7 +70,6 @@
                                 <rect key="frame" x="211.5" y="105.5" width="57" height="41"/>
                                 <color key="backgroundColor" colorSpace="calibratedRGB" red="0.49803921568627452" green="0" blue="0.49803921568627452" alpha="1"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <state key="normal" title="A2"/>
                                 <connections>
                                     <action selector="A1Button_TouchUpInside:" destination="BYZ-38-t0r" id="2511" eventType="touchUpInside"/>
                                 </connections>
@@ -82,7 +78,6 @@
                                 <rect key="frame" x="211.5" y="151" width="57" height="41"/>
                                 <color key="backgroundColor" colorSpace="calibratedRGB" red="0.49803921568627452" green="0" blue="0.49803921568627452" alpha="1"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <state key="normal" title="B2"/>
                                 <connections>
                                     <action selector="A1Button_TouchUpInside:" destination="BYZ-38-t0r" id="2575" eventType="touchUpInside"/>
                                 </connections>
@@ -91,7 +86,6 @@
                                 <rect key="frame" x="211.5" y="197" width="57" height="41"/>
                                 <color key="backgroundColor" colorSpace="calibratedRGB" red="0.49803921568627452" green="0" blue="0.49803921568627452" alpha="1"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <state key="normal" title="C2"/>
                                 <connections>
                                     <action selector="A1Button_TouchUpInside:" destination="BYZ-38-t0r" id="2639" eventType="touchUpInside"/>
                                 </connections>
@@ -100,7 +94,6 @@
                                 <rect key="frame" x="272" y="105.5" width="57" height="41"/>
                                 <color key="backgroundColor" colorSpace="calibratedRGB" red="0.49803921568627452" green="0" blue="0.49803921568627452" alpha="1"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <state key="normal" title="A3"/>
                                 <connections>
                                     <action selector="A1Button_TouchUpInside:" destination="BYZ-38-t0r" id="2512" eventType="touchUpInside"/>
                                 </connections>
@@ -109,7 +102,6 @@
                                 <rect key="frame" x="272" y="151" width="57" height="41"/>
                                 <color key="backgroundColor" colorSpace="calibratedRGB" red="0.49803921568627452" green="0" blue="0.49803921568627452" alpha="1"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <state key="normal" title="B3"/>
                                 <connections>
                                     <action selector="A1Button_TouchUpInside:" destination="BYZ-38-t0r" id="2637" eventType="touchUpInside"/>
                                 </connections>
@@ -118,7 +110,6 @@
                                 <rect key="frame" x="272" y="197" width="57" height="41"/>
                                 <color key="backgroundColor" colorSpace="calibratedRGB" red="0.49803921568627452" green="0" blue="0.49803921568627452" alpha="1"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <state key="normal" title="C3"/>
                                 <connections>
                                     <action selector="A1Button_TouchUpInside:" destination="BYZ-38-t0r" id="2701" eventType="touchUpInside"/>
                                 </connections>
