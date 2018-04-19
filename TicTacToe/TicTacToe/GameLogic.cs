@@ -13,15 +13,12 @@ namespace TicTacToe
         const int MAXROW = 3, MAXCOLUMN = 3;
         public char[,] board = new char[MAXROW, MAXCOLUMN]; // keep track of which squares have been filled
         public int[,] grid = new int[MAXROW, MAXCOLUMN] { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 }}; // keep track of which squares have been filled
-        //public string[,] grid = new string[3, 3] { { "a1Button", "a2Button", "a3Button" }, { "b1Button", "b2Button", "b3Button" }, { "c1Button", "c2Button", "c3Button" } }; // keep track of which squares have been filled
         public bool[,] openBoard = new bool[MAXROW, MAXCOLUMN];  // keep track of which squares have been filled
-        public int playerTurn = 1;
+        public int playerTurn = 1, compButtonNumber;
         public string player;
-        //public char markToPlace;
-        //public string MarkToPlace { get { return markToPlace.ToString(); } }
-        public int compButtonNumber;
         public int CompButtonNumber { get { return compButtonNumber; } }
-        public Random rand = new Random();
+        public string Player { get { return player; } }
+        public Random rand;
 
         //Marks down the players symbols
         public int PlayerChoice(int buttonNumber)
@@ -31,14 +28,15 @@ namespace TicTacToe
             board[i, j] = 'X';
             openBoard[i, j] = false;
             playerTurn++;
-            if (!CheckForWin() || playerTurn == 10)
+            if (!CheckForWin() && playerTurn != 10)
             {
-                player = "You";
+               compButtonNumber = ComputerChoice();  
             }
             else
             {
-               compButtonNumber = ComputerChoice();  
-            } 
+                compButtonNumber = -1;
+                player = "You";
+            }
             return compButtonNumber;
         }
 
@@ -51,7 +49,7 @@ namespace TicTacToe
             {
                 for (int j = 0; j < MAXCOLUMN; j++) // Loop through columns
                 {
-                    //board[i, j] = '';
+                    board[i, j] = ' ';
                     openBoard[i, j] = true;
                 }
             }
@@ -66,15 +64,17 @@ namespace TicTacToe
             {
                 row = rand.Next(MAXROW);
                 column = rand.Next(MAXCOLUMN);
-            } while (!openBoard[row, column]);
+            } while (!openBoard[row, column]); //&& (board[row, column] == 'X'||board[row, column] == 'O'));
+            //while (board[row, column] == 'X' || board[row, column] == 'O');
+
             board[row, column] = 'O';
             openBoard[row, column] = false;
             result = grid[row, column];
             playerTurn++;
-            //if (CheckForWin())
-            //{
-            //    player = "Computer";
-            //}
+            if (CheckForWin())
+            {
+                player = "Computer";
+            }
             //need to return button number
             return result;
         }
@@ -132,7 +132,7 @@ namespace TicTacToe
         // Check to see if all three values are the same (and not empty) indicating a win.
         private bool CheckRowCol(char c1, char c2, char c3)
         {
-            return ((c1 == c2) && (c2 == c3));
+            return ((c1 != ' ') && (c1 == c2) && (c2 == c3));
         }
     }
 }       

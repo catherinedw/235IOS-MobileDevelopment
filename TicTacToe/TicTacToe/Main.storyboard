@@ -44,21 +44,21 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="399" translatesAutoresizingMaskIntoConstraints="NO" selected="YES" tag="4">
                                 <rect key="frame" x="158" y="108" width="57" height="41"/>
-                                <state key="normal" title="A2"/>
+                                <state key="normal" title="B1"/>
                                 <connections>
                                     <action selector="A1Button_TouchUpInside:" destination="BYZ-38-t0r" id="2574" eventType="touchUpInside"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="400" translatesAutoresizingMaskIntoConstraints="NO" selected="YES" tag="7">
                                 <rect key="frame" x="158" y="154" width="57" height="41"/>
-                                <state key="normal" title="A3"/>
+                                <state key="normal" title="C1"/>
                                 <connections>
                                     <action selector="A1Button_TouchUpInside:" destination="BYZ-38-t0r" id="2638" eventType="touchUpInside"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="401" translatesAutoresizingMaskIntoConstraints="NO" selected="YES" tag="2">
                                 <rect key="frame" x="211.5" y="62.5" width="57" height="41"/>
-                                <state key="normal" title="B1"/>
+                                <state key="normal" title="A2"/>
                                 <connections>
                                     <action selector="A1Button_TouchUpInside:" destination="BYZ-38-t0r" id="2511" eventType="touchUpInside"/>
                                 </connections>
@@ -72,21 +72,21 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="403" translatesAutoresizingMaskIntoConstraints="NO" selected="YES" tag="8">
                                 <rect key="frame" x="211.5" y="154" width="57" height="41"/>
-                                <state key="normal" title="B3"/>
+                                <state key="normal" title="C2"/>
                                 <connections>
                                     <action selector="A1Button_TouchUpInside:" destination="BYZ-38-t0r" id="2639" eventType="touchUpInside"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="404" translatesAutoresizingMaskIntoConstraints="NO" selected="YES" tag="3">
                                 <rect key="frame" x="265" y="62.5" width="57" height="41"/>
-                                <state key="normal" title="C1"/>
+                                <state key="normal" title="A3"/>
                                 <connections>
                                     <action selector="A1Button_TouchUpInside:" destination="BYZ-38-t0r" id="2512" eventType="touchUpInside"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="405" translatesAutoresizingMaskIntoConstraints="NO" selected="YES" tag="6">
                                 <rect key="frame" x="265" y="108" width="57" height="41"/>
-                                <state key="normal" title="C2"/>
+                                <state key="normal" title="B3"/>
                                 <connections>
                                     <action selector="A1Button_TouchUpInside:" destination="BYZ-38-t0r" id="2637" eventType="touchUpInside"/>
                                 </connections>
@@ -160,13 +160,13 @@
                     <connections>
                         <outlet property="newGameButton" destination="197" id="name-outlet-197"/>
                         <outlet property="a1Button" destination="397" id="name-outlet-397"/>
-                        <outlet property="a2Button" destination="399" id="name-outlet-399"/>
-                        <outlet property="a3Button" destination="400" id="name-outlet-400"/>
-                        <outlet property="b1Button" destination="401" id="name-outlet-401"/>
+                        <outlet property="b1Button" destination="399" id="name-outlet-399"/>
+                        <outlet property="c1Button" destination="400" id="name-outlet-400"/>
+                        <outlet property="a2Button" destination="401" id="name-outlet-401"/>
                         <outlet property="b2Button" destination="402" id="name-outlet-402"/>
-                        <outlet property="b3Button" destination="403" id="name-outlet-403"/>
-                        <outlet property="c1Button" destination="404" id="name-outlet-404"/>
-                        <outlet property="c2Button" destination="405" id="name-outlet-405"/>
+                        <outlet property="c2Button" destination="403" id="name-outlet-403"/>
+                        <outlet property="a3Button" destination="404" id="name-outlet-404"/>
+                        <outlet property="b3Button" destination="405" id="name-outlet-405"/>
                         <outlet property="c3Button" destination="406" id="name-outlet-406"/>
                         <outlet property="communicationLabel" destination="408" id="name-outlet-408"/>
                     </connections>

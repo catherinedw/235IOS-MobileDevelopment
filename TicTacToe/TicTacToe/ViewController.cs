@@ -29,6 +29,7 @@ namespace TicTacToe
         partial void NewGameButton_TouchUpInside(UIButton sender)
         {
             game.NewGame();
+            //reset communication label
 
             a1Button.Enabled = true;
             a2Button.Enabled = true;
@@ -110,20 +111,20 @@ namespace TicTacToe
                     c3Button.SetTitle("", UIControlState.Disabled);
                     c3Button.Enabled = false;
                     break;
-            /*
-            bool result = game.CheckForWin();
-            if (result)
-            {
-               //communicationLabel.Text = ("{0} win!", game.player);
+                default:
+                    break;
             }
-            else
+
+            if (game.CheckForWin())
             {
-                if (game.playerTurn == 9)
-                {
-                    communicationLabel.Text = "Draw";
-                }
-                */
+                communicationLabel.Text = game.player;
             }
+            else if (game.playerTurn == 10)
+            {
+                communicationLabel.Text = "Draw";
+            }
+
         }
     }
 }
+
