@@ -40,7 +40,7 @@ namespace TicTacToe
             return compButtonNumber;
         }
 
-        // Reset the board.
+        // Reset the board
         public void NewGame()
         {
             playerTurn = 1;
@@ -64,29 +64,19 @@ namespace TicTacToe
             {
                 row = rand.Next(MAXROW);
                 column = rand.Next(MAXCOLUMN);
-            } while (!openBoard[row, column]); //&& (board[row, column] == 'X'||board[row, column] == 'O'));
-            //while (board[row, column] == 'X' || board[row, column] == 'O');
+            } while (!openBoard[row, column]); 
 
             board[row, column] = 'O';
             openBoard[row, column] = false;
             result = grid[row, column];
             playerTurn++;
+
             if (CheckForWin())
             {
                 player = "Computer";
             }
             //need to return button number
             return result;
-        }
-
-        //This makes sure that the button isnt already taken 
-        private bool CheckChoice(int i, int j)
-        {
-            if (board[i,j] != 'O' && board[i,j] != 'X')
-            {
-                return true;
-            }
-                return false;
         }
 
         // Returns true if there is a win, false otherwise.
