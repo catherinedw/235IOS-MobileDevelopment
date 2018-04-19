@@ -11,38 +11,34 @@ namespace TicTacToe
     {
         /*** variables ***/
         const int MAXROW = 3, MAXCOLUMN = 3;
-        private char[,] board = new char[MAXROW, MAXCOLUMN]; // keep track of which squares have been filled
-        public int[,] grid = new int[3,3] { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 }}; // keep track of which squares have been filled
+        public char[,] board = new char[MAXROW, MAXCOLUMN]; // keep track of which squares have been filled
+        public int[,] grid = new int[MAXROW, MAXCOLUMN] { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 }}; // keep track of which squares have been filled
         //public string[,] grid = new string[3, 3] { { "a1Button", "a2Button", "a3Button" }, { "b1Button", "b2Button", "b3Button" }, { "c1Button", "c2Button", "c3Button" } }; // keep track of which squares have been filled
-
-        private bool[,] openBoard = new bool[MAXROW, MAXCOLUMN];  // keep track of which squares have been filled
-        public Random rand = new Random();  // Random number generator
+        public bool[,] openBoard = new bool[MAXROW, MAXCOLUMN];  // keep track of which squares have been filled
         public int playerTurn = 1;
         public string player;
-        public char markToPlace;
-        public string MarkToPlace { get { return markToPlace.ToString(); } }
+        //public char markToPlace;
+        //public string MarkToPlace { get { return markToPlace.ToString(); } }
         public int compButtonNumber;
         public int CompButtonNumber { get { return compButtonNumber; } }
+        public Random rand = new Random();
 
         //Marks down the players symbols
         public int PlayerChoice(int buttonNumber)
         {
-            int i = (buttonNumber - 1) / MAXCOLUMN;
-            int j = (buttonNumber - 1) % MAXROW;
-            if (CheckChoice(i, j))
+            int i = (buttonNumber - 1) / MAXROW;
+            int j = (buttonNumber - 1) % MAXCOLUMN;
+            board[i, j] = 'X';
+            openBoard[i, j] = false;
+            playerTurn++;
+            if (!CheckForWin() || playerTurn == 10)
             {
-                board[i, j] = 'X';
-                openBoard[i, j] = false;
-                playerTurn++;
-                if (!CheckForWin())
-                {
-                    player = "You";
-                }
-                else
-                {
-                   compButtonNumber = ComputerChoice();  
-                } 
+                player = "You";
             }
+            else
+            {
+               compButtonNumber = ComputerChoice();  
+            } 
             return compButtonNumber;
         }
 
@@ -55,28 +51,30 @@ namespace TicTacToe
             {
                 for (int j = 0; j < MAXCOLUMN; j++) // Loop through columns
                 {
+                    //board[i, j] = '';
                     openBoard[i, j] = true;
                 }
             }
         }
 
         //This marks a the computers randomly selected button
-        public int ComputerChoice()//char[,] board)
+        public int ComputerChoice()
         {
-            int row = 0;
-            int column = 0;
+            rand = new Random();  // Random number generator
+            int row = 0, column = 0, result = 0;
             do
             {
                 row = rand.Next(MAXROW);
                 column = rand.Next(MAXCOLUMN);
-            } while (openBoard[row, column]);
-            playerTurn++;
+            } while (!openBoard[row, column]);
             board[row, column] = 'O';
-            int result = grid[row, column];
-            if (CheckForWin())
-            {
-                player = "Computer";
-            }
+            openBoard[row, column] = false;
+            result = grid[row, column];
+            playerTurn++;
+            //if (CheckForWin())
+            //{
+            //    player = "Computer";
+            //}
             //need to return button number
             return result;
         }
@@ -84,7 +82,7 @@ namespace TicTacToe
         //This makes sure that the button isnt already taken 
         private bool CheckChoice(int i, int j)
         {
-            if (board[i,j] != '0' && board[i,j] != 'X')
+            if (board[i,j] != 'O' && board[i,j] != 'X')
             {
                 return true;
             }
