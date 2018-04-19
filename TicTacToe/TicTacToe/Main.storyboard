@@ -22,7 +22,9 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="197" translatesAutoresizingMaskIntoConstraints="NO">
-                                <rect key="frame" x="200.5" y="203" width="79" height="30"/>
+                                <rect key="frame" x="200.5" y="246" width="79" height="30"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="backgroundColor" colorSpace="calibratedWhite" white="0.666666666666667" alpha="1"/>
                                 <state key="normal" title="New Game"/>
                                 <constraints>
                                     <constraint id="1671" firstAttribute="width" constant="79"/>
@@ -30,9 +32,16 @@
                                 <connections>
                                     <action selector="NewGameButton_TouchUpInside:" destination="BYZ-38-t0r" id="2447" eventType="touchUpInside"/>
                                 </connections>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="397" translatesAutoresizingMaskIntoConstraints="NO" selected="YES" tag="1">
-                                <rect key="frame" x="158" y="62.5" width="57" height="41"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="397" translatesAutoresizingMaskIntoConstraints="NO" tag="1">
+                                <rect key="frame" x="151" y="105.5" width="57" height="41"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.49803921568627452" green="0" blue="0.49803921568627452" alpha="1"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" title="A1"/>
                                 <constraints>
                                     <constraint id="1600" firstItem="397" firstAttribute="height" constant="41"/>
@@ -42,64 +51,80 @@
                                     <action selector="A1Button_TouchUpInside:" destination="BYZ-38-t0r" id="2510" eventType="touchUpInside"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="399" translatesAutoresizingMaskIntoConstraints="NO" selected="YES" tag="4">
-                                <rect key="frame" x="158" y="108" width="57" height="41"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="399" translatesAutoresizingMaskIntoConstraints="NO" tag="4">
+                                <rect key="frame" x="151" y="151" width="57" height="41"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.49803921568627452" green="0" blue="0.49803921568627452" alpha="1"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" title="B1"/>
                                 <connections>
                                     <action selector="A1Button_TouchUpInside:" destination="BYZ-38-t0r" id="2574" eventType="touchUpInside"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="400" translatesAutoresizingMaskIntoConstraints="NO" selected="YES" tag="7">
-                                <rect key="frame" x="158" y="154" width="57" height="41"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="400" translatesAutoresizingMaskIntoConstraints="NO" tag="7">
+                                <rect key="frame" x="151" y="197" width="57" height="41"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.49803921568627452" green="0" blue="0.49803921568627452" alpha="1"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" title="C1"/>
                                 <connections>
                                     <action selector="A1Button_TouchUpInside:" destination="BYZ-38-t0r" id="2638" eventType="touchUpInside"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="401" translatesAutoresizingMaskIntoConstraints="NO" selected="YES" tag="2">
-                                <rect key="frame" x="211.5" y="62.5" width="57" height="41"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="401" translatesAutoresizingMaskIntoConstraints="NO" tag="2">
+                                <rect key="frame" x="211.5" y="105.5" width="57" height="41"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.49803921568627452" green="0" blue="0.49803921568627452" alpha="1"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" title="A2"/>
                                 <connections>
                                     <action selector="A1Button_TouchUpInside:" destination="BYZ-38-t0r" id="2511" eventType="touchUpInside"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="402" translatesAutoresizingMaskIntoConstraints="NO" selected="YES" tag="5">
-                                <rect key="frame" x="211.5" y="108" width="57" height="41"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="402" translatesAutoresizingMaskIntoConstraints="NO" tag="5">
+                                <rect key="frame" x="211.5" y="151" width="57" height="41"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.49803921568627452" green="0" blue="0.49803921568627452" alpha="1"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" title="B2"/>
                                 <connections>
                                     <action selector="A1Button_TouchUpInside:" destination="BYZ-38-t0r" id="2575" eventType="touchUpInside"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="403" translatesAutoresizingMaskIntoConstraints="NO" selected="YES" tag="8">
-                                <rect key="frame" x="211.5" y="154" width="57" height="41"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="403" translatesAutoresizingMaskIntoConstraints="NO" tag="8">
+                                <rect key="frame" x="211.5" y="197" width="57" height="41"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.49803921568627452" green="0" blue="0.49803921568627452" alpha="1"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" title="C2"/>
                                 <connections>
                                     <action selector="A1Button_TouchUpInside:" destination="BYZ-38-t0r" id="2639" eventType="touchUpInside"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="404" translatesAutoresizingMaskIntoConstraints="NO" selected="YES" tag="3">
-                                <rect key="frame" x="265" y="62.5" width="57" height="41"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="404" translatesAutoresizingMaskIntoConstraints="NO" tag="3">
+                                <rect key="frame" x="272" y="105.5" width="57" height="41"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.49803921568627452" green="0" blue="0.49803921568627452" alpha="1"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" title="A3"/>
                                 <connections>
                                     <action selector="A1Button_TouchUpInside:" destination="BYZ-38-t0r" id="2512" eventType="touchUpInside"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="405" translatesAutoresizingMaskIntoConstraints="NO" selected="YES" tag="6">
-                                <rect key="frame" x="265" y="108" width="57" height="41"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="405" translatesAutoresizingMaskIntoConstraints="NO" tag="6">
+                                <rect key="frame" x="272" y="151" width="57" height="41"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.49803921568627452" green="0" blue="0.49803921568627452" alpha="1"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" title="B3"/>
                                 <connections>
                                     <action selector="A1Button_TouchUpInside:" destination="BYZ-38-t0r" id="2637" eventType="touchUpInside"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="406" translatesAutoresizingMaskIntoConstraints="NO" selected="YES" tag="9">
-                                <rect key="frame" x="265" y="154" width="57" height="41"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="406" translatesAutoresizingMaskIntoConstraints="NO" tag="9">
+                                <rect key="frame" x="272" y="197" width="57" height="41"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.49803921568627452" green="0" blue="0.49803921568627452" alpha="1"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" title="C3"/>
                                 <connections>
                                     <action selector="A1Button_TouchUpInside:" destination="BYZ-38-t0r" id="2701" eventType="touchUpInside"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please pick a button where you want to play" lineBreakMode="wordWrap" id="408" translatesAutoresizingMaskIntoConstraints="NO" adjustsFontForContentSizeCategory="YES" textAlignment="center" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" numberOfLines="0">
-                                <rect key="frame" x="137.5" y="-0.5" width="205" height="55"/>
+                                <rect key="frame" x="137.5" y="42.5" width="205" height="55"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -108,9 +133,15 @@
                                     <constraint id="890" firstAttribute="height" constant="55"/>
                                 </constraints>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TIC TAC TOE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4547" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="190.5" y="20.5" width="99" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <constraints>
-                            <constraint id="1599" firstItem="8bC-Xf-vdC" firstAttribute="centerY" secondItem="401" secondAttribute="centerY" constant="77"/>
+                            <constraint id="1599" firstItem="8bC-Xf-vdC" firstAttribute="centerY" secondItem="401" secondAttribute="centerY" constant="34"/>
                             <constraint id="1602" firstItem="401" firstAttribute="width" secondItem="397" secondAttribute="width"/>
                             <constraint id="1603" firstItem="404" firstAttribute="width" secondItem="397" secondAttribute="width"/>
                             <constraint id="1604" firstItem="405" firstAttribute="width" secondItem="397" secondAttribute="width"/>
@@ -143,18 +174,20 @@
                             <constraint id="1642" firstItem="402" firstAttribute="centerY" secondItem="405" secondAttribute="centerY"/>
                             <constraint id="1643" firstItem="399" firstAttribute="centerY" secondItem="405" secondAttribute="centerY"/>
                             <constraint id="1644" firstItem="403" firstAttribute="centerY" secondItem="400" secondAttribute="centerY"/>
-                            <constraint id="1645" firstItem="406" firstAttribute="centerY" secondItem="400" secondAttribute="centerY"/>
-                            <constraint id="1646" firstItem="404" firstAttribute="centerX" secondItem="401" secondAttribute="trailing" constant="25"/>
+                            <constraint id="1646" firstItem="404" firstAttribute="centerX" secondItem="401" secondAttribute="trailing" constant="32"/>
                             <constraint id="1647" firstItem="405" firstAttribute="top" secondItem="404" secondAttribute="centerY" constant="25"/>
-                            <constraint id="1648" firstItem="401" firstAttribute="leading" secondItem="397" secondAttribute="centerX" constant="25"/>
+                            <constraint id="1648" firstItem="401" firstAttribute="leading" secondItem="397" secondAttribute="centerX" constant="32"/>
                             <constraint id="1650" firstItem="400" firstAttribute="centerX" secondItem="397" secondAttribute="centerX"/>
                             <constraint id="1651" firstItem="406" firstAttribute="top" secondItem="405" secondAttribute="bottom" constant="5"/>
-                            <constraint id="1664" firstItem="8bC-Xf-vdC" firstAttribute="centerY" secondItem="408" secondAttribute="centerY" constant="133"/>
                             <constraint id="1665" firstItem="408" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX"/>
                             <constraint id="1667" firstItem="399" firstAttribute="centerX" secondItem="397" secondAttribute="centerX"/>
                             <constraint id="1668" firstItem="400" firstAttribute="centerX" secondItem="397" secondAttribute="centerX"/>
-                            <constraint id="1675" firstItem="197" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="58"/>
+                            <constraint id="1675" firstItem="197" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="101"/>
                             <constraint id="1676" firstItem="197" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX"/>
+                            <constraint id="4230" firstItem="8bC-Xf-vdC" firstAttribute="centerY" secondItem="408" secondAttribute="centerY" constant="90"/>
+                            <constraint id="4548" firstItem="8bC-Xf-vdC" firstAttribute="centerX" secondItem="4547" secondAttribute="centerX"/>
+                            <constraint id="4550" firstItem="408" firstAttribute="centerX" secondItem="4547" secondAttribute="centerX"/>
+                            <constraint id="4551" firstItem="408" firstAttribute="top" secondItem="4547" secondAttribute="centerY" constant="12"/>
                         </constraints>
                     </view>
                     <connections>
@@ -169,6 +202,7 @@
                         <outlet property="b3Button" destination="405" id="name-outlet-405"/>
                         <outlet property="c3Button" destination="406" id="name-outlet-406"/>
                         <outlet property="communicationLabel" destination="408" id="name-outlet-408"/>
+                        <outlet property="headerLabel" destination="4547" id="name-outlet-4547"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

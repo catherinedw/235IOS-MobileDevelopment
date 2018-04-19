@@ -55,6 +55,10 @@ namespace TicTacToe
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel headerLabel { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton newGameButton { get; set; }
 
         [Action ("A1Button_TouchUpInside:")]
@@ -115,6 +119,11 @@ namespace TicTacToe
             if (communicationLabel != null) {
                 communicationLabel.Dispose ();
                 communicationLabel = null;
+            }
+
+            if (headerLabel != null) {
+                headerLabel.Dispose ();
+                headerLabel = null;
             }
 
             if (newGameButton != null) {

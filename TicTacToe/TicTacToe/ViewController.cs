@@ -30,7 +30,7 @@ namespace TicTacToe
         {
             game.NewGame();
             //reset communication label
-            communicationLabel.Text = "Please pick a button where you would like to play";
+            communicationLabel.Text = "Please pick a button";
 
             a1Button.Enabled = true;
             a2Button.Enabled = true;
@@ -118,11 +118,11 @@ namespace TicTacToe
 
             if (game.CheckForWin())
             {
-                communicationLabel.Text = game.player;
+                communicationLabel.Text = String.Format("{0} won!", game.player);
             }
             else if (game.playerTurn == 10)
             {
-                communicationLabel.Text = "Draw";
+                communicationLabel.Text = "It's a draw!";
             }
 
         }
