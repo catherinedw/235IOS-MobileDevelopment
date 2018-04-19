@@ -61,55 +61,55 @@ namespace TicTacToe
                 game.NewGame();
             }
             int compResult = game.PlayerChoice((int)sender.Tag);
-            sender.SetTitle("X", UIControlState.Normal);
-            sender.SetTitle("X", UIControlState.Disabled);
+            sender.SetTitle("O", UIControlState.Normal);
+            sender.SetTitle("O", UIControlState.Disabled);
             sender.Enabled = false;
 
             switch (compResult)
             {
                 case 1:
-                    a1Button.SetTitle("O", UIControlState.Normal);
-                    a1Button.SetTitle("O", UIControlState.Disabled);
+                    a1Button.SetTitle("X", UIControlState.Normal);
+                    a1Button.SetTitle("X", UIControlState.Disabled);
                     a1Button.Enabled = false;
                     break;
                 case 2:
-                    a2Button.SetTitle("O", UIControlState.Normal);
-                    a2Button.SetTitle("O", UIControlState.Disabled);
+                    a2Button.SetTitle("X", UIControlState.Normal);
+                    a2Button.SetTitle("X", UIControlState.Disabled);
                     a2Button.Enabled = false;
                     break;
                 case 3:
-                    a3Button.SetTitle("O", UIControlState.Normal);
-                    a3Button.SetTitle("O", UIControlState.Disabled);
+                    a3Button.SetTitle("X", UIControlState.Normal);
+                    a3Button.SetTitle("X", UIControlState.Disabled);
                     a3Button.Enabled = false;
                     break;
                 case 4:
-                    b1Button.SetTitle("O", UIControlState.Normal);
-                    b1Button.SetTitle("O", UIControlState.Disabled);
+                    b1Button.SetTitle("X", UIControlState.Normal);
+                    b1Button.SetTitle("X", UIControlState.Disabled);
                     b1Button.Enabled = false;
                     break;
                 case 5:
-                    b2Button.SetTitle("O", UIControlState.Normal);
-                    b2Button.SetTitle("O", UIControlState.Disabled);
+                    b2Button.SetTitle("X", UIControlState.Normal);
+                    b2Button.SetTitle("X", UIControlState.Disabled);
                     b2Button.Enabled = false;
                     break;
                 case 6:
-                    b3Button.SetTitle("O", UIControlState.Normal);
-                    b3Button.SetTitle("O", UIControlState.Disabled);
+                    b3Button.SetTitle("X", UIControlState.Normal);
+                    b3Button.SetTitle("X", UIControlState.Disabled);
                     b3Button.Enabled = false;
                     break;
                 case 7:
-                    c1Button.SetTitle("O", UIControlState.Normal);
-                    c1Button.SetTitle("O", UIControlState.Disabled);
+                    c1Button.SetTitle("X", UIControlState.Normal);
+                    c1Button.SetTitle("X", UIControlState.Disabled);
                     c1Button.Enabled = false;
                     break;
                 case 8:
-                    c2Button.SetTitle("O", UIControlState.Normal);
-                    c2Button.SetTitle("O", UIControlState.Disabled);
+                    c2Button.SetTitle("X", UIControlState.Normal);
+                    c2Button.SetTitle("X", UIControlState.Disabled);
                     c2Button.Enabled = false;
                     break;
                 case 9:
-                    c3Button.SetTitle("O", UIControlState.Normal);
-                    c3Button.SetTitle("O", UIControlState.Disabled);
+                    c3Button.SetTitle("X", UIControlState.Normal);
+                    c3Button.SetTitle("X", UIControlState.Disabled);
                     c3Button.Enabled = false;
                     break;
                 default:

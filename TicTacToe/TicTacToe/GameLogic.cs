@@ -25,7 +25,7 @@ namespace TicTacToe
         {
             int i = (buttonNumber - 1) / MAXROW;
             int j = (buttonNumber - 1) % MAXCOLUMN;
-            board[i, j] = 'X';
+            board[i, j] = 'O';
             openBoard[i, j] = false;
             playerTurn++;
             if (!CheckForWin() && playerTurn != 10)
@@ -66,7 +66,7 @@ namespace TicTacToe
                 column = rand.Next(MAXCOLUMN);
             } while (!openBoard[row, column]); 
 
-            board[row, column] = 'O';
+            board[row, column] = 'X';
             openBoard[row, column] = false;
             result = grid[row, column];
             playerTurn++;
