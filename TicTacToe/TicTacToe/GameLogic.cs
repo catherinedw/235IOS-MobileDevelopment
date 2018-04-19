@@ -12,31 +12,40 @@ namespace TicTacToe
         /*** variables ***/
         const int MAXROW = 3, MAXCOLUMN = 3;
         private char[,] board = new char[MAXROW, MAXCOLUMN]; // keep track of which squares have been filled
+        public int[,] grid = new int[3,3] { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 }}; // keep track of which squares have been filled
+        //public string[,] grid = new string[3, 3] { { "a1Button", "a2Button", "a3Button" }, { "b1Button", "b2Button", "b3Button" }, { "c1Button", "c2Button", "c3Button" } }; // keep track of which squares have been filled
+
         private bool[,] openBoard = new bool[MAXROW, MAXCOLUMN];  // keep track of which squares have been filled
         public Random rand = new Random();  // Random number generator
         public int playerTurn = 1;
         public string player;
+        public char markToPlace;
+        public string MarkToPlace { get { return markToPlace.ToString(); } }
+        public int compButtonNumber;
+        public int CompButtonNumber { get { return compButtonNumber; } }
 
         //Marks down the players symbols
-        public void PlayerChoice(int buttonNumber)
+        public int PlayerChoice(int buttonNumber)
         {
             int i = (buttonNumber - 1) / MAXCOLUMN;
             int j = (buttonNumber - 1) % MAXROW;
             if (CheckChoice(i, j))
             {
                 board[i, j] = 'X';
+                openBoard[i, j] = false;
                 playerTurn++;
-                if (CheckForWin())
+                if (!CheckForWin())
                 {
                     player = "You";
                 }
                 else
                 {
-                    ComputerChoice(buttonNumber);  
+                   compButtonNumber = ComputerChoice();  
                 } 
             }
+            return compButtonNumber;
         }
-                             
+
         // Reset the board.
         public void NewGame()
         {
@@ -52,7 +61,7 @@ namespace TicTacToe
         }
 
         //This marks a the computers randomly selected button
-        void ComputerChoice(int buttonNumber)//char[,] board)
+        public int ComputerChoice()//char[,] board)
         {
             int row = 0;
             int column = 0;
@@ -60,13 +69,16 @@ namespace TicTacToe
             {
                 row = rand.Next(MAXROW);
                 column = rand.Next(MAXCOLUMN);
-            } while (!CheckChoice(row, column)|| playerTurn < 10);
+            } while (openBoard[row, column]);
             playerTurn++;
             board[row, column] = 'O';
+            int result = grid[row, column];
             if (CheckForWin())
             {
                 player = "Computer";
             }
+            //need to return button number
+            return result;
         }
 
         //This makes sure that the button isnt already taken 

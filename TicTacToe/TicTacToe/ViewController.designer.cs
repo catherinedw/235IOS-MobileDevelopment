@@ -51,7 +51,7 @@ namespace TicTacToe
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UILabel instructorLabel { get; set; }
+        UIKit.UILabel communicationLabel { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -112,9 +112,9 @@ namespace TicTacToe
                 c3Button = null;
             }
 
-            if (instructorLabel != null) {
-                instructorLabel.Dispose ();
-                instructorLabel = null;
+            if (communicationLabel != null) {
+                communicationLabel.Dispose ();
+                communicationLabel = null;
             }
 
             if (newGameButton != null) {

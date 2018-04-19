@@ -43,24 +43,28 @@ namespace TicTacToe
 
         partial void A1Button_TouchUpInside(UIButton sender)
         {
-            game.PlayerChoice((int)sender.Tag);
-            //sender.SetTitle(game.NumberToPlace, UIControlState.Normal);
-            sender.SetTitle("X", UIControlState.Normal);    
-            sender.SetTitle("X", UIControlState.Disabled);
-            sender.Enabled = false;
+            int compResult = game.PlayerChoice((int)sender.Tag);
+            sender.SetTitle("X", UIControlState.Normal);
+            //UIButton button = .SetTitle("O", UIControlState.Normal);
+
+
+            //sender.SetTitle("X", UIControlState.Disabled);
+            //sender.Enabled = false;
+            /*
             bool result = game.CheckForWin();
             if (result)
             {
-                messageLabel.Text = ("{0} win!", player);
+               //communicationLabel.Text = ("{0} win!", game.player);
             }
             else
             {
-                if (playerTurn == 9)
+                if (game.playerTurn == 9)
                 {
-                    messageLabel.Text = "Draw";
+                    communicationLabel.Text = "Draw";
                 }
-                messageLabel.Text = "Draw";
+
             }
+            */
                 
 
         }

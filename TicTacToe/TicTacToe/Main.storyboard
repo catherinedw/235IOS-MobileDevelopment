@@ -168,7 +168,7 @@
                         <outlet property="c1Button" destination="404" id="name-outlet-404"/>
                         <outlet property="c2Button" destination="405" id="name-outlet-405"/>
                         <outlet property="c3Button" destination="406" id="name-outlet-406"/>
-                        <outlet property="instructorLabel" destination="408" id="name-outlet-408"/>
+                        <outlet property="communicationLabel" destination="408" id="name-outlet-408"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
