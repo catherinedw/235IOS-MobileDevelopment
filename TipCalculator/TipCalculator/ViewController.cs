@@ -33,24 +33,24 @@ namespace TipCalculator
             //This gets rid of the text when you are done editing
  //TODO validate input
             amountTextView.EditingDidEndOnExit += (sender, e) => {
-                tipAmount = Math.Round(Double.Parse(amountTextView.Text) * serviceSlider.Value / 100);
-                taxAmount = Math.Round(Double.Parse(amountTextView.Text) * taxPercent / 100);
+                tipAmount = Math.Round(Double.Parse(amountTextView.Text) * serviceSlider.Value / 100, 2);
+                taxAmount = Math.Round(Double.Parse(amountTextView.Text) * taxPercent / 100, 2);
                 //should make this a method
-                total = Math.Round(Double.Parse(amountTextView.Text) + tipAmount + taxAmount);
+                total = Math.Round(Double.Parse(amountTextView.Text) + tipAmount + taxAmount, 2);
                 //should make this a method
-                tipAmountTextView.Text = tipAmount.ToString();
-                taxAmountTextView.Text = taxAmount.ToString();
-                totalTextView.Text = total.ToString();//(Double.Parse(amountTextView.Text) + Double.Parse(tipAmountTextView.Text) + Double.Parse(taxAmountTextView.Text)).ToString();
+                tipAmountTextView.Text = "$" + tipAmount.ToString();
+                taxAmountTextView.Text = "$" + taxAmount.ToString();
+                totalTextView.Text = "$" + total.ToString();//(Double.Parse(amountTextView.Text) + Double.Parse(tipAmountTextView.Text) + Double.Parse(taxAmountTextView.Text)).ToString();
                 ((UITextField)sender).ResignFirstResponder();
             };
 
             tipPercentageTextView.EditingDidEndOnExit += (sender, e) => {
                 tipPercent = Int32.Parse(tipPercentageTextView.Text);
                 serviceSlider.Value = tipPercent; //this changes the slider value to match the input
-                tipAmount = Math.Round(Double.Parse(amountTextView.Text) * tipPercent / 100);
-                tipAmountTextView.Text = tipAmount.ToString();//(Double.Parse(amountTextView.Text) * Double.Parse(tipPercentageTextView.Text) / 100).ToString();
-                total = Math.Round(Double.Parse(amountTextView.Text) + tipAmount + taxAmount);
-                totalTextView.Text = total.ToString();//(Double.Parse(amountTextView.Text) + Double.Parse(tipAmountTextView.Text) + Double.Parse(taxAmountTextView.Text)).ToString();
+                tipAmount = Math.Round(Double.Parse(amountTextView.Text) * tipPercent / 100, 2);
+                tipAmountTextView.Text = "$" + tipAmount.ToString();//(Double.Parse(amountTextView.Text) * Double.Parse(tipPercentageTextView.Text) / 100).ToString();
+                total = Math.Round(Double.Parse(amountTextView.Text) + tipAmount + taxAmount, 2);
+                totalTextView.Text = "$" + total.ToString();//(Double.Parse(amountTextView.Text) + Double.Parse(tipAmountTextView.Text) + Double.Parse(taxAmountTextView.Text)).ToString();
                 ((UITextField)sender).ResignFirstResponder();
             };
 
@@ -58,10 +58,10 @@ namespace TipCalculator
                 //disable till switch on
                 if (taxPercentageTextView.UserInteractionEnabled)
                 {
-                    taxAmount = Math.Round(Double.Parse(amountTextView.Text) * Double.Parse(taxPercentageTextView.Text) / 100);
-                    taxAmountTextView.Text = taxAmount.ToString();//(Double.Parse(amountTextView.Text) * Double.Parse(tipPercentageTextView.Text) / 100).ToString();
-                    total = Math.Round(Double.Parse(amountTextView.Text) + tipAmount + taxAmount);
-                    totalTextView.Text = total.ToString();//(Double.Parse(amountTextView.Text) + Double.Parse(tipAmountTextView.Text) + Double.Parse(taxAmountTextView.Text)).ToString();
+                    taxAmount = Math.Round(Double.Parse(amountTextView.Text) * Double.Parse(taxPercentageTextView.Text) / 100, 2);
+                    taxAmountTextView.Text = "$" + taxAmount.ToString();//(Double.Parse(amountTextView.Text) * Double.Parse(tipPercentageTextView.Text) / 100).ToString();
+                    total = Math.Round(Double.Parse(amountTextView.Text) + tipAmount + taxAmount, 2);
+                    totalTextView.Text = "$" + total.ToString();//(Double.Parse(amountTextView.Text) + Double.Parse(tipAmountTextView.Text) + Double.Parse(taxAmountTextView.Text)).ToString();
                 }
                     ((UITextField)sender).ResignFirstResponder();
             };
@@ -72,10 +72,10 @@ namespace TipCalculator
         {
             int progress = (int)sender.Value;
             tipPercentageTextView.Text = progress.ToString();
-            tipAmount = Double.Parse(amountTextView.Text) * progress / 100;
-            tipAmountTextView.Text = tipAmount.ToString();
-            total = Double.Parse(amountTextView.Text) + tipAmount + taxAmount;
-            totalTextView.Text = total.ToString();
+            tipAmount = Math.Round(Double.Parse(amountTextView.Text) * progress / 100, 2);
+            tipAmountTextView.Text = "$" + tipAmount.ToString();
+            total = Math.Round(Double.Parse(amountTextView.Text) + tipAmount + taxAmount, 2);
+            totalTextView.Text = "$" + total.ToString();
             //tipAmountTextView.Text = progress.ToString();
         }
 
@@ -85,7 +85,8 @@ namespace TipCalculator
             bool setting = sender.On;
             if (setting) {
                 //TODO enable tax value edit
-                taxPercentageTextView.UserInteractionEnabled = true; 
+                taxPercentageTextView.UserInteractionEnabled = true;
+                taxPercentageTextView.AccessibilityLabel = "%";
             }
 
 //TODO what to do if turned back off
