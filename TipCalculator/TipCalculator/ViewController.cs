@@ -7,9 +7,8 @@ namespace TipCalculator
     public partial class ViewController : UIViewController
     {
         /***variables***/
-        //double amount;
         double tipAmount, taxAmount, total;
-        int taxPercent = 0;
+        int tipPercent, taxPercent = 0;
 
         protected ViewController(IntPtr handle) : base(handle)
         {
@@ -46,8 +45,9 @@ namespace TipCalculator
             };
 
             tipPercentageTextView.EditingDidEndOnExit += (sender, e) => {
-                serviceSlider.Value = Int32.Parse(tipPercentageTextView.Text); //this changes the slider value to match the input
-                tipAmount = Math.Round(Double.Parse(amountTextView.Text) * serviceSlider.Value / 100);
+                tipPercent = Int32.Parse(tipPercentageTextView.Text);
+                serviceSlider.Value = tipPercent; //this changes the slider value to match the input
+                tipAmount = Math.Round(Double.Parse(amountTextView.Text) * tipPercent / 100);
                 tipAmountTextView.Text = tipAmount.ToString();//(Double.Parse(amountTextView.Text) * Double.Parse(tipPercentageTextView.Text) / 100).ToString();
                 total = Math.Round(Double.Parse(amountTextView.Text) + tipAmount + taxAmount);
                 totalTextView.Text = total.ToString();//(Double.Parse(amountTextView.Text) + Double.Parse(tipAmountTextView.Text) + Double.Parse(taxAmountTextView.Text)).ToString();
@@ -83,30 +83,30 @@ namespace TipCalculator
         partial void taxSwitch_ValueChanged(UISwitch sender)
         {
             bool setting = sender.On;
-            if (taxSwitch.On) {
+            if (setting) {
                 //TODO enable tax value edit
                 taxPercentageTextView.UserInteractionEnabled = true; 
             }
-            else//if (!taxSwitch.On)
+
+//TODO what to do if turned back off
+            if (!setting)
             {
                 //TODO change total amount back to what it would be without tax
                 taxPercentageTextView.UserInteractionEnabled = false;
                 taxPercent = 0;
             }
-            //rightSwitch.SetState(setting, true);
+
         }
 
         //make sure you want to add tax
         partial void taxSwitch_ActionSheet(UISwitch sender)
         {
-            //Conroller
-            //ActionSheet
             var controller = UIAlertController.Create("Are You Sure You Want to Add a Tax?", null, UIAlertControllerStyle.ActionSheet);
 
             var yesAction = UIAlertAction.Create("Yes, I'm Sure!", UIAlertActionStyle.Destructive,
                 (action) =>
                 {
-                string msg = Int32.Parse(this.taxPercentageTextView.Text) == 0
+                string msg = taxPercent == 0
                       ? "You can breath easy, you live in Oregon"
                       : "Sorry you live in a State with state tax";
 
