@@ -54,11 +54,15 @@ namespace TipCalculator
             };
 
             taxPercentageTextView.EditingDidEndOnExit += (sender, e) => {
-                taxAmount = Double.Parse(amountTextView.Text) * Double.Parse(taxPercentageTextView.Text) / 100;
-                taxAmountTextView.Text = taxAmount.ToString();//(Double.Parse(amountTextView.Text) * Double.Parse(tipPercentageTextView.Text) / 100).ToString();
-                total = Double.Parse(amountTextView.Text) + tipAmount + taxAmount;
-                totalTextView.Text = total.ToString();//(Double.Parse(amountTextView.Text) + Double.Parse(tipAmountTextView.Text) + Double.Parse(taxAmountTextView.Text)).ToString();
-                ((UITextField)sender).ResignFirstResponder();
+                //TODO disable till switch on
+                if (taxPercentageTextView.UserInteractionEnabled)
+                {
+                    taxAmount = Double.Parse(amountTextView.Text) * Double.Parse(taxPercentageTextView.Text) / 100;
+                    taxAmountTextView.Text = taxAmount.ToString();//(Double.Parse(amountTextView.Text) * Double.Parse(tipPercentageTextView.Text) / 100).ToString();
+                    total = Double.Parse(amountTextView.Text) + tipAmount + taxAmount;
+                    totalTextView.Text = total.ToString();//(Double.Parse(amountTextView.Text) + Double.Parse(tipAmountTextView.Text) + Double.Parse(taxAmountTextView.Text)).ToString();
+                }
+                    ((UITextField)sender).ResignFirstResponder();
             };
             /*
             ((UIControl)View).TouchDown += (sender, e) => {
@@ -83,7 +87,10 @@ namespace TipCalculator
         partial void taxSwitch_ValueChanged(UISwitch sender)
         {
             bool setting = sender.On;
-            //leftSwitch.SetState(setting, true);
+            if (taxSwitch.On) {
+                //TODO enable tax value edit
+                taxPercentageTextView.UserInteractionEnabled = true; 
+            }
             //rightSwitch.SetState(setting, true);
         }
 
