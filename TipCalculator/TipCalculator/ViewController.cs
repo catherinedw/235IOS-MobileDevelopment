@@ -86,7 +86,6 @@ namespace TipCalculator
             if (setting) {
                 //TODO enable tax value edit
                 taxPercentageTextView.UserInteractionEnabled = true;
-                taxPercentageTextView.AccessibilityLabel = "%";
             }
 
 //TODO what to do if turned back off
