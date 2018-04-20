@@ -81,17 +81,17 @@ namespace TipCalculator
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextField totalText { get; set; }
 
-        [Action ("TaxSwitch_ActionSheet:")]
+        [Action ("serviceSlider_ValueChanged:")]
         [GeneratedCode ("iOS Designer", "1.0")]
-        partial void TaxSwitch_ActionSheet (UIKit.UISwitch sender);
+        partial void serviceSlider_ValueChanged (UIKit.UISlider sender);
 
-        [Action ("valueChanged_serviceslider:")]
+        [Action ("taxSwitch_ActionSheet:")]
         [GeneratedCode ("iOS Designer", "1.0")]
-        partial void valueChanged_serviceslider (UIKit.UISlider sender);
+        partial void taxSwitch_ActionSheet (UIKit.UISwitch sender);
 
-        [Action ("valueChanged_taxSwitch:")]
+        [Action ("taxSwitch_ValueChanged:")]
         [GeneratedCode ("iOS Designer", "1.0")]
-        partial void valueChanged_taxSwitch (UIKit.UISwitch sender);
+        partial void taxSwitch_ValueChanged (UIKit.UISwitch sender);
 
         void ReleaseDesignerOutlets ()
         {

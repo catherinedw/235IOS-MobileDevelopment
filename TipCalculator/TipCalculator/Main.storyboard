@@ -25,7 +25,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AmountofMeals" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="198" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount of Meals" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="198" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
                                 <rect key="frame" x="47" y="200" width="133" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -92,15 +92,15 @@
                                 <rect key="frame" x="123" y="229" width="216" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="valueChanged_serviceslider:" destination="BYZ-38-t0r" id="684" eventType="valueChanged"/>
+                                    <action selector="serviceSlider_ValueChanged:" destination="BYZ-38-t0r" id="943" eventType="valueChanged"/>
                                 </connections>
                             </slider>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="208" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
                                 <rect key="frame" x="47" y="382" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="valueChanged_taxSwitch:" destination="BYZ-38-t0r" id="685" eventType="valueChanged"/>
-                                    <action selector="TaxSwitch_ActionSheet:" destination="BYZ-38-t0r" id="709" eventType="valueChanged"/>
+                                    <action selector="taxSwitch_ValueChanged:" destination="BYZ-38-t0r" id="944" eventType="valueChanged"/>
+                                    <action selector="taxSwitch_ActionSheet:" destination="BYZ-38-t0r" id="945" eventType="valueChanged"/>
                                 </connections>
                             </switch>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="209" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
