@@ -47,7 +47,7 @@ namespace TipCalculator
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UITextField taxAmount { get; set; }
+        UIKit.UITextField taxAmountTextView { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -55,7 +55,7 @@ namespace TipCalculator
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UITextField taxPercentageText { get; set; }
+        UIKit.UITextField taxPercentageTextView { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -63,7 +63,7 @@ namespace TipCalculator
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UITextField tipAmountText { get; set; }
+        UIKit.UITextField tipAmountTextView { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -71,7 +71,7 @@ namespace TipCalculator
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UITextField tipPercentageText { get; set; }
+        UIKit.UITextField tipPercentageTextView { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -79,7 +79,7 @@ namespace TipCalculator
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UITextField totalText { get; set; }
+        UIKit.UITextField totalTextView { get; set; }
 
         [Action ("serviceSlider_ValueChanged:")]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -135,9 +135,9 @@ namespace TipCalculator
                 serviceSlider = null;
             }
 
-            if (taxAmount != null) {
-                taxAmount.Dispose ();
-                taxAmount = null;
+            if (taxAmountTextView != null) {
+                taxAmountTextView.Dispose ();
+                taxAmountTextView = null;
             }
 
             if (taxLabel != null) {
@@ -145,9 +145,9 @@ namespace TipCalculator
                 taxLabel = null;
             }
 
-            if (taxPercentageText != null) {
-                taxPercentageText.Dispose ();
-                taxPercentageText = null;
+            if (taxPercentageTextView != null) {
+                taxPercentageTextView.Dispose ();
+                taxPercentageTextView = null;
             }
 
             if (taxSwitch != null) {
@@ -155,9 +155,9 @@ namespace TipCalculator
                 taxSwitch = null;
             }
 
-            if (tipAmountText != null) {
-                tipAmountText.Dispose ();
-                tipAmountText = null;
+            if (tipAmountTextView != null) {
+                tipAmountTextView.Dispose ();
+                tipAmountTextView = null;
             }
 
             if (tipLabel != null) {
@@ -165,9 +165,9 @@ namespace TipCalculator
                 tipLabel = null;
             }
 
-            if (tipPercentageText != null) {
-                tipPercentageText.Dispose ();
-                tipPercentageText = null;
+            if (tipPercentageTextView != null) {
+                tipPercentageTextView.Dispose ();
+                tipPercentageTextView = null;
             }
 
             if (totalLabel != null) {
@@ -175,9 +175,9 @@ namespace TipCalculator
                 totalLabel = null;
             }
 
-            if (totalText != null) {
-                totalText.Dispose ();
-                totalText = null;
+            if (totalTextView != null) {
+                totalTextView.Dispose ();
+                totalTextView = null;
             }
         }
     }

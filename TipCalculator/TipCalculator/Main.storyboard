@@ -110,12 +110,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="210" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="210" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" text="18">
                                 <rect key="frame" x="115" y="305" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <accessibility key="accessibilityConfiguration" hint="0%"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="211" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
                                 <rect key="frame" x="115" y="344" width="97" height="30"/>
@@ -123,6 +124,7 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <accessibility key="accessibilityConfiguration" hint="0%"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="212" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
                                 <rect key="frame" x="250" y="305" width="97" height="30"/>
@@ -130,6 +132,7 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <accessibility key="accessibilityConfiguration" hint="0"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="213" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
                                 <rect key="frame" x="250" y="344" width="97" height="30"/>
@@ -137,6 +140,7 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <accessibility key="accessibilityConfiguration" hint="0"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="214" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
                                 <rect key="frame" x="218" y="486" width="97" height="30"/>
@@ -165,11 +169,11 @@
                         <outlet property="amountTextView" destination="209" id="name-outlet-209"/>
                         <outlet property="serviceSlider" destination="207" id="name-outlet-207"/>
                         <outlet property="taxSwitch" destination="208" id="name-outlet-208"/>
-                        <outlet property="tipPercentageText" destination="210" id="name-outlet-210"/>
-                        <outlet property="tipAmountText" destination="212" id="name-outlet-212"/>
-                        <outlet property="taxPercentageText" destination="211" id="name-outlet-211"/>
-                        <outlet property="taxAmount" destination="213" id="name-outlet-213"/>
-                        <outlet property="totalText" destination="214" id="name-outlet-214"/>
+                        <outlet property="tipPercentageTextView" destination="210" id="name-outlet-210"/>
+                        <outlet property="tipAmountTextView" destination="212" id="name-outlet-212"/>
+                        <outlet property="taxPercentageTextView" destination="211" id="name-outlet-211"/>
+                        <outlet property="taxAmountTextView" destination="213" id="name-outlet-213"/>
+                        <outlet property="totalTextView" destination="214" id="name-outlet-214"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
