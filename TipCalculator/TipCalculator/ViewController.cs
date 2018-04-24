@@ -30,17 +30,26 @@ namespace TipCalculator
             taxSwitch.On = false; //default of switch is off
             taxPercentageTextView.Text = taxPercent.ToString();
 
- //TODO validate input
+            //When the meal amount gets edited
             amountTextView.EditingDidEnd += (sender, e) => {
-                tipAmount = CalculateTipAmount(amountTextView.Text, Convert.ToDecimal(serviceSlider.Value));
-                taxAmount = CalculateTaxAmount(amountTextView.Text, taxPercent);
-                total = CalculateTotalAmount(amountTextView.Text, tipAmount, taxAmount);
-                tipAmountTextView.Text = "$" + tipAmount.ToString();
-                taxAmountTextView.Text = "$" + taxAmount.ToString();
-                totalTextView.Text = "$" + total.ToString();
+                try //to validate number input
+                {
+                    tipAmount = CalculateTipAmount(amountTextView.Text, Convert.ToDecimal(serviceSlider.Value));
+                    taxAmount = CalculateTaxAmount(amountTextView.Text, taxPercent);
+                    total = CalculateTotalAmount(amountTextView.Text, tipAmount, taxAmount);
+                    tipAmountTextView.Text = "$" + tipAmount.ToString();
+                    taxAmountTextView.Text = "$" + taxAmount.ToString();
+                    totalTextView.Text = "$" + total.ToString();
+                }
+                //This catches values outside of the scope
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error");
+                }
                 ((UITextField)sender).ResignFirstResponder();
             };
 
+            //When the tip percentage amount gets edited
             tipPercentageTextView.EditingDidEnd += (sender, e) => {
                 tipPercent = Int32.Parse(tipPercentageTextView.Text);
                 serviceSlider.Value = tipPercent; //this changes the slider value to match the input
@@ -51,6 +60,7 @@ namespace TipCalculator
                 ((UITextField)sender).ResignFirstResponder();
             };
 
+            //When the tax percentage gets edited
             taxPercentageTextView.EditingDidEnd += (sender, e) => {
                 //disable till switch on
                 if (taxPercentageTextView.UserInteractionEnabled)
@@ -81,7 +91,7 @@ namespace TipCalculator
             totalTextView.Text = "$" + total.ToString();
         }
 
-        //switch change Event
+        //switch change of value Event
         partial void taxSwitch_ValueChanged(UISwitch sender)
         {
             bool setting = sender.On;
@@ -103,7 +113,7 @@ namespace TipCalculator
 
         }
 
-        //Event to make sure you want to add tax when the switch is toggle on
+        //Event to make sure you want to add tax when the switch is toggled on, and to confirm you dont want tax when toggled off
         partial void taxSwitch_ActionSheet(UISwitch sender)
         {
             var controller = UIAlertController.Create("Are You Sure You Want to Add a Tax?", null, UIAlertControllerStyle.ActionSheet);
@@ -121,23 +131,19 @@ namespace TipCalculator
                     controller2.AddAction(cancelAction);
                     this.PresentViewController(controller2, true, null);
                 });
+
             var noAction = UIAlertAction.Create("No way!", UIAlertActionStyle.Cancel,//Cancel, null);
                 (action) =>
                 {
                     taxSwitch.On = false;
                 });
+
             controller.AddAction(noAction);
             if (taxSwitch.On)
             {
                 controller.AddAction(yesAction);
             }
-//TODO if noAction then set switch to off
-/*
-            if ()
-            {
-                taxSwitch.On = false;
-            }
-*/
+
             var ppc = controller.PopoverPresentationController;
             if (ppc != null)
             {
@@ -146,17 +152,19 @@ namespace TipCalculator
             }
 
             PresentViewController(controller, true, null);
-
         }
 
+        //Calculates tip
         private decimal CalculateTipAmount(string totalA, decimal tipP)
         {
             return Math.Round(Convert.ToDecimal(totalA) * tipP / 100, 2);
         }
+        //Calculates tax
         private decimal CalculateTaxAmount(string totalA, decimal taxP)
         {
             return Math.Round(Convert.ToDecimal(totalA) * taxP / 100, 2);
         }
+        //Calculates tax
         private decimal CalculateTotalAmount(string totalA, decimal tipA, decimal taxA)
         {
             return Math.Round(Convert.ToDecimal(totalA) + tipA + taxA, 2);
