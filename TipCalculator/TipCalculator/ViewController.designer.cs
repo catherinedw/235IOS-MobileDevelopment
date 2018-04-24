@@ -81,6 +81,10 @@ namespace TipCalculator
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextField totalTextView { get; set; }
 
+        [Action ("OnTapGestureRecognized:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void OnTapGestureRecognized (UIKit.UITapGestureRecognizer sender);
+
         [Action ("serviceSlider_ValueChanged:")]
         [GeneratedCode ("iOS Designer", "1.0")]
         partial void serviceSlider_ValueChanged (UIKit.UISlider sender);

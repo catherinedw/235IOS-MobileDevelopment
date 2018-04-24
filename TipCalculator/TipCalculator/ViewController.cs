@@ -6,8 +6,9 @@ namespace TipCalculator
 {
     public partial class ViewController : UIViewController
     {
+
         /***variables***/
-        double tipAmount, taxAmount, total;
+        decimal tipAmount, taxAmount, total;
         int tipPercent, taxPercent = 0;
 
         protected ViewController(IntPtr handle) : base(handle)
@@ -26,45 +27,54 @@ namespace TipCalculator
         {
             base.ViewDidLoad();
             // Perform any additional setup after loading the view, typically from a nib.
-            //default of switch is off
-            taxSwitch.On = false;
-            taxPercentageTextView.Text = ""; //taxPercent.ToString();
+            taxSwitch.On = false; //default of switch is off
+            taxPercentageTextView.Text = "";//taxPercent.ToString();
 
-            //This gets rid of the text when you are done editing
  //TODO validate input
-            amountTextView.EditingDidEndOnExit += (sender, e) => {
-                tipAmount = Math.Round(Double.Parse(amountTextView.Text) * serviceSlider.Value / 100, 2);
-                taxAmount = Math.Round(Double.Parse(amountTextView.Text) * taxPercent / 100, 2);
-                //should make this a method
-                total = Math.Round(Double.Parse(amountTextView.Text) + tipAmount + taxAmount, 2);
-                //should make this a method
+            amountTextView.EditingDidEnd += (sender, e) => {
+                //tipAmount = Math.Round(Double.Parse(amountTextView.Text) * serviceSlider.Value / 100, 2);
+                //taxAmount = Math.Round(Decimal.Parse(amountTextView.Text) * taxPercent / 100, 2);
+                //total = Math.Round(Decimal.Parse(amountTextView.Text) + tipAmount + taxAmount, 2);
+                tipAmount = CalculateTipAmount(amountTextView.Text, Convert.ToDecimal(serviceSlider.Value));
+                taxAmount = CalculateTaxAmount(amountTextView.Text, taxPercent);
+                total = CalculateTotalAmount(amountTextView.Text, tipAmount, taxAmount);
                 tipAmountTextView.Text = "$" + tipAmount.ToString();
                 taxAmountTextView.Text = "$" + taxAmount.ToString();
-                totalTextView.Text = "$" + total.ToString();//(Double.Parse(amountTextView.Text) + Double.Parse(tipAmountTextView.Text) + Double.Parse(taxAmountTextView.Text)).ToString();
+                totalTextView.Text = "$" + total.ToString();
                 ((UITextField)sender).ResignFirstResponder();
             };
 
-            tipPercentageTextView.EditingDidEndOnExit += (sender, e) => {
+            tipPercentageTextView.EditingDidEnd += (sender, e) => {
                 tipPercent = Int32.Parse(tipPercentageTextView.Text);
                 serviceSlider.Value = tipPercent; //this changes the slider value to match the input
-                tipAmount = Math.Round(Double.Parse(amountTextView.Text) * tipPercent / 100, 2);
-                tipAmountTextView.Text = "$" + tipAmount.ToString();//(Double.Parse(amountTextView.Text) * Double.Parse(tipPercentageTextView.Text) / 100).ToString();
-                total = Math.Round(Double.Parse(amountTextView.Text) + tipAmount + taxAmount, 2);
-                totalTextView.Text = "$" + total.ToString();//(Double.Parse(amountTextView.Text) + Double.Parse(tipAmountTextView.Text) + Double.Parse(taxAmountTextView.Text)).ToString();
+                //tipAmount = Math.Round(Double.Parse(amountTextView.Text) * tipPercent / 100, 2);
+                tipAmount = CalculateTipAmount(amountTextView.Text, tipPercent);
+                //total = Math.Round(Double.Parse(amountTextView.Text) + tipAmount + taxAmount, 2);
+                total = CalculateTotalAmount(amountTextView.Text, tipAmount, taxAmount);
+                tipAmountTextView.Text = "$" + tipAmount.ToString();
+                totalTextView.Text = "$" + total.ToString();
                 ((UITextField)sender).ResignFirstResponder();
             };
 
-            taxPercentageTextView.EditingDidEndOnExit += (sender, e) => {
+            taxPercentageTextView.EditingDidEnd += (sender, e) => {
                 //disable till switch on
                 if (taxPercentageTextView.UserInteractionEnabled)
                 {
-                    taxAmount = Math.Round(Double.Parse(amountTextView.Text) * Double.Parse(taxPercentageTextView.Text) / 100, 2);
-                    taxAmountTextView.Text = "$" + taxAmount.ToString();//(Double.Parse(amountTextView.Text) * Double.Parse(tipPercentageTextView.Text) / 100).ToString();
-                    total = Math.Round(Double.Parse(amountTextView.Text) + tipAmount + taxAmount, 2);
-                    totalTextView.Text = "$" + total.ToString();//(Double.Parse(amountTextView.Text) + Double.Parse(tipAmountTextView.Text) + Double.Parse(taxAmountTextView.Text)).ToString();
+                    taxAmount = CalculateTaxAmount(amountTextView.Text, Convert.ToDecimal(taxPercentageTextView.Text));
+                    total = CalculateTotalAmount(amountTextView.Text, tipAmount, taxAmount);
+                    //taxAmount = Math.Round(Double.Parse(amountTextView.Text) * Double.Parse(taxPercentageTextView.Text) / 100, 2);
+                    //total = Math.Round(Double.Parse(amountTextView.Text) + tipAmount + taxAmount, 2);
+                    taxAmountTextView.Text = "$" + taxAmount.ToString();
+                    totalTextView.Text = "$" + total.ToString();
                 }
                     ((UITextField)sender).ResignFirstResponder();
             };
+        }
+
+        //This gets rid of the text when you are done editing
+        partial void OnTapGestureRecognized(UITapGestureRecognizer sender)
+        {
+            amountTextView.ResignFirstResponder();             tipPercentageTextView.ResignFirstResponder();             taxPercentageTextView.ResignFirstResponder();
         }
 
         //slide the slider
@@ -72,33 +82,39 @@ namespace TipCalculator
         {
             int progress = (int)sender.Value;
             tipPercentageTextView.Text = progress.ToString();
-            tipAmount = Math.Round(Double.Parse(amountTextView.Text) * progress / 100, 2);
+            tipAmount = CalculateTipAmount(amountTextView.Text, Convert.ToDecimal(progress));
+            total = CalculateTotalAmount(amountTextView.Text, tipAmount, taxAmount);
+            //tipAmount = Math.Round(Double.Parse(amountTextView.Text) * progress / 100, 2);
             tipAmountTextView.Text = "$" + tipAmount.ToString();
-            total = Math.Round(Double.Parse(amountTextView.Text) + tipAmount + taxAmount, 2);
+            //total = Math.Round(Double.Parse(amountTextView.Text) + tipAmount + taxAmount, 2);
             totalTextView.Text = "$" + total.ToString();
-            //tipAmountTextView.Text = progress.ToString();
         }
 
-        //switch change
+        //switch change Event
         partial void taxSwitch_ValueChanged(UISwitch sender)
         {
             bool setting = sender.On;
-            if (setting) {
-                //TODO enable tax value edit
-                taxPercentageTextView.UserInteractionEnabled = true;
-            }
-
-//TODO what to do if turned back off
-            if (!setting)
+            if (setting) //switch on
             {
-                //TODO change total amount back to what it would be without tax
+                taxPercentageTextView.UserInteractionEnabled = true; //Makes the tax percent text view editable
+            }
+            if (!setting) //switch off 
+            {
+                //changes total amount back to what it would be without tax
                 taxPercentageTextView.UserInteractionEnabled = false;
                 taxPercent = 0;
+                taxPercentageTextView.Text = "0";
+                taxAmount = CalculateTaxAmount(amountTextView.Text, taxPercent);
+                total = CalculateTotalAmount(amountTextView.Text, tipAmount, taxAmount);
+                //taxAmount = Math.Round(Double.Parse(amountTextView.Text) * taxPercent / 100, 2);
+                taxAmountTextView.Text = "$" + taxAmount.ToString();
+                //total = Math.Round(Double.Parse(amountTextView.Text) + tipAmount + taxAmount, 2);
+                totalTextView.Text = "$" + total.ToString();
             }
 
         }
 
-        //make sure you want to add tax
+        //Event to make sure you want to add tax when the switch is toggle on
         partial void taxSwitch_ActionSheet(UISwitch sender)
         {
             var controller = UIAlertController.Create("Are You Sure You Want to Add a Tax?", null, UIAlertControllerStyle.ActionSheet);
@@ -121,7 +137,13 @@ namespace TipCalculator
             var noAction = UIAlertAction.Create("No way!", UIAlertActionStyle.Cancel, null);
             controller.AddAction(noAction);
             controller.AddAction(yesAction);
-
+//TODO if noAction then set switch to off
+/*
+            if ()
+            {
+                taxSwitch.On = false;
+            }
+*/
             var ppc = controller.PopoverPresentationController;
             if (ppc != null)
             {
@@ -133,25 +155,18 @@ namespace TipCalculator
 
         }
 
-
-        /*
-        partial void choiceSegmentedControl_ValueChanged(UISegmentedControl sender)
+        private decimal CalculateTipAmount(string totalA, decimal tipP)
         {
-            if (sender.SelectedSegment == 0)    // Switches selected
-            {
-                leftSwitch.Hidden = false;
-                rightSwitch.Hidden = false;
-                doSomethingButton.Hidden = true;
-            }
-            else
-            {
-                leftSwitch.Hidden = true;           // Button selected
-                rightSwitch.Hidden = true;
-                doSomethingButton.Hidden = false;
-            }
-
+            return Math.Round(Convert.ToDecimal(totalA) * tipP / 100, 2);
         }
-        */
+        private decimal CalculateTaxAmount(string totalA, decimal taxP)
+        {
+            return Math.Round(Convert.ToDecimal(totalA) * taxP / 100, 2);
+        }
+        private decimal CalculateTotalAmount(string totalA, decimal tipA, decimal taxA)
+        {
+            return Math.Round(Convert.ToDecimal(totalA) + tipA + taxA, 2);
+        }
 
         #endregion
     }

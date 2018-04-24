@@ -218,6 +218,9 @@
                             <constraint id="4135" firstItem="212" firstAttribute="centerX" secondItem="213" secondAttribute="centerX"/>
                             <constraint id="4136" firstItem="206" firstAttribute="centerX" secondItem="213" secondAttribute="centerX"/>
                         </constraints>
+                        <connections>
+                            <outletCollection id="6382" property="gestureRecognizers" destination="6381"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="headerLabel" destination="197" id="name-outlet-197"/>
@@ -241,6 +244,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="6381">
+                    <connections>
+                        <action selector="OnTapGestureRecognized:" destination="BYZ-38-t0r" id="6463"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
