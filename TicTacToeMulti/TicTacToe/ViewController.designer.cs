@@ -27,6 +27,10 @@ namespace TicTacToe
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton aboutButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton b1Button { get; set; }
 
         [Outlet]
@@ -61,6 +65,10 @@ namespace TicTacToe
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton newGameButton { get; set; }
 
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton scroreButton { get; set; }
+
         [Action ("A1Button_TouchUpInside:")]
         [GeneratedCode ("iOS Designer", "1.0")]
         partial void A1Button_TouchUpInside (UIKit.UIButton sender);
@@ -84,6 +92,11 @@ namespace TicTacToe
             if (a3Button != null) {
                 a3Button.Dispose ();
                 a3Button = null;
+            }
+
+            if (aboutButton != null) {
+                aboutButton.Dispose ();
+                aboutButton = null;
             }
 
             if (b1Button != null) {
@@ -129,6 +142,11 @@ namespace TicTacToe
             if (newGameButton != null) {
                 newGameButton.Dispose ();
                 newGameButton = null;
+            }
+
+            if (scroreButton != null) {
+                scroreButton.Dispose ();
+                scroreButton = null;
             }
         }
     }
