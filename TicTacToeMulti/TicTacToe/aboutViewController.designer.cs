@@ -14,5 +14,16 @@ namespace TicTacToe
     [Register ("aboutViewController")]
     partial class aboutViewController
     {
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel aboutLabel { get; set; }
+
+        void ReleaseDesignerOutlets ()
+        {
+            if (aboutLabel != null) {
+                aboutLabel.Dispose ();
+                aboutLabel = null;
+            }
+        }
     }
 }

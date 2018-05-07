@@ -14,5 +14,16 @@ namespace TicTacToe
     [Register ("scoreViewController")]
     partial class scoreViewController
     {
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel scoreLabel { get; set; }
+
+        void ReleaseDesignerOutlets ()
+        {
+            if (scoreLabel != null) {
+                scoreLabel.Dispose ();
+                scoreLabel = null;
+            }
+        }
     }
 }

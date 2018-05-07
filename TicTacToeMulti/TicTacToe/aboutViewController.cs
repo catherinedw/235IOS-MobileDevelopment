@@ -9,5 +9,11 @@ namespace TicTacToe
         public aboutViewController (IntPtr handle) : base (handle)
         {
         }
+        public override void ViewDidLoad()
+        {
+            base.ViewDidLoad();
+            aboutLabel.Text += "Tic Tac Toe rules:" +
+                "App produced by Catherine Whitaker in Spring 2018";
+        }
     }
 }

@@ -8,6 +8,7 @@ namespace TicTacToe
     {
         //Create an instance of the game
         private GameLogic game = new GameLogic();
+        private int score;
 
         protected ViewController(IntPtr handle) : base(handle)
         {
@@ -124,6 +125,31 @@ namespace TicTacToe
             {
                 communicationLabel.Text = "It's a draw!";
             }
+
+        }
+
+        partial void TouchUpInsideEachButton(UIButton sender)
+        {
+            //pass the score
+            // score = ;
+            UIButton button = (UIButton)sender;
+
+            UIViewController controller;
+            if (button.TitleLabel.Text == "About")
+            {
+                controller = this.Storyboard.InstantiateViewController("HelloViewController") as aboutViewController;
+                //((aboutViewController)controller).UserName = userName;
+            }
+            else if (button.TitleLabel.Text == "Score")
+            {
+                controller = this.Storyboard.InstantiateViewController("GoodbyeViewController") as scoreViewController;
+                //((scoreViewController)controller).UserName = userName;
+            }
+            else 
+            {
+                //do nothing
+            }
+            this.NavigationController.PushViewController(controller, true);
 
         }
     }
