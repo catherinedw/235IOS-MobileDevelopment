@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="197" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="200.5" y="246" width="79" height="30"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="backgroundColor" colorSpace="calibratedWhite" white="0.666666666666667" alpha="1"/>
+                                <state key="normal" title="New Game"/>
+                                <constraints>
+                                    <constraint id="1671" firstAttribute="width" constant="79"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="NewGameButton_TouchUpInside:" destination="BYZ-38-t0r" id="2447" eventType="touchUpInside"/>
+                                </connections>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="397" translatesAutoresizingMaskIntoConstraints="NO" tag="1">
+                                <rect key="frame" x="151" y="105.5" width="57" height="41"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.49803921568627452" green="0" blue="0.49803921568627452" alpha="1"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint id="1600" firstItem="397" firstAttribute="height" constant="41"/>
+                                    <constraint id="1601" firstItem="397" firstAttribute="width" constant="57"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="A1Button_TouchUpInside:" destination="BYZ-38-t0r" id="2510" eventType="touchUpInside"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="399" translatesAutoresizingMaskIntoConstraints="NO" tag="4">
+                                <rect key="frame" x="151" y="151" width="57" height="41"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.49803921568627452" green="0" blue="0.49803921568627452" alpha="1"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <connections>
+                                    <action selector="A1Button_TouchUpInside:" destination="BYZ-38-t0r" id="2574" eventType="touchUpInside"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="400" translatesAutoresizingMaskIntoConstraints="NO" tag="7">
+                                <rect key="frame" x="151" y="197" width="57" height="41"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.49803921568627452" green="0" blue="0.49803921568627452" alpha="1"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <connections>
+                                    <action selector="A1Button_TouchUpInside:" destination="BYZ-38-t0r" id="2638" eventType="touchUpInside"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="401" translatesAutoresizingMaskIntoConstraints="NO" tag="2">
+                                <rect key="frame" x="211.5" y="105.5" width="57" height="41"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.49803921568627452" green="0" blue="0.49803921568627452" alpha="1"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <connections>
+                                    <action selector="A1Button_TouchUpInside:" destination="BYZ-38-t0r" id="2511" eventType="touchUpInside"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="402" translatesAutoresizingMaskIntoConstraints="NO" tag="5">
+                                <rect key="frame" x="211.5" y="151" width="57" height="41"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.49803921568627452" green="0" blue="0.49803921568627452" alpha="1"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <connections>
+                                    <action selector="A1Button_TouchUpInside:" destination="BYZ-38-t0r" id="2575" eventType="touchUpInside"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="403" translatesAutoresizingMaskIntoConstraints="NO" tag="8">
+                                <rect key="frame" x="211.5" y="197" width="57" height="41"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.49803921568627452" green="0" blue="0.49803921568627452" alpha="1"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <connections>
+                                    <action selector="A1Button_TouchUpInside:" destination="BYZ-38-t0r" id="2639" eventType="touchUpInside"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="404" translatesAutoresizingMaskIntoConstraints="NO" tag="3">
+                                <rect key="frame" x="272" y="105.5" width="57" height="41"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.49803921568627452" green="0" blue="0.49803921568627452" alpha="1"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <connections>
+                                    <action selector="A1Button_TouchUpInside:" destination="BYZ-38-t0r" id="2512" eventType="touchUpInside"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="405" translatesAutoresizingMaskIntoConstraints="NO" tag="6">
+                                <rect key="frame" x="272" y="151" width="57" height="41"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.49803921568627452" green="0" blue="0.49803921568627452" alpha="1"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <connections>
+                                    <action selector="A1Button_TouchUpInside:" destination="BYZ-38-t0r" id="2637" eventType="touchUpInside"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="406" translatesAutoresizingMaskIntoConstraints="NO" tag="9">
+                                <rect key="frame" x="272" y="197" width="57" height="41"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.49803921568627452" green="0" blue="0.49803921568627452" alpha="1"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <connections>
+                                    <action selector="A1Button_TouchUpInside:" destination="BYZ-38-t0r" id="2701" eventType="touchUpInside"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please pick a button where you want to play" lineBreakMode="wordWrap" id="408" translatesAutoresizingMaskIntoConstraints="NO" adjustsFontForContentSizeCategory="YES" textAlignment="center" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" numberOfLines="0">
+                                <rect key="frame" x="137.5" y="42.5" width="205" height="55"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="889" firstAttribute="width" constant="205"/>
+                                    <constraint id="890" firstAttribute="height" constant="55"/>
+                                </constraints>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TIC TAC TOE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4547" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="190.5" y="20.5" width="99" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint id="1599" firstItem="8bC-Xf-vdC" firstAttribute="centerY" secondItem="401" secondAttribute="centerY" constant="34"/>
+                            <constraint id="1602" firstItem="401" firstAttribute="width" secondItem="397" secondAttribute="width"/>
+                            <constraint id="1603" firstItem="404" firstAttribute="width" secondItem="397" secondAttribute="width"/>
+                            <constraint id="1604" firstItem="405" firstAttribute="width" secondItem="397" secondAttribute="width"/>
+                            <constraint id="1605" firstItem="402" firstAttribute="width" secondItem="397" secondAttribute="width"/>
+                            <constraint id="1606" firstItem="399" firstAttribute="width" secondItem="397" secondAttribute="width"/>
+                            <constraint id="1607" firstItem="400" firstAttribute="width" secondItem="397" secondAttribute="width"/>
+                            <constraint id="1608" firstItem="403" firstAttribute="width" secondItem="397" secondAttribute="width"/>
+                            <constraint id="1609" firstItem="406" firstAttribute="width" secondItem="397" secondAttribute="width"/>
+                            <constraint id="1610" firstItem="401" firstAttribute="height" secondItem="397" secondAttribute="height"/>
+                            <constraint id="1611" firstItem="404" firstAttribute="height" secondItem="397" secondAttribute="height"/>
+                            <constraint id="1612" firstItem="405" firstAttribute="height" secondItem="397" secondAttribute="height"/>
+                            <constraint id="1613" firstItem="402" firstAttribute="height" secondItem="397" secondAttribute="height"/>
+                            <constraint id="1614" firstItem="399" firstAttribute="height" secondItem="397" secondAttribute="height"/>
+                            <constraint id="1615" firstItem="400" firstAttribute="height" secondItem="397" secondAttribute="height"/>
+                            <constraint id="1616" firstItem="403" firstAttribute="height" secondItem="397" secondAttribute="height"/>
+                            <constraint id="1617" firstItem="406" firstAttribute="height" secondItem="397" secondAttribute="height"/>
+                            <constraint id="1619" firstItem="401" firstAttribute="centerX" secondItem="403" secondAttribute="centerX"/>
+                            <constraint id="1620" firstItem="408" firstAttribute="centerX" secondItem="403" secondAttribute="centerX"/>
+                            <constraint id="1624" firstItem="408" firstAttribute="centerX" secondItem="403" secondAttribute="centerX"/>
+                            <constraint id="1628" firstItem="408" firstAttribute="centerX" secondItem="403" secondAttribute="centerX"/>
+                            <constraint id="1630" firstItem="402" firstAttribute="centerX" secondItem="403" secondAttribute="centerX"/>
+                            <constraint id="1632" firstItem="408" firstAttribute="centerX" secondItem="403" secondAttribute="centerX"/>
+                            <constraint id="1634" firstItem="397" firstAttribute="centerY" secondItem="401" secondAttribute="centerY"/>
+                            <constraint id="1635" firstItem="404" firstAttribute="centerY" secondItem="401" secondAttribute="centerY"/>
+                            <constraint id="1636" firstItem="399" firstAttribute="centerY" secondItem="402" secondAttribute="centerY"/>
+                            <constraint id="1638" firstItem="403" firstAttribute="centerY" secondItem="406" secondAttribute="centerY"/>
+                            <constraint id="1639" firstItem="400" firstAttribute="centerY" secondItem="406" secondAttribute="centerY"/>
+                            <constraint id="1640" firstItem="405" firstAttribute="centerX" secondItem="406" secondAttribute="centerX"/>
+                            <constraint id="1641" firstItem="404" firstAttribute="centerX" secondItem="406" secondAttribute="centerX"/>
+                            <constraint id="1642" firstItem="402" firstAttribute="centerY" secondItem="405" secondAttribute="centerY"/>
+                            <constraint id="1643" firstItem="399" firstAttribute="centerY" secondItem="405" secondAttribute="centerY"/>
+                            <constraint id="1644" firstItem="403" firstAttribute="centerY" secondItem="400" secondAttribute="centerY"/>
+                            <constraint id="1646" firstItem="404" firstAttribute="centerX" secondItem="401" secondAttribute="trailing" constant="32"/>
+                            <constraint id="1647" firstItem="405" firstAttribute="top" secondItem="404" secondAttribute="centerY" constant="25"/>
+                            <constraint id="1648" firstItem="401" firstAttribute="leading" secondItem="397" secondAttribute="centerX" constant="32"/>
+                            <constraint id="1650" firstItem="400" firstAttribute="centerX" secondItem="397" secondAttribute="centerX"/>
+                            <constraint id="1651" firstItem="406" firstAttribute="top" secondItem="405" secondAttribute="bottom" constant="5"/>
+                            <constraint id="1665" firstItem="408" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX"/>
+                            <constraint id="1667" firstItem="399" firstAttribute="centerX" secondItem="397" secondAttribute="centerX"/>
+                            <constraint id="1668" firstItem="400" firstAttribute="centerX" secondItem="397" secondAttribute="centerX"/>
+                            <constraint id="1675" firstItem="197" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="101"/>
+                            <constraint id="1676" firstItem="197" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX"/>
+                            <constraint id="4230" firstItem="8bC-Xf-vdC" firstAttribute="centerY" secondItem="408" secondAttribute="centerY" constant="90"/>
+                            <constraint id="4548" firstItem="8bC-Xf-vdC" firstAttribute="centerX" secondItem="4547" secondAttribute="centerX"/>
+                            <constraint id="4550" firstItem="408" firstAttribute="centerX" secondItem="4547" secondAttribute="centerX"/>
+                            <constraint id="4551" firstItem="408" firstAttribute="top" secondItem="4547" secondAttribute="centerY" constant="12"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="newGameButton" destination="197" id="name-outlet-197"/>
+                        <outlet property="a1Button" destination="397" id="name-outlet-397"/>
+                        <outlet property="b1Button" destination="399" id="name-outlet-399"/>
+                        <outlet property="c1Button" destination="400" id="name-outlet-400"/>
+                        <outlet property="a2Button" destination="401" id="name-outlet-401"/>
+                        <outlet property="b2Button" destination="402" id="name-outlet-402"/>
+                        <outlet property="c2Button" destination="403" id="name-outlet-403"/>
+                        <outlet property="a3Button" destination="404" id="name-outlet-404"/>
+                        <outlet property="b3Button" destination="405" id="name-outlet-405"/>
+                        <outlet property="c3Button" destination="406" id="name-outlet-406"/>
+                        <outlet property="communicationLabel" destination="408" id="name-outlet-408"/>
+                        <outlet property="headerLabel" destination="4547" id="name-outlet-4547"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+</document>

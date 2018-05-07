@@ -46,6 +46,9 @@
                                 <constraints>
                                     <constraint id="796" firstAttribute="width" constant="326"/>
                                 </constraints>
+                                <connections>
+                                    <segue id="1157" destination="803" kind="show"/>
+                                </connections>
                             </button>
                         </subviews>
                         <constraints>
@@ -103,7 +106,7 @@
         </scene>
         <scene sceneID="802">
             <objects>
-                <tableViewController id="803" sceneMemberID="viewController" customClass="CallHistoryController">
+                <tableViewController id="803" sceneMemberID="viewController" customClass="CallHistoryController" title="Call History">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="804">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -126,7 +129,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="809" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="918" y="-225"/>
+            <point key="canvasLocation" x="937" y="-227"/>
         </scene>
     </scenes>
 </document>
