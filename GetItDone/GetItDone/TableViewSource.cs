@@ -27,6 +27,6 @@ namespace GetItDone
             }  
             cell.TextLabel.Text = TableData[indexPath.Row];  
             return cell;  
-        }  
+        } 
     }
 }

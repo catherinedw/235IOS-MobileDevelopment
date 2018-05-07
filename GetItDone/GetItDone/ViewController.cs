@@ -29,6 +29,19 @@ namespace GetItDone
             //mainListview.TableFooterView = new UIView(CoreGraphics.CGRect.Empty); 
             //table.Source = new TableViewSource(itemData); 
             //Add(table);
+            var indexedTableItems = new Dictionary<string, List<string>>();
+            foreach (var t in itemData)
+            {
+                if (indexedTableItems.ContainsKey(t[0].ToString()))
+                {
+                    indexedTableItems[t[0].ToString()].Add(t);
+                }
+                else
+                {
+                    indexedTableItems.Add(t[0].ToString(), new List<string>() { t });
+                }
+            }
+            var keys = indexedTableItems.Keys;
         }
 
         public override void DidReceiveMemoryWarning()
@@ -42,5 +55,6 @@ namespace GetItDone
             if (cell.RespondsToSelector(new ObjCRuntime.Selector("setSeparatorInset:"))) cell.SeparatorInset = UIEdgeInsets.Zero;  
             if (cell.RespondsToSelector(new ObjCRuntime.Selector("setLayoutMargins:"))) cell.LayoutMargins = UIEdgeInsets.Zero;  
         } */ 
+
     }
 }
