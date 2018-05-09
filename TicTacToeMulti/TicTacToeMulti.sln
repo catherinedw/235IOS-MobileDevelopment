@@ -1,7 +1,7 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToe", "TicTacToe\TicTacToe.csproj", "{BB6236BC-6EC0-4EE2-8336-F44BC2C8622D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToeMulti", "TicTacToe\TicTacToeMulti.csproj", "{BB6236BC-6EC0-4EE2-8336-F44BC2C8622D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

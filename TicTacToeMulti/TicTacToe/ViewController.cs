@@ -128,7 +128,8 @@ namespace TicTacToe
 
         }
 
-        partial void TouchUpInsideEachButton(UIButton sender)
+
+        partial void ActionButton_TouchUpInside(UIButton sender)
         {
             //pass the score
             // score = ;
@@ -137,19 +138,21 @@ namespace TicTacToe
             UIViewController controller;
             if (button.TitleLabel.Text == "About")
             {
-                controller = this.Storyboard.InstantiateViewController("HelloViewController") as aboutViewController;
+                controller = this.Storyboard.InstantiateViewController("aboutViewController") as aboutViewController;
                 //((aboutViewController)controller).UserName = userName;
             }
+            /*
             else if (button.TitleLabel.Text == "Score")
             {
-                controller = this.Storyboard.InstantiateViewController("GoodbyeViewController") as scoreViewController;
+                controller = this.Storyboard.InstantiateViewController("scoreViewController") as scoreViewController;
                 //((scoreViewController)controller).UserName = userName;
             }
-            else 
+            else
             {
                 //do nothing
             }
-            this.NavigationController.PushViewController(controller, true);
+            */
+            //this.NavigationController.PushViewController(controller, true);
 
         }
     }
