@@ -132,7 +132,7 @@ namespace TicTacToe
         {
             UIView.BeginAnimations("My Animation");
             UIView.SetAnimationDuration(0.5);
-            //UIView.SetAnimationCurve(UIViewAnimationCurve.EaseInOut);
+            UIView.SetAnimationCurve(UIViewAnimationCurve.EaseInOut);
             UIView.SetAnimationTransition(UIViewAnimationTransition.FlipFromLeft, forView: View, cache:true);
 
             UIButton button = (UIButton)sender;
