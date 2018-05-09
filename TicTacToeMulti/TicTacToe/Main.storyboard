@@ -141,13 +141,13 @@
                                 <connections>
                                     <action selector="NewGameButton_TouchUpInside:" destination="5018" id="5017" eventType="touchUpInside"/>
                                     <segue id="5123" destination="5010" kind="show"/>
+                                    <action selector="ActionButton_TouchUpInside:" destination="BYZ-38-t0r" id="6835" eventType="touchUpInside"/>
                                 </connections>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
                                         <real key="value" value="6"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5022" translatesAutoresizingMaskIntoConstraints="NO">
                                 <rect key="frame" x="288" y="246" width="79" height="30"/>
@@ -160,13 +160,13 @@
                                 <connections>
                                     <action selector="NewGameButton_TouchUpInside:" destination="5024" id="5023" eventType="touchUpInside"/>
                                     <segue id="5198" destination="5128" kind="show"/>
+                                    <action selector="ActionButton_TouchUpInside:" destination="BYZ-38-t0r" id="8161" eventType="touchUpInside"/>
                                 </connections>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
                                         <real key="value" value="6"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </button>
                         </subviews>
                         <constraints>
@@ -217,6 +217,10 @@
                             <constraint id="4548" firstItem="8bC-Xf-vdC" firstAttribute="centerX" secondItem="4547" secondAttribute="centerX"/>
                             <constraint id="4550" firstItem="408" firstAttribute="centerX" secondItem="4547" secondAttribute="centerX"/>
                             <constraint id="4551" firstItem="408" firstAttribute="top" secondItem="4547" secondAttribute="centerY" constant="12"/>
+                            <constraint id="7178" firstItem="197" firstAttribute="leading" secondItem="5016" secondAttribute="centerX" constant="47"/>
+                            <constraint id="7180" firstItem="5022" firstAttribute="centerX" secondItem="197" secondAttribute="trailing" constant="48"/>
+                            <constraint id="7182" firstItem="197" firstAttribute="top" secondItem="5016" secondAttribute="top"/>
+                            <constraint id="7183" firstItem="5022" firstAttribute="top" secondItem="5016" secondAttribute="top"/>
                         </constraints>
                     </view>
                     <connections>
@@ -258,7 +262,7 @@
         </scene>
         <scene sceneID="5009">
             <objects>
-                <viewController id="5010" sceneMemberID="viewController" title="About" customClass="aboutViewController">
+                <viewController id="5010" sceneMemberID="viewController" title="About" customClass="aboutViewController" storyboardIdentifier="aboutViewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5007"/>
                         <viewControllerLayoutGuide type="bottom" id="5008"/>
@@ -287,7 +291,7 @@
         </scene>
         <scene sceneID="5127">
             <objects>
-                <viewController id="5128" sceneMemberID="viewController" customClass="scoreViewController" title="Score">
+                <viewController id="5128" sceneMemberID="viewController" customClass="scoreViewController" title="Score" storyboardIdentifier="scoreViewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5125"/>
                         <viewControllerLayoutGuide type="bottom" id="5126"/>
