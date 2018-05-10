@@ -19,6 +19,9 @@ namespace TicTacToe
         public int CompButtonNumber { get { return compButtonNumber; } }
         public string Player { get { return player; } }
         public Random rand;
+        public int playerScore = 0, computerScore = 0;
+        public int PlayerScore { get { return playerScore; } }
+        public int ComputerScore { get { return computerScore; } }
 
         //Marks down the players symbols
         public int PlayerChoice(int buttonNumber)
@@ -36,6 +39,11 @@ namespace TicTacToe
             {
                 compButtonNumber = -1;
                 player = "You";
+                playerScore += 1;
+                if (computerScore > 0)
+                {
+                    computerScore -= 1;
+                }
             }
             return compButtonNumber;
         }
@@ -74,6 +82,11 @@ namespace TicTacToe
             if (CheckForWin())
             {
                 player = "Computer";
+                computerScore += 1;
+                if (playerScore>0)
+                {
+                    playerScore -= 1; 
+                }
             }
             //need to return button number
             return result;

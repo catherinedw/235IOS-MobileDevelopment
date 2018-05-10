@@ -8,7 +8,6 @@ namespace TicTacToe
     {
         //Create an instance of the game
         private GameLogic game = new GameLogic();
-        private int score;
 
         protected ViewController(IntPtr handle) : base(handle)
         {
