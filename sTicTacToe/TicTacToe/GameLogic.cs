@@ -11,14 +11,14 @@ namespace TicTacToe
     {
         /*** variables ***/
         const int MAXROW = 3, MAXCOLUMN = 3;
-        public char[,] board = new char[MAXROW, MAXCOLUMN]; // keep track of which squares have been filled
-        public int[,] grid = new int[MAXROW, MAXCOLUMN] { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 }}; // keep track of which squares have been filled
-        public bool[,] openBoard = new bool[MAXROW, MAXCOLUMN];  // keep track of which squares have been filled
+        private char[,] board = new char[MAXROW, MAXCOLUMN]; // keep track of which squares have been filled
+        private int[,] grid = new int[MAXROW, MAXCOLUMN] { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 }}; // keep track of which squares have been filled
+        private bool[,] openBoard = new bool[MAXROW, MAXCOLUMN];  // keep track of which squares have been filled
         public int playerTurn = 1, compButtonNumber;
         public string player;
-        public int CompButtonNumber { get { return compButtonNumber; } }
+        private int CompButtonNumber { get { return compButtonNumber; } }
         public string Player { get { return player; } }
-        public Random rand;
+        private Random rand;
 
         //Marks down the players symbols
         public int PlayerChoice(int buttonNumber)
