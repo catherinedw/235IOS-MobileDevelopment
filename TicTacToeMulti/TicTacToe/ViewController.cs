@@ -131,8 +131,12 @@ namespace TicTacToe
 
         partial void ActionButton_TouchUpInside(UIButton sender)
         {
-            //pass the score
-            // score = ;
+            UIView.BeginAnimations("My Animation");
+            UIView.SetAnimationDuration(0.5);
+            //UIView.SetAnimationCurve(UIViewAnimationCurve.EaseInOut);
+            UIView.SetAnimationCurve(UIViewAnimationCurve.EaseInOut);
+            UIView.SetAnimationTransition(UIViewAnimationTransition.FlipFromLeft, forView: View, cache: true);
+
             UIButton button = (UIButton)sender;
 
             UIViewController controller;
@@ -141,18 +145,13 @@ namespace TicTacToe
                 controller = this.Storyboard.InstantiateViewController("aboutViewController") as aboutViewController;
                 //((aboutViewController)controller).UserName = userName;
             }
-            /*
-            else if (button.TitleLabel.Text == "Score")
+            else //if (button.TitleLabel.Text == "Score")
             {
                 controller = this.Storyboard.InstantiateViewController("scoreViewController") as scoreViewController;
                 //((scoreViewController)controller).UserName = userName;
             }
-            else
-            {
-                //do nothing
-            }
-            */
-            //this.NavigationController.PushViewController(controller, true);
+            this.NavigationController.PushViewController(controller, true);
+            UIView.CommitAnimations();    
 
         }
     }
