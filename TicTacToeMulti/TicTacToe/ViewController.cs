@@ -132,7 +132,6 @@ namespace TicTacToe
         {
             UIView.BeginAnimations("My Animation");
             UIView.SetAnimationDuration(0.5);
-            //UIView.SetAnimationCurve(UIViewAnimationCurve.EaseInOut);
             UIView.SetAnimationCurve(UIViewAnimationCurve.EaseInOut);
             UIView.SetAnimationTransition(UIViewAnimationTransition.FlipFromLeft, forView: View, cache: true);
 
@@ -142,12 +141,11 @@ namespace TicTacToe
             if (button.TitleLabel.Text == "About")
             {
                 controller = this.Storyboard.InstantiateViewController("aboutViewController") as aboutViewController;
-                //((aboutViewController)controller).UserName = userName;
             }
             else //if (button.TitleLabel.Text == "Score")
             {
                 controller = this.Storyboard.InstantiateViewController("scoreViewController") as scoreViewController;
-                //((scoreViewController)controller).UserName = userName;
+                ((scoreViewController)controller).PlayerScore = game.playerScore;
             }
             this.NavigationController.PushViewController(controller, true);
             UIView.CommitAnimations();    

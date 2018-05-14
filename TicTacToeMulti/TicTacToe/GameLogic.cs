@@ -20,8 +20,8 @@ namespace TicTacToe
         public string Player { get { return player; } }
         public Random rand;
         public int playerScore = 0, computerScore = 0;
-        public int PlayerScore { get { return playerScore; } }
-        public int ComputerScore { get { return computerScore; } }
+        //public int PlayerScore { get { return playerScore; } }
+        //public int ComputerScore { get { return computerScore; } }
 
         //Marks down the players symbols
         public int PlayerChoice(int buttonNumber)
