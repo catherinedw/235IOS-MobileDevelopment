@@ -9,6 +9,8 @@ namespace TabbedApplication
     public class AppDelegate : UIApplicationDelegate
     {
         // class-level declarations
+        UIWindow window;
+        TabController tabController;
 
         public override UIWindow Window
         {
@@ -20,7 +22,12 @@ namespace TabbedApplication
         {
             // Override point for customization after application launch.
             // If not required for your application you can safely delete this method
+            window = new UIWindow(UIScreen.MainScreen.Bounds);
 
+            var tabController = new TabController();
+            window.RootViewController = tabController;
+
+            window.MakeKeyAndVisible();
             return true;
         }
 
