@@ -119,6 +119,42 @@ namespace TicTacToe
             if (game.CheckForWin())
             {
                 communicationLabel.Text = String.Format("{0} won!", game.player);
+                if (a1Button.Enabled){
+                    a1Button.Enabled = false;
+                }
+                if (a2Button.Enabled)
+                {
+                    a2Button.Enabled = false;
+                }
+                if (a3Button.Enabled)
+                {
+                    a3Button.Enabled = false;
+                }
+                if (b1Button.Enabled)
+                {
+                    b1Button.Enabled = false;
+                }
+                if (b2Button.Enabled)
+                {
+                    b2Button.Enabled = false;
+                }
+                if (b3Button.Enabled)
+                {
+                    b3Button.Enabled = false;
+                }
+                if (c1Button.Enabled)
+                {
+                    c1Button.Enabled = false;
+                }
+                if (c2Button.Enabled)
+                {
+                    c2Button.Enabled = false;
+                }
+                if (c3Button.Enabled)
+                {
+                    c3Button.Enabled = false;
+                }
+                    
             }
             else if (game.playerTurn == 10)
             {
@@ -146,6 +182,7 @@ namespace TicTacToe
             {
                 controller = this.Storyboard.InstantiateViewController("scoreViewController") as scoreViewController;
                 ((scoreViewController)controller).PlayerScore = game.playerScore;
+                ((scoreViewController)controller).ComputerScore = game.computerScore;
             }
             this.NavigationController.PushViewController(controller, true);
             UIView.CommitAnimations();    

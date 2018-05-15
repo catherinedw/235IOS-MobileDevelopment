@@ -33,16 +33,19 @@ namespace TicTacToe
             playerTurn++;
             if (!CheckForWin() && playerTurn != 10)
             {
-               compButtonNumber = ComputerChoice();  
+               compButtonNumber = ComputerChoice();
             }
             else
             {
-                compButtonNumber = -1;
+                compButtonNumber = -1; // player wins
                 player = "You";
-                playerScore += 1;
-                if (computerScore > 0)
+                if (CheckForWin())
                 {
-                    computerScore -= 1;
+                    playerScore += 1;
+                    if (computerScore > 0)
+                    {
+                        computerScore -= 1;
+                    }
                 }
             }
             return compButtonNumber;
@@ -79,7 +82,7 @@ namespace TicTacToe
             result = grid[row, column];
             playerTurn++;
 
-            if (CheckForWin())
+            if (CheckForWin()) // computer win
             {
                 player = "Computer";
                 computerScore += 1;
