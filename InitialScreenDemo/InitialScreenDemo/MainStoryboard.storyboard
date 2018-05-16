@@ -31,6 +31,7 @@
                                 <state key="normal" title="User Takes Some Initial Action"/>
                                 <connections>
                                     <action selector="InitialActionCompleted:" destination="199" id="635" eventType="touchUpInside"/>
+                                    <segue id="1664" destination="863" kind="modal"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -45,10 +46,12 @@
                     <connections>
                         <outlet property="aButton" destination="416" id="name-outlet-416"/>
                     </connections>
+                    <tabBarItem key="tabBarItem" title="One" id="1943"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="201" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="22" y="-9"/>
+            <point key="canvasLocation" x="-576" y="-229"/>
         </scene>
         <scene sceneID="205">
             <objects>
@@ -71,10 +74,12 @@
                             </label>
                         </subviews>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Two" id="1127" badgeValue="Hi!"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="208" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="206" y="41"/>
+            <point key="canvasLocation" x="286" y="-229"/>
         </scene>
         <scene sceneID="212">
             <objects>
@@ -97,10 +102,30 @@
                             </label>
                         </subviews>
                     </view>
+                    <tabBarItem key="tabBarItem" id="1163" systemItem="more"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="215" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="356" y="110"/>
+            <point key="canvasLocation" x="709" y="-224"/>
+        </scene>
+        <scene sceneID="862">
+            <objects>
+                <tabBarController id="863" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="866">
+                        <rect key="frame" x="0.0" y="431" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue id="2237" destination="199" kind="relationship" relationship="viewControllers"/>
+                        <segue id="2312" destination="206" kind="relationship" relationship="viewControllers"/>
+                        <segue id="2373" destination="213" kind="relationship" relationship="viewControllers"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="867" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-301" y="436"/>
         </scene>
     </scenes>
 </document>
