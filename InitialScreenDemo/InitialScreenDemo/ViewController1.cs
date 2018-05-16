@@ -8,6 +8,11 @@ namespace InitialScreenDemo
     {
         public ViewController1 (IntPtr handle) : base (handle)
         {
+            
+        }
+        partial void InitialActionCompleted (UIButton sender)
+        {
+          aButton.Hidden = true;  
         }
     }
 }
