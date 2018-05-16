@@ -11,26 +11,26 @@ namespace TabbedApplication
         // class-level declarations
         UIWindow window;
         TabController tabController;
-
+        /*
         public override UIWindow Window
         {
             get;
             set;
         }
-
+*/
         public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
         {
             // Override point for customization after application launch.
             // If not required for your application you can safely delete this method
             window = new UIWindow(UIScreen.MainScreen.Bounds);
 
-            var tabController = new TabController();
+            tabController = new TabController();
             window.RootViewController = tabController;
 
             window.MakeKeyAndVisible();
             return true;
         }
-
+        /*
         public override void OnResignActivation(UIApplication application)
         {
             // Invoked when the application is about to move from active to inactive state.
@@ -60,7 +60,7 @@ namespace TabbedApplication
         public override void WillTerminate(UIApplication application)
         {
             // Called when the application is about to terminate. Save data, if needed. See also DidEnterBackground.
-        }
+        }*/
     }
 }
 
