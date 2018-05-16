@@ -15,7 +15,7 @@ namespace InitialScreenDemo
             get;
             set;
         }
-
+        /*
         public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
         {
             // Override point for customization after application launch.
@@ -53,7 +53,7 @@ namespace InitialScreenDemo
         public override void WillTerminate(UIApplication application)
         {
             // Called when the application is about to terminate. Save data, if needed. See also DidEnterBackground.
-        }
+        }*/
     }
 }
 
