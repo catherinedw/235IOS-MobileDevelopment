@@ -14,8 +14,20 @@ namespace InitialScreenDemo
     [Register ("ViewController1")]
     partial class ViewController1
     {
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton aButton { get; set; }
+
+        [Action ("InitialActionCompleted:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void InitialActionCompleted (UIKit.UIButton sender);
+
         void ReleaseDesignerOutlets ()
         {
+            if (aButton != null) {
+                aButton.Dispose ();
+                aButton = null;
+            }
         }
     }
 }

@@ -14,5 +14,8 @@ namespace InitialScreenDemo
     [Register ("ViewController3")]
     partial class ViewController3
     {
+        void ReleaseDesignerOutlets ()
+        {
+        }
     }
 }

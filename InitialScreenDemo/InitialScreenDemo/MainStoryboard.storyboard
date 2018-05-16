@@ -29,6 +29,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="416" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
                                 <rect key="frame" x="40" y="286" width="239" height="30"/>
                                 <state key="normal" title="User Takes Some Initial Action"/>
+                                <connections>
+                                    <action selector="InitialActionCompleted:" destination="199" id="635" eventType="touchUpInside"/>
+                                </connections>
                             </button>
                         </subviews>
                         <constraints>
