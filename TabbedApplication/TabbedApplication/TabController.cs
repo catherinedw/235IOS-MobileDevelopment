@@ -18,11 +18,13 @@ namespace TabbedApplication
             //tab2 = new UIViewController();
             //tab2.Title = "Orange";
             //tab2.View.BackgroundColor = UIColor.Orange;
+            /*second part*/
             tab2 = new UIViewController();
             tab2.TabBarItem = new UITabBarItem();
-            tab2.TabBarItem.Image = UIImage.FromFile("second.png"); //add image
+            tab2.TabBarItem.Image = UIImage.FromFile("Yoshi120.png"); //add image
             tab2.TabBarItem.Title = "Second";
             tab2.View.BackgroundColor = UIColor.Orange;
+            //*/
 
             tab3 = new UIViewController();
             tab3.Title = "Red";

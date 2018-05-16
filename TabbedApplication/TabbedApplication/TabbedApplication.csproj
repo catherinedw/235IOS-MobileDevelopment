@@ -98,5 +98,9 @@
     <Compile Include="AppDelegate.cs" />
     <Compile Include="TabController.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Yoshi120.png" />
+    <BundleResource Include="Yoshi180.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
