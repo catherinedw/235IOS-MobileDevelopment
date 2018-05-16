@@ -104,6 +104,10 @@
     <Compile Include="ViewController2.designer.cs">
       <DependentUpon>ViewController2.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewController3.cs" />
+    <Compile Include="ViewController3.designer.cs">
+      <DependentUpon>ViewController3.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="MainStoryboard.storyboard" />

@@ -14,5 +14,8 @@ namespace InitialScreenDemo
     [Register ("ViewController2")]
     partial class ViewController2
     {
+        void ReleaseDesignerOutlets ()
+        {
+        }
     }
 }

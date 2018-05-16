@@ -11,11 +11,8 @@ using UIKit;
 
 namespace InitialScreenDemo
 {
-    [Register ("ViewController1")]
-    partial class ViewController1
+    [Register ("ViewController3")]
+    partial class ViewController3
     {
-        void ReleaseDesignerOutlets ()
-        {
-        }
     }
 }
