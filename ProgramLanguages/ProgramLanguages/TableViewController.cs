@@ -7,7 +7,7 @@ namespace ProgramLanguages
 {
     public partial class TableViewController : UITableViewController
     {
-        private string[] tableLanguages;
+        public string[] tableLanguages;
         //List<tableItem> tableItems = new List<tableItem>();
         //string[] keys;  // V, F, L, B, T
         //Dictionary<string, List<string>> indexedTableItems;
@@ -30,7 +30,7 @@ namespace ProgramLanguages
         {
             base.ViewWillAppear(animated);
 
-            TableView.DataSource = new TableViewDataSource(tableLanguages, this);
+            TableView.Source = new TableViewSource(tableLanguages, this);
         }
 
         public override void DidReceiveMemoryWarning()

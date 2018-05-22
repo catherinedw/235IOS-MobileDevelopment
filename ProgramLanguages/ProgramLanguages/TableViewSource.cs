@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace ProgramLanguages
 {
-    public class TableViewDataSource: UITableViewDataSource
+    public class TableViewSource: UITableViewSource
     {
         // there is NO database or storage of Tasks in this example, just an in-memory array
         string[] tableItems;//, detailItems;
@@ -16,7 +16,7 @@ namespace ProgramLanguages
         TableViewController owner;
         string cellIdentifier = "LanguagesCell"; // set in the Storyboard
 
-        public TableViewDataSource(string[] items, TableViewController owner)
+        public TableViewSource(string[] items, TableViewController owner)
         {
             this.owner = owner;
             //tableItems = items;
@@ -59,10 +59,9 @@ namespace ProgramLanguages
         /// Called when a row is touched
         public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
         {
-            UIAlertController okAlertController = UIAlertController.Create("Row Selected", tableItems[indexPath.Row], UIAlertControllerStyle.Alert);
+            UIAlertController okAlertController = UIAlertController.Create("Row Selected", indexedTableItems[keys[indexPath.Section]][indexPath.Row], UIAlertControllerStyle.Alert);
             okAlertController.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, null));
             owner.PresentViewController(okAlertController, true, null);
-
             tableView.DeselectRow(indexPath, true);
         }
 
