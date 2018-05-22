@@ -22,7 +22,7 @@ namespace TicTacToe
             {
                 cName =((AppDelegate)UIApplication.SharedApplication.Delegate).ComputerName;
             }
-            scoreLabel.Text = "Player score: " + pScore + "\n" + cName + "Score: " + cScore;
+            scoreLabel.Text = "Player score: " + pScore + "\n" + cName + " score: " + cScore;
         }
     }
 }

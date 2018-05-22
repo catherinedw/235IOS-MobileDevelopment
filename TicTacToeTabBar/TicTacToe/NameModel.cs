@@ -7,9 +7,15 @@ namespace TicTacToe
     public class NameModel : UIPickerViewModel
     {
         private string[] names = new string[] {
+                "Cruella De Vil",
                 "Darth Vader",
+                "Iago",
                 "Khan Noonien Singh",
+                "Medusa",
+                "Professor Moriarty",
+                "Queen of hearts",
                 "Sauron",
+                "The White Witch",
                 "Voldermort"
             };
 

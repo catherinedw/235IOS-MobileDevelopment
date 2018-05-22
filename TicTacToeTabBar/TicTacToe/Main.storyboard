@@ -148,7 +148,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please pick a button where you want to play" lineBreakMode="wordWrap" id="408" translatesAutoresizingMaskIntoConstraints="NO" adjustsFontForContentSizeCategory="YES" textAlignment="center" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" numberOfLines="0">
-                                <rect key="frame" x="85" y="236" width="205" height="70"/>
+                                <rect key="frame" x="85" y="256" width="205" height="70"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -157,15 +157,22 @@
                                     <constraint id="890" firstAttribute="height" constant="70"/>
                                 </constraints>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TIC TAC TOE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4547" translatesAutoresizingMaskIntoConstraints="NO">
-                                <rect key="frame" x="138" y="203.5" width="99" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick an opponent" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4547" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="109" y="119" width="157" height="37"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="8404" firstItem="4547" firstAttribute="width" constant="157"/>
+                                    <constraint id="8405" firstItem="4547" firstAttribute="height" constant="37"/>
+                                </constraints>
                             </label>
-                            <pickerView contentMode="scaleToFill" id="8057" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                <rect key="frame" x="48" y="63" width="278" height="98"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <pickerView contentMode="scaleToFill" id="8057" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="48" y="153" width="280" height="115"/>
+                                <constraints>
+                                    <constraint id="8401" firstItem="8057" firstAttribute="width" constant="278"/>
+                                    <constraint id="8402" firstItem="8057" firstAttribute="height" constant="115"/>
+                                </constraints>
                             </pickerView>
                         </subviews>
                         <constraints>
@@ -206,13 +213,15 @@
                             <constraint id="4979" firstItem="408" firstAttribute="centerX" secondItem="4547" secondAttribute="centerX"/>
                             <constraint id="4980" firstItem="197" firstAttribute="centerX" secondItem="4547" secondAttribute="centerX"/>
                             <constraint id="4981" firstItem="8bC-Xf-vdC" firstAttribute="centerX" secondItem="4547" secondAttribute="centerX" constant="120"/>
-                            <constraint id="4982" firstItem="408" firstAttribute="top" secondItem="4547" secondAttribute="bottom" constant="12"/>
+                            <constraint id="4982" firstItem="408" firstAttribute="top" secondItem="4547" secondAttribute="bottom" constant="100"/>
                             <constraint id="4983" firstItem="197" firstAttribute="top" secondItem="408" secondAttribute="bottom" constant="15"/>
                             <constraint id="4986" firstItem="408" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY"/>
                             <constraint id="5299" firstItem="399" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-75"/>
-                            <constraint id="5948" firstItem="8bC-Xf-vdC" firstAttribute="centerY" secondItem="408" secondAttribute="centerY" constant="135"/>
+                            <constraint id="5948" firstItem="8bC-Xf-vdC" firstAttribute="centerY" secondItem="408" secondAttribute="centerY" constant="115"/>
                             <constraint id="5954" firstItem="4547" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX"/>
                             <constraint id="5955" firstItem="197" firstAttribute="top" secondItem="403" secondAttribute="bottom" constant="29"/>
+                            <constraint id="8400" firstItem="8057" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX"/>
+                            <constraint id="8403" firstItem="408" firstAttribute="top" secondItem="8057" secondAttribute="centerY" constant="49"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -359,7 +368,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6891" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-246" y="424"/>
+            <point key="canvasLocation" x="-331" y="763"/>
         </scene>
     </scenes>
 </document>
