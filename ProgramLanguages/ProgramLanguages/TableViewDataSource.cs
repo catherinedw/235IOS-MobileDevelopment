@@ -13,12 +13,13 @@ namespace ProgramLanguages
         string[] tableItems;//, detailItems;
         Dictionary<string, List<string>> indexedTableItems;
         string[] keys;
-
+        TableViewController owner;
         string cellIdentifier = "LanguagesCell"; // set in the Storyboard
 
-        public TableViewDataSource(string[] items)
+        public TableViewDataSource(string[] items, TableViewController owner)
         {
-            ///tableItems = items;
+            this.owner = owner;
+            //tableItems = items;
             indexedTableItems = new Dictionary<string, List<string>>();
             foreach (var t in items)
             {
@@ -54,10 +55,8 @@ namespace ProgramLanguages
             return indexedTableItems.Keys.ToArray();
         }
 
-        /*
         /// <summary>
         /// Called when a row is touched
-        /// </summary>
         public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
         {
             UIAlertController okAlertController = UIAlertController.Create("Row Selected", tableItems[indexPath.Row], UIAlertControllerStyle.Alert);
@@ -66,7 +65,7 @@ namespace ProgramLanguages
 
             tableView.DeselectRow(indexPath, true);
         }
-        */
+
 
         /// <summary> Called by the TableView to get the actual UITableViewCell to render for the particular row
         public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
@@ -77,7 +76,7 @@ namespace ProgramLanguages
             if (cell == null) //---- if there are no cells to reuse, create a new one
             {
                 cell = new UITableViewCell(UITableViewCellStyle.Default, cellIdentifier);
-                cell = new UITableViewCell(UITableViewCellStyle.Subtitle, cellIdentifier);
+                //cell = new UITableViewCell(UITableViewCellStyle.Subtitle, cellIdentifier);
             }
             cell.TextLabel.Text = indexedTableItems[keys[indexPath.Section]][indexPath.Row];//tableItems[indexPath.Row];
 
@@ -105,10 +104,11 @@ namespace ProgramLanguages
 
             return cell;
         }
-
+        /*
         public string GetItem(int id)
         {
             return tableItems[id];
         }
+        */
     }
 }

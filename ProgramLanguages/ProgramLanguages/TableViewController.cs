@@ -30,7 +30,7 @@ namespace ProgramLanguages
         {
             base.ViewWillAppear(animated);
 
-            TableView.DataSource = new TableViewDataSource(tableLanguages);
+            TableView.DataSource = new TableViewDataSource(tableLanguages, this);
         }
 
         public override void DidReceiveMemoryWarning()

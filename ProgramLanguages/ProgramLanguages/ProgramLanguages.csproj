@@ -105,6 +105,7 @@
       <DependentUpon>TableViewController.cs</DependentUpon>
     </Compile>
     <Compile Include="TableViewDataSource.cs" />
+    <Compile Include="TableItem.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

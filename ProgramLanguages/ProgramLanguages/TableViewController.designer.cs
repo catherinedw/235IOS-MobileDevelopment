@@ -14,5 +14,8 @@ namespace ProgramLanguages
     [Register ("TableViewController")]
     partial class TableViewController
     {
+        void ReleaseDesignerOutlets ()
+        {
+        }
     }
 }
