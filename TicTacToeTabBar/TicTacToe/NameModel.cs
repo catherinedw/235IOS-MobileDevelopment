@@ -13,7 +13,7 @@ namespace TicTacToe
                 "Voldermort"
             };
 
-        private PlayViewController controller;
+        private PlayViewController controller; //need to instantiate the controller that has the picker and therefore creates the option
 
         public NameModel(PlayViewController vc)
         {
