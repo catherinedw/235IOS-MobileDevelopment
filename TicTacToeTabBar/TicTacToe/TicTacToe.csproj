@@ -113,6 +113,7 @@
     <Compile Include="ScoreViewController.designer.cs">
       <DependentUpon>ScoreViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="NameModel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

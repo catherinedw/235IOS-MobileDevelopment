@@ -60,6 +60,10 @@ namespace TicTacToe
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIPickerView namePicker { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton newGameButton { get; set; }
 
         [Outlet]
@@ -129,6 +133,11 @@ namespace TicTacToe
             if (headerLabel != null) {
                 headerLabel.Dispose ();
                 headerLabel = null;
+            }
+
+            if (namePicker != null) {
+                namePicker.Dispose ();
+                namePicker = null;
             }
 
             if (newGameButton != null) {

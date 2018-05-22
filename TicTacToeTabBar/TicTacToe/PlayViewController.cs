@@ -18,6 +18,9 @@ namespace TicTacToe
         {
             base.ViewDidLoad();
             // Perform any additional setup after loading the view, typically from a nib.
+            // set our picker class to our newly created picker model
+            namePicker.Model = new NameModel(this);
+            namePicker.ShowSelectionIndicator = true;
         }
 
         public override void DidReceiveMemoryWarning()
@@ -118,7 +121,7 @@ namespace TicTacToe
 
             if (game.CheckForWin())
             {
-                communicationLabel.Text = String.Format("{0} won!", game.player);
+                communicationLabel.Text = String.Format("{0} won!", game.Player);
                 if (a1Button.Enabled){
                     a1Button.Enabled = false;
                 }
@@ -154,13 +157,21 @@ namespace TicTacToe
                 {
                     c3Button.Enabled = false;
                 }
-                    
+
+                ((AppDelegate)UIApplication.SharedApplication.Delegate).PlayerScore = game.playerScore;
+                ((AppDelegate)UIApplication.SharedApplication.Delegate).ComputerScore = game.computerScore;     
             }
             else if (game.playerTurn == 10)
             {
                 communicationLabel.Text = "It's a draw!";
             }
         }
+
+        public void DisplayName(string name)
+        {
+            ((AppDelegate)UIApplication.SharedApplication.Delegate).ComputerName = name;
+        }
+
     }
 }
 

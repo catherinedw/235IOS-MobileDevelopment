@@ -9,9 +9,9 @@ namespace TicTacToe
     public class AppDelegate : UIApplicationDelegate
     {
         // class-level declarations
+        public string ComputerName { get; set; }
         public int PlayerScore { get; set; }
         public int ComputerScore { get; set; }
-
 
         public override UIWindow Window
         {
@@ -57,6 +57,13 @@ namespace TicTacToe
         {
             // Called when the application is about to terminate. Save data, if needed. See also DidEnterBackground.
         }
+
+        /*
+        public void CallToDisplayName(string name)
+        {
+            ComputerName = name;
+        }
+        */
     }
 }
 

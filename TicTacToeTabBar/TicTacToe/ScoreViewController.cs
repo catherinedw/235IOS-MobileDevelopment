@@ -6,6 +6,9 @@ namespace TicTacToe
 {
     public partial class ScoreViewController : UIViewController
     {
+        //public int ComputerName { get; set; }
+        //UIViewController controller;
+        string cName = "Computer";
 
         public ScoreViewController (IntPtr handle) : base (handle)
         {
@@ -13,9 +16,13 @@ namespace TicTacToe
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-            ((AppDelegate)UIApplication.SharedApplication.Delegate).PlayerScore = game.playerScore;
-            ((AppDelegate)UIApplication.SharedApplication.Delegate).ComputerScore = game.computerScore;
-            scoreLabel.Text = "Player score: " + PlayerScore + "\nComputer score: " + ComputerScore;
+            int pScore =((AppDelegate)UIApplication.SharedApplication.Delegate).PlayerScore;
+            int cScore =((AppDelegate)UIApplication.SharedApplication.Delegate).ComputerScore;
+            if (cName != null) 
+            {
+                cName =((AppDelegate)UIApplication.SharedApplication.Delegate).ComputerName;
+            }
+            scoreLabel.Text = "Player score: " + pScore + "\n" + cName + "Score: " + cScore;
         }
     }
 }
