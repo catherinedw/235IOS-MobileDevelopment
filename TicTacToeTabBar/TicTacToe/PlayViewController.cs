@@ -167,6 +167,7 @@ namespace TicTacToe
             }
         }
 
+        //This method is called in the picker NameModel 
         public void DisplayName(string name)
         {
             ((AppDelegate)UIApplication.SharedApplication.Delegate).ComputerName = name;
