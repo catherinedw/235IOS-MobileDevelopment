@@ -36,7 +36,7 @@ namespace ProgramLanguages
         }
 
 
-        /// <summary> </summary>Called by the TableView to determine how many sections(groups) there are.
+        /// <summary> Called by the TableView to determine how many sections(groups) there are.
         public override nint NumberOfSections(UITableView tableView)
         {
             return keys.Length;
@@ -74,11 +74,19 @@ namespace ProgramLanguages
             //---- declare vars
             UITableViewCell cell = tableView.DequeueReusableCell (cellIdentifier);
             TableItem item = indexedTableItems[keys[indexPath.Section]][indexPath.Row];
+ // UNCOMMENT to use that subheader style and change line 83 to cellStyle
+            //var cellStyle = UITableViewCellStyle.Subtitle;
 
             // if there are no cells to reuse, create a new one
             if (cell == null) 
-            { cell = new UITableViewCell(item.CellStyle, cellIdentifier); }
-
+            { 
+                cell = new UITableViewCell(item.CellStyle, cellIdentifier); 
+            }
+// UNCOMMENT one of these to detail button accessory
+            //          cell.Accessory = UITableViewCellAccessory.DetailButton;
+            //---- set the accessory
+            cell.Accessory = item.CellAccessory;
+            cell.Accessory = UITableViewCellAccessory.None; // to clear the accessory
             //---- set the item text
             cell.TextLabel.Text = item.Heading;
             ///cell.TextLabel.Text = indexedTableItems[keys[indexPath.Section]][indexPath.Row];//tableItems[indexPath.Row];
@@ -93,26 +101,7 @@ namespace ProgramLanguages
                 if(File.Exists(item.ImageName))
                 { cell.ImageView.Image = UIImage.FromBundle(item.ImageName); }
             }
-            //Cell style should be set to "Subtitle" or "RightDetial" in the storyboard
-            //Add detail information
-
-            const int NUM_DISNEY_DWARVES = 7;
-            if (cell.DetailTextLabel != null)
-            {
-                if (indexPath.Row < NUM_DISNEY_DWARVES)
-                {
-                    cell.DetailTextLabel.Text = "Mr Disney";
-                }
-                else
-                {
-                    cell.DetailTextLabel.Text = "Mr Tolkien";
-                }
-            }
-            
             */
-            //---- set the accessory
-            cell.Accessory = item.CellAccessory;
-
             return cell;
         }
         /*
