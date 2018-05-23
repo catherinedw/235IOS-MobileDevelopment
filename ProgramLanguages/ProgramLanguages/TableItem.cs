@@ -9,6 +9,8 @@ namespace ProgramLanguages
 
         public string SubHeading { get; set; }
 
+        public string Developer { get; set; }
+
         public UITableViewCellStyle CellStyle
         {
             get { return cellStyle; }

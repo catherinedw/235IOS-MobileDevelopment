@@ -14,11 +14,11 @@ namespace ProgramLanguages
             ///tableLanguages = new string[] {
             ///"Javascript", "Python", "Java", "Ruby", "PHP"
             ///};
-            tableLanguages.Add(new TableItem("Javascript, 1995") { SubHeading = "Brendan Eich" });//, ImageName="Vegetables.jpg"});
-            tableLanguages.Add(new TableItem("Python, 1990") { SubHeading = "Guido van Rossum" });
-            tableLanguages.Add(new TableItem("Java, 1995") { SubHeading = "James Gosling" });
-            tableLanguages.Add(new TableItem("Ruby, 1995") { SubHeading = "Yukihiro Matsumoto" });
-            tableLanguages.Add(new TableItem("PHP, 1995") { SubHeading = "Rasmus Lerdorf" });
+            tableLanguages.Add(new TableItem("Javascript") { SubHeading = "1995", Developer = "Brendan Eich" });//, ImageName="Vegetables.jpg"});
+            tableLanguages.Add(new TableItem("Python") { SubHeading = "1990", Developer = "Guido van Rossum" });
+            tableLanguages.Add(new TableItem("Java") { SubHeading = "1995", Developer = "James Gosling" });
+            tableLanguages.Add(new TableItem("Ruby") { SubHeading = "1995", Developer = "Yukihiro Matsumoto" });
+            tableLanguages.Add(new TableItem("PHP") { SubHeading = "1995", Developer = "Rasmus Lerdorf" });
 
         }
 

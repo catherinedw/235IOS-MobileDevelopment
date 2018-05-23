@@ -52,15 +52,14 @@ namespace ProgramLanguages
         /// <summary> Sections the index titles.
         public override String[] SectionIndexTitles(UITableView tableView)
         {
-            return indexedTableItems.Keys.ToArray();
+            return keys;
         }
 
         /// <summary>
         /// Called when a row is touched
         public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
         {
-            ///UIAlertController okAlertController = UIAlertController.Create("Chief Developers", indexedTableItems[keys[indexPath.Section]][indexPath.Row], UIAlertControllerStyle.Alert);
-            UIAlertController okAlertController = UIAlertController.Create("Chief Developers", indexedTableItems[keys[indexPath.Section]][indexPath.Row].SubHeading, UIAlertControllerStyle.Alert);
+            UIAlertController okAlertController = UIAlertController.Create("Chief Developers", indexedTableItems[keys[indexPath.Section]][indexPath.Row].Developer, UIAlertControllerStyle.Alert);
             okAlertController.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, null));
             owner.PresentViewController(okAlertController, true, null);
             tableView.DeselectRow(indexPath, true);
@@ -74,23 +73,29 @@ namespace ProgramLanguages
             //---- declare vars
             UITableViewCell cell = tableView.DequeueReusableCell (cellIdentifier);
             TableItem item = indexedTableItems[keys[indexPath.Section]][indexPath.Row];
- // UNCOMMENT to use that subheader style and change line 83 to cellStyle
-            //var cellStyle = UITableViewCellStyle.Subtitle;
+// UNCOMMENT to use that subheader style
+            var cellStyle = UITableViewCellStyle.Subtitle;
 
             // if there are no cells to reuse, create a new one
             if (cell == null) 
             { 
-                cell = new UITableViewCell(item.CellStyle, cellIdentifier); 
+                //cell = new UITableViewCell(item.CellStyle, cellIdentifier); 
+                cell = new UITableViewCell(UITableViewCellStyle.Subtitle, cellIdentifier);
             }
 // UNCOMMENT one of these to detail button accessory
-            //          cell.Accessory = UITableViewCellAccessory.DetailButton;
+            //cell.Accessory = UITableViewCellAccessory.DetailButton;
             //---- set the accessory
             cell.Accessory = item.CellAccessory;
             cell.Accessory = UITableViewCellAccessory.None; // to clear the accessory
             //---- set the item text
             cell.TextLabel.Text = item.Heading;
-            ///cell.TextLabel.Text = indexedTableItems[keys[indexPath.Section]][indexPath.Row];//tableItems[indexPath.Row];
 
+            if (cellStyle == UITableViewCellStyle.Subtitle
+               || cellStyle == UITableViewCellStyle.Value1
+               || cellStyle == UITableViewCellStyle.Value2)
+            {
+                cell.DetailTextLabel.Text = indexedTableItems[keys[indexPath.Section]][indexPath.Row].SubHeading;
+            }
             // Add images to the cell
             //cell.ImageView.Image = UIImage.FromFile("Images/star");
             //cell.ImageView.HighlightedImage = UIImage.FromFile("Images/star2");
