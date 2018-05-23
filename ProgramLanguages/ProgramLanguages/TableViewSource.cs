@@ -9,8 +9,7 @@ namespace ProgramLanguages
 {
     public class TableViewSource: UITableViewSource
     {
-        // there is NO database or storage of Tasks in this example, just an in-memory array
-        ///string[] tableItems;//, detailItems;
+        ///string[] tableItems; //used for array
         Dictionary<string, List<TableItem>> indexedTableItems;
         string[] keys;
         TableViewController owner;
@@ -19,7 +18,7 @@ namespace ProgramLanguages
         public TableViewSource(List<TableItem> items, TableViewController owner)
         {
             this.owner = owner;
-            ///tableItems = items;
+            ///tableItems = items; //this is used when using an array
             indexedTableItems = new Dictionary<string, List<TableItem>>();
             foreach (var t in items)
             {
@@ -55,8 +54,7 @@ namespace ProgramLanguages
             return keys;
         }
 
-        /// <summary>
-        /// Called when a row is touched
+        /// <summary> Called when a row is touched
         public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
         {
             UIAlertController okAlertController = UIAlertController.Create("Chief Developers", indexedTableItems[keys[indexPath.Section]][indexPath.Row].Developer, UIAlertControllerStyle.Alert);
@@ -79,6 +77,7 @@ namespace ProgramLanguages
             // if there are no cells to reuse, create a new one
             if (cell == null) 
             { 
+// UNCOMMENT to use without the subheader style
                 //cell = new UITableViewCell(item.CellStyle, cellIdentifier); 
                 cell = new UITableViewCell(UITableViewCellStyle.Subtitle, cellIdentifier);
             }
@@ -109,11 +108,5 @@ namespace ProgramLanguages
             */
             return cell;
         }
-        /*
-        public string GetItem(int id)
-        {
-            return tableItems[id];
-        }
-        */
     }
 }
