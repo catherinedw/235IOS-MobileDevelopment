@@ -115,6 +115,7 @@
       <DependentUpon>HappeningTableViewController.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\Happening.cs" />
+    <Compile Include="HappeningTableViewSource.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

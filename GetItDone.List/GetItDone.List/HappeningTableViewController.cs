@@ -20,6 +20,8 @@ namespace GetItDone.List
         {
             base.ViewDidLoad();
 
+            happenings = new List<Happening>();
+
             var documentsFolder = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
             pathToDatabase = Path.Combine(documentsFolder, "happenings_db.db");
 
@@ -33,6 +35,7 @@ namespace GetItDone.List
         public override void ViewDidAppear(bool animated)
         {
             base.ViewDidAppear(animated);
+            //TableView.Source = new HappeningTableViewSource(happening, this);
 
             using (var connection = new SQLite.SQLiteConnection(pathToDatabase))
             {
