@@ -35,7 +35,6 @@ namespace GetItDone.List
         public override void ViewDidAppear(bool animated)
         {
             base.ViewDidAppear(animated);
-            //TableView.Source = new HappeningTableViewSource(happening, this);
 
             using (var connection = new SQLite.SQLiteConnection(pathToDatabase))
             {
@@ -45,7 +44,9 @@ namespace GetItDone.List
                 {
                     happenings.Add(happening);
                     TableView.ReloadData();
+                    //TableView.Source = new HappeningTableViewSource(happening, this);
                 }
+
             }
         }
 
