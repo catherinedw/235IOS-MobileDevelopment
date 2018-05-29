@@ -14,5 +14,8 @@ namespace GetItDone.List
     [Register ("HappeningTableViewController")]
     partial class HappeningTableViewController
     {
+        void ReleaseDesignerOutlets ()
+        {
+        }
     }
 }

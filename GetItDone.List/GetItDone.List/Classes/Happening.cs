@@ -22,7 +22,13 @@ namespace GetItDone.List.Classes
             set;
         }
 
-        public string Date
+        public DateTime Date
+        {
+            get;
+            set;
+        }
+
+        public string Comment
         {
             get;
             set;
@@ -41,9 +47,9 @@ namespace GetItDone.List.Classes
             set { cellAccessory = value; }
         }
         protected UITableViewCellAccessory cellAccessory = UITableViewCellAccessory.None;
-
+****/
         public Happening(string title)
         { Title = title; }
-        ****/
+
     }
 }

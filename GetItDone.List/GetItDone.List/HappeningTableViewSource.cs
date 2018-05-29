@@ -22,22 +22,22 @@ namespace GetItDone.List
         public HappeningTableViewSource(List<Happening> happening, HappeningTableViewController owner)
         {
             this.owner = owner;
-            ///tableItems = items; //this is used when using an array
+            //TODO      ///this is for the first letter. Turn this into date
             indexedHappenings = new Dictionary<string, List<Happening>>();
+
             foreach (var t in happening)
             {
-                if (indexedHappenings.ContainsKey(t.Title.Substring(0, 1)))
+                if (indexedHappenings.ContainsKey(t.Date.Month.ToString()) && indexedHappenings.ContainsKey(t.Date.Year.ToString()))
                 {
-                    indexedHappenings[t.Title.Substring(0, 1)].Add(t);
+                    indexedHappenings[t.Date.Month.ToString() + '/' + t.Date.Year.ToString()].Add(t);
                 }
                 else
                 {
-                    indexedHappenings.Add(t.Title.Substring(0, 1), new List<Happening>() { t });
+                    indexedHappenings[t.Date.Month.ToString() + '/' + t.Date.Year.ToString()] = new List<Happening>();
                 }
+                keys = indexedHappenings.Keys.ToArray();
             }
-            keys = indexedHappenings.Keys.ToArray();
         }
-
 
         /// <summary> Called by the TableView to determine how many sections(groups) there are.
         public override nint NumberOfSections(UITableView tableView)
@@ -55,18 +55,17 @@ namespace GetItDone.List
         /// <summary> Sections the index titles.
         public override String[] SectionIndexTitles(UITableView tableView)
         {
-            return keys;
+            return keys;//.Select(x => x.ToString()).ToArray();
         }
 
         /// <summary> Called when a row is touched
         public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
         {
-            UIAlertController okAlertController = UIAlertController.Create("Chief Developers", indexedHappenings[keys[indexPath.Section]][indexPath.Row].Date, UIAlertControllerStyle.Alert);
+            UIAlertController okAlertController = UIAlertController.Create("Comment", indexedHappenings[keys[indexPath.Section]][indexPath.Row].Comment.ToString(), UIAlertControllerStyle.Alert);
             okAlertController.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, null));
             owner.PresentViewController(okAlertController, true, null);
             tableView.DeselectRow(indexPath, true);
         }
-
 
         /// <summary> Called by the TableView to get the actual UITableViewCell to render for the particular row
         public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
@@ -97,7 +96,7 @@ namespace GetItDone.List
                || cellStyle == UITableViewCellStyle.Value1
                || cellStyle == UITableViewCellStyle.Value2)
             {
-                cell.DetailTextLabel.Text = item.Date;
+                cell.DetailTextLabel.Text = item.Date.ToString();
             }
             // Add images to the cell
             //cell.ImageView.Image = UIImage.FromFile("Images/star");

@@ -43,13 +43,15 @@ namespace GetItDone.List
                 foreach (Happening happening in query)
                 {
                     happenings.Add(happening);
+                    happenings.Sort((x, y) => { return x.Date.CompareTo(y.Date); });
                     TableView.ReloadData();
-                    //TableView.Source = new HappeningTableViewSource(happening, this);
-                }
 
+//TODO              There is a duplicate.
+                    TableView.Source = new HappeningTableViewSource(happenings, this);
+                }
             }
         }
-
+        /*
         public override nint RowsInSection(UITableView tableView, nint section)
         {
             return happenings.Count;
@@ -63,8 +65,7 @@ namespace GetItDone.List
             cell.DetailTextLabel.Text = data.Date;
 
             return cell;
-
         }
+        */
     }
-
 }
