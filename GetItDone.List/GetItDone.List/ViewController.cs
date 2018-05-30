@@ -112,7 +112,7 @@ namespace GetItDone.List
                     this.PresentViewController(controller2, true, null);
                     */
                 });
-
+            //This neeeds to be fixed
             var noAction = UIAlertAction.Create("No thank you!", UIAlertActionStyle.Cancel,//Cancel, null);
                 (action) =>
                 {
