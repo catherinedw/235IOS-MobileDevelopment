@@ -19,7 +19,8 @@ namespace GetItDone.List
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-
+            commentSwitch.On = false; //default of switch is off
+            commentTextView.UserInteractionEnabled = false;
             // Perform any additional setup after loading the view, typically from a nib.
             saveButton.Clicked += SaveButton_Clicked;
             // Perform any additional setup after loading the view, typically from a nib.
@@ -90,12 +91,9 @@ namespace GetItDone.List
                 //changes total amount back to what it would be without tax
                 commentTextView.UserInteractionEnabled = false;
             }
-
         }
 
-        /*
-        //Event to make sure you want to add tax when the switch is toggled on, and to confirm you dont want tax when toggled off
-        partial void commentSwitch_ActionSheet(UISwitch sender)
+       partial void commentSwitch_ActionSheet(UISwitch sender)
         {
             var controller = UIAlertController.Create("Are You Sure You Want to Add a Comment?", null, UIAlertControllerStyle.ActionSheet);
             var yesAction = UIAlertAction.Create("Yes, I'm Sure!", UIAlertActionStyle.Destructive,
@@ -105,22 +103,25 @@ namespace GetItDone.List
                       ? "You can now enter your comment"
                       : "You have already entered a comment";
 
-                    // Controller within a controller
-                    var cancelAction = UIAlertAction.Create("Enter1", UIAlertActionStyle.Cancel, null);
+                // Controller within a controller
+                /*
+                var cancelAction = UIAlertAction.Create("three", UIAlertActionStyle.Cancel, null);
 
-                    var controller2 = UIAlertController.Create(String.Format("Enter 2"), msg, UIAlertControllerStyle.Alert);
+                    var controller2 = UIAlertController.Create(String.Format("Comment"), msg, UIAlertControllerStyle.Alert);
                     controller2.AddAction(cancelAction);
                     this.PresentViewController(controller2, true, null);
+                    */
                 });
 
             var noAction = UIAlertAction.Create("No thank you!", UIAlertActionStyle.Cancel,//Cancel, null);
                 (action) =>
                 {
-                    taxSwitch.On = false;
+                    commentSwitch.On = false;
+                    commentTextView.UserInteractionEnabled = false;
                 });
 
             controller.AddAction(noAction);
-            if (taxSwitch.On)
+            if (commentSwitch.On)
             {
                 controller.AddAction(yesAction);
             }
@@ -134,6 +135,5 @@ namespace GetItDone.List
 
             PresentViewController(controller, true, null);
         }
-        */
     }
 }
