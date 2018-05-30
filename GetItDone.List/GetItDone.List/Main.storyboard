@@ -22,13 +22,13 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="516" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Title">
-                                <rect key="frame" x="16" y="64" width="288" height="30"/>
+                                <rect key="frame" x="16" y="72" width="288" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="517" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" placeholder="Date">
-                                <rect key="frame" x="112" y="234" width="97" height="30"/>
+                                <rect key="frame" x="112" y="242" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -36,7 +36,7 @@
                                 <connections/>
                             </textField>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="15" id="734" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                <rect key="frame" x="28" y="102" width="265" height="124"/>
+                                <rect key="frame" x="28" y="110" width="265" height="124"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <date key="date" timeIntervalSinceReferenceDate="332704801.65417802">
                                     <!--2011-07-18 18:00:01 +0000-->
@@ -67,6 +67,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="partialvoidcommentSwitch_ValueChanged:" destination="BYZ-38-t0r" id="3884" eventType="valueChanged"/>
+                                    <action selector="commentSwitch_ActionSheet:" destination="BYZ-38-t0r" id="6093" eventType="valueChanged"/>
                                 </connections>
                             </switch>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="3877" fixedFrame="YES">
@@ -82,7 +83,7 @@
                         <constraints>
                             <constraint id="3863" firstItem="516" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin"/>
                             <constraint id="3864" firstItem="516" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin"/>
-                            <constraint id="3869" firstItem="8bC-Xf-vdC" firstAttribute="centerY" secondItem="516" secondAttribute="centerY" constant="161"/>
+                            <constraint id="3869" firstItem="8bC-Xf-vdC" firstAttribute="centerY" secondItem="516" secondAttribute="centerY" constant="153"/>
                         </constraints>
                         <connections>
                             <outletCollection id="3882" property="gestureRecognizers" destination="3881"/>

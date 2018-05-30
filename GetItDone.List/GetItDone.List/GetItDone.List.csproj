@@ -116,10 +116,6 @@
     </Compile>
     <Compile Include="Classes\Happening.cs" />
     <Compile Include="HappeningTableViewSource.cs" />
-    <Compile Include="DatePickerViewController.cs" />
-    <Compile Include="DatePickerViewController.designer.cs">
-      <DependentUpon>DatePickerViewController.cs</DependentUpon>
-    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
