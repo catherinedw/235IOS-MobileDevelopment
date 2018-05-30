@@ -45,10 +45,6 @@ namespace GetItDone.List
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextField titleTextField { get; set; }
 
-        [Action ("commentSwitch_ActionSheet:")]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        partial void commentSwitch_ActionSheet (UIKit.UISwitch sender);
-
         [Action ("DateTimeChanged:")]
         [GeneratedCode ("iOS Designer", "1.0")]
         partial void DateTimeChanged (UIKit.UIDatePicker sender);

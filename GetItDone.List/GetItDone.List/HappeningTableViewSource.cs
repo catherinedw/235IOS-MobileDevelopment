@@ -60,16 +60,7 @@ namespace GetItDone.List
         /// <summary> Called when a row is touched
         public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
         {
-            string commentIndex;
-            if (indexedHappenings[keys[indexPath.Section]][indexPath.Row].Comment != null)
-            {
-                commentIndex = indexedHappenings[keys[indexPath.Section]][indexPath.Row].Comment;
-            }
-            else
-            {
-                commentIndex = "No Comments";
-            }
-            UIAlertController okAlertController = UIAlertController.Create("Comment", commentIndex, UIAlertControllerStyle.Alert);
+            UIAlertController okAlertController = UIAlertController.Create("Comment", indexedHappenings[keys[indexPath.Section]][indexPath.Row].Comment.ToString(), UIAlertControllerStyle.Alert);
             okAlertController.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, null));
             owner.PresentViewController(okAlertController, true, null);
             tableView.DeselectRow(indexPath, true);
