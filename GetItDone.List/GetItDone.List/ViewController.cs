@@ -93,6 +93,7 @@ namespace GetItDone.List
 
         }
 
+        /*
         //Event to make sure you want to add tax when the switch is toggled on, and to confirm you dont want tax when toggled off
         partial void commentSwitch_ActionSheet(UISwitch sender)
         {
@@ -133,5 +134,6 @@ namespace GetItDone.List
 
             PresentViewController(controller, true, null);
         }
+        */
     }
 }

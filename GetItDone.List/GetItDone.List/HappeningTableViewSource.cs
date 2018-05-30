@@ -24,21 +24,20 @@ namespace GetItDone.List
             this.owner = owner;
             //TODO      ///this is for the first letter. Turn this into date
             indexedHappenings = new Dictionary<string, List<Happening>>();
-
             foreach (var t in happening)
             {
-                if (indexedHappenings.ContainsKey(t.Date.Month.ToString()) && indexedHappenings.ContainsKey(t.Date.Year.ToString()))
+                if (indexedHappenings.ContainsKey(t.Date.Month.ToString() + '/' + t.Date.Year.ToString()))
                 {
                     indexedHappenings[t.Date.Month.ToString() + '/' + t.Date.Year.ToString()].Add(t);
                 }
                 else
                 {
-                    indexedHappenings[t.Date.Month.ToString() + '/' + t.Date.Year.ToString()] = new List<Happening>();
+                    indexedHappenings.Add(t.Date.Month.ToString() + '/' + t.Date.Year.ToString(), new List<Happening>() { t });
                 }
-                keys = indexedHappenings.Keys.ToArray();
             }
+            keys = indexedHappenings.Keys.ToArray();
         }
-
+                
         /// <summary> Called by the TableView to determine how many sections(groups) there are.
         public override nint NumberOfSections(UITableView tableView)
         {

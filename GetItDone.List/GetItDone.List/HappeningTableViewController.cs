@@ -13,7 +13,7 @@ namespace GetItDone.List
         private List<Happening> happenings;
         public HappeningTableViewController(IntPtr handle) : base(handle)
         {
-            happenings = new List<Happening>();
+            //happenings = new List<Happening>();
         }
 
         public override void ViewDidLoad()
@@ -43,7 +43,7 @@ namespace GetItDone.List
                 foreach (Happening happening in query)
                 {
                     happenings.Add(happening);
-                    happenings.Sort((x, y) => { return x.Date.CompareTo(y.Date); });
+                    //happenings.Sort((x, y) => { return x.Date.CompareTo(y.Date); });
                     TableView.ReloadData();
 
 //TODO              There is a duplicate.
