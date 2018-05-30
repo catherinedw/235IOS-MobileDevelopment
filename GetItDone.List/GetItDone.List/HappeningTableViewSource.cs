@@ -28,11 +28,11 @@ namespace GetItDone.List
             {
                 if (indexedHappenings.ContainsKey(t.Date.Month.ToString() + '/' + t.Date.Year.ToString()))
                 {
-                    indexedHappenings[t.Date.Month.ToString() + '/' + t.Date.Year.ToString()].Add(t);
+                    indexedHappenings[t.Date.Month.ToString() + '/' + t.Date.Year.ToString()].Add(t); //this adds this to the created section
                 }
                 else
                 {
-                    indexedHappenings.Add(t.Date.Month.ToString() + '/' + t.Date.Year.ToString(), new List<Happening>() { t });
+                    indexedHappenings.Add(t.Date.Month.ToString() + '/' + t.Date.Year.ToString(), new List<Happening>() { t });// this creates a new section
                 }
             }
             keys = indexedHappenings.Keys.ToArray();
