@@ -3,6 +3,7 @@ using GetItDone.List.Classes;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using UIKit;
 
 namespace GetItDone.List
@@ -28,6 +29,8 @@ namespace GetItDone.List
             //create connection
             using (var connection = new SQLite.SQLiteConnection(pathToDatabase))
             {
+                //Uncomment to delete table
+                //connection.DropTable<Happening>();
                 connection.CreateTable<Happening>();
             }
 
@@ -44,28 +47,14 @@ namespace GetItDone.List
                 {
                     happenings.Add(happening);
                     //happenings.Sort((x, y) => { return x.Date.CompareTo(y.Date); });
-                    TableView.ReloadData();
+                    happenings = happenings.OrderBy(x => x.Date).ThenBy(x => x.Title).ToList();
 
-//TODO              There is a duplicate.
+                    TableView.ReloadData();
+                    //TableView.AlwaysBounceVertical = false;
+//TODO              There is a duplicate when you dont enter anything and return to table
                     TableView.Source = new HappeningTableViewSource(happenings, this);
                 }
             }
         }
-        /*
-        public override nint RowsInSection(UITableView tableView, nint section)
-        {
-            return happenings.Count;
-        }
-
-        public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
-        {
-            UITableViewCell cell = tableView.DequeueReusableCell("happening");
-            var data = happenings[indexPath.Row];
-            cell.TextLabel.Text = data.Title;
-            cell.DetailTextLabel.Text = data.Date;
-
-            return cell;
-        }
-        */
     }
 }

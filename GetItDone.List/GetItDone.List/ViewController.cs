@@ -10,6 +10,8 @@ namespace GetItDone.List
     public partial class ViewController : UIViewController
     {
         private string pathToDatabase;
+        public string segmentValue = "!";
+
         protected ViewController(IntPtr handle) : base(handle)
         {
             var documentsFolder = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
@@ -23,7 +25,6 @@ namespace GetItDone.List
             commentTextView.UserInteractionEnabled = false;
             // Perform any additional setup after loading the view, typically from a nib.
             saveButton.Clicked += SaveButton_Clicked;
-            // Perform any additional setup after loading the view, typically from a nib.
             UIPickerView pickerView = new UIPickerView(
                             new CGRect(
                                 UIScreen.MainScreen.Bounds.X - UIScreen.MainScreen.Bounds.Width, UIScreen.MainScreen.Bounds.Height - 230,
@@ -45,19 +46,23 @@ namespace GetItDone.List
                 connection.Insert(new Happening()
                 {
                     Title = titleTextField.Text,
-                    //TODO this needs to be a picker
-                    Date = (System.DateTime)datePickerView.Date
+                    Date = (System.DateTime)datePickerView.Date,
+                    Importance = segmentValue,
+                    Comment = commentTextView.Text,
+                    Location = locationTextView.Text
                 });
                 NavigationController.PopToRootViewController(true);
             }
         }
 
+//TODO rotation
         public override bool ShouldAutorotateToInterfaceOrientation(UIInterfaceOrientation toInterfaceOrientation)
         {
             // Return true for supported orientations
             return (toInterfaceOrientation != UIInterfaceOrientation.PortraitUpsideDown);
         }
 
+        //picker 
         partial void DateTimeChanged(UIDatePicker sender)
         {
             //Formatting for Date and Time
@@ -84,39 +89,23 @@ namespace GetItDone.List
             bool setting = sender.On;
             if (setting) //switch on
             {
-                commentTextView.UserInteractionEnabled = true; //Makes the tax percent text view editable
+                commentTextView.UserInteractionEnabled = true; //Makes the comment text view editable
             }
             if (!setting) //switch off 
             {
-                //changes total amount back to what it would be without tax
+                //Makes the comment text view NON editable
                 commentTextView.UserInteractionEnabled = false;
             }
         }
 
-       partial void commentSwitch_ActionSheet(UISwitch sender)
+        //switch warning
+        partial void commentSwitch_ActionSheet(UISwitch sender)
         {
             var controller = UIAlertController.Create("Are You Sure You Want to Add a Comment?", null, UIAlertControllerStyle.ActionSheet);
             var controllerOff = UIAlertController.Create("Your comment will be delete?", null, UIAlertControllerStyle.ActionSheet);
 
-            var yesAction = UIAlertAction.Create("Yes, I'm Sure!", UIAlertActionStyle.Destructive,
-                (action) =>
-                {
-                    
-                //string msg = commentTextView.Text == ""
-                      //? "You can now enter your comment"
-                      //: "You have already entered a comment";
-
-                // Controller within a controller
-                /*
-                var cancelAction = UIAlertAction.Create("three", UIAlertActionStyle.Cancel, null);
-
-                    var controller2 = UIAlertController.Create(String.Format("Comment"), msg, UIAlertControllerStyle.Alert);
-                    controller2.AddAction(cancelAction);
-                    this.PresentViewController(controller2, true, null);
-                    */
-                });
-            //This neeeds to be fixed
-            var noAction = UIAlertAction.Create("No thank you!", UIAlertActionStyle.Cancel,//Cancel, null);
+            var yesAction = UIAlertAction.Create("Yes, I'm Sure!", UIAlertActionStyle.Destructive, null);
+            var noAction = UIAlertAction.Create("No thank you!", UIAlertActionStyle.Cancel,
                 (action) =>
                 {
                     string msg = commentTextView.Text == ""
@@ -135,10 +124,7 @@ namespace GetItDone.List
                     commentTextView.Text = "";     
                 });
 
-            if (commentSwitch.On)
-            {
-                controller.AddAction(yesAction);
-            }
+            controller.AddAction(yesAction);
             controller.AddAction(noAction);
            
             var ppc = controller.PopoverPresentationController;
@@ -149,6 +135,28 @@ namespace GetItDone.List
             }
 
             PresentViewController(controller, true, null);
+        }
+
+        void ImportanceValueChanged_SegmentedController()
+        {
+            // Take action based on the number of players selected
+            switch (segmentedControl.SelectedSegment)
+            {
+                case 0:
+                    // Do something if the segment "!" is selected
+                    segmentValue = segmentedControl.TitleAt(0);
+                break;
+                
+                case 1:
+                    // Do something if the segment "!" is selected
+                    segmentValue = segmentedControl.TitleAt(1);
+                break;
+                
+                case 2:
+                    // Do something if the segment "!" is selected
+                    segmentValue = segmentedControl.TitleAt(2);
+                break;
+            }
         }
     }
 }

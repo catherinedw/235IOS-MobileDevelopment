@@ -17,12 +17,11 @@ namespace GetItDone.List
         Dictionary<string, List<Happening>> indexedHappenings;
         string[] keys;
         HappeningTableViewController owner;
-        string cellIdentifier = "HappeningCell"; // set in the Storyboard
+        string cellIdentifier = "HappeningCell";
 
         public HappeningTableViewSource(List<Happening> happening, HappeningTableViewController owner)
         {
             this.owner = owner;
-            //TODO      ///this is for the first letter. Turn this into date
             indexedHappenings = new Dictionary<string, List<Happening>>();
             foreach (var t in happening)
             {
@@ -48,13 +47,12 @@ namespace GetItDone.List
         public override nint RowsInSection(UITableView tableView, nint section)
         {
             return indexedHappenings[keys[section]].Count;
-            ///return tableItems.Length;
         }
 
         /// <summary> Sections the index titles.
         public override String[] SectionIndexTitles(UITableView tableView)
         {
-            return keys;//.Select(x => x.ToString()).ToArray();
+            return keys;
         }
 
         /// <summary> Called when a row is touched
@@ -104,7 +102,8 @@ namespace GetItDone.List
                || cellStyle == UITableViewCellStyle.Value1
                || cellStyle == UITableViewCellStyle.Value2)
             {
-                cell.DetailTextLabel.Text = item.Date.ToString();
+                cell.DetailTextLabel.Lines = 0;     
+                cell.DetailTextLabel.Text = item.Importance + ' ' + item.Date.ToString() + "- " + item.Location + Environment.NewLine + item.Comment;
             }
             // Add images to the cell
             //cell.ImageView.Image = UIImage.FromFile("Images/star");

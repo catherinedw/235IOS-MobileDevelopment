@@ -53,6 +53,10 @@ namespace GetItDone.List
         [GeneratedCode ("iOS Designer", "1.0")]
         partial void DateTimeChanged (UIKit.UIDatePicker sender);
 
+        [Action ("ImportanceValueChanged_SegmentedController:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void ImportanceValueChanged_SegmentedController (UIKit.UISegmentedControl sender);
+
         [Action ("OnTapGestureRecognized:")]
         [GeneratedCode ("iOS Designer", "1.0")]
         partial void OnTapGestureRecognized (UIKit.UITapGestureRecognizer sender);
