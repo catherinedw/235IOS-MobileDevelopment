@@ -46,8 +46,7 @@ namespace GetItDone.List
                 foreach (Happening happening in query)
                 {
                     happenings.Add(happening);
-                    //happenings.Sort((x, y) => { return x.Date.CompareTo(y.Date); });
-                    happenings = happenings.OrderBy(x => x.Date).ThenBy(x => x.Title).ToList();
+                    happenings = happenings.OrderBy(x => x.Date).ThenBy(x => x.Importance).ThenBy(x => x.Title).ToList();
 
                     TableView.ReloadData();
                     //TableView.AlwaysBounceVertical = false;
