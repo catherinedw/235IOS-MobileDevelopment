@@ -137,7 +137,7 @@ namespace GetItDone.List
             PresentViewController(controller, true, null);
         }
 
-        void ImportanceValueChanged_SegmentedController()
+        partial void ImportanceChanged_SegmentedController(UISegmentedControl sender)
         {
             // Take action based on the number of players selected
             switch (segmentedControl.SelectedSegment)
@@ -145,17 +145,18 @@ namespace GetItDone.List
                 case 0:
                     // Do something if the segment "!" is selected
                     segmentValue = segmentedControl.TitleAt(0);
-                break;
-                
+                    //segmentedControl.TitleAt(0);
+                    break;
+
                 case 1:
                     // Do something if the segment "!" is selected
                     segmentValue = segmentedControl.TitleAt(1);
-                break;
-                
+                    break;
+
                 case 2:
                     // Do something if the segment "!" is selected
                     segmentValue = segmentedControl.TitleAt(2);
-                break;
+                    break;
             }
         }
     }
