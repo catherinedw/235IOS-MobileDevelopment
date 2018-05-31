@@ -96,12 +96,15 @@ namespace GetItDone.List
        partial void commentSwitch_ActionSheet(UISwitch sender)
         {
             var controller = UIAlertController.Create("Are You Sure You Want to Add a Comment?", null, UIAlertControllerStyle.ActionSheet);
+            var controllerOff = UIAlertController.Create("Your comment will be delete?", null, UIAlertControllerStyle.ActionSheet);
+
             var yesAction = UIAlertAction.Create("Yes, I'm Sure!", UIAlertActionStyle.Destructive,
                 (action) =>
                 {
-                    string msg = commentTextView.Text == ""
-                      ? "You can now enter your comment"
-                      : "You have already entered a comment";
+                    
+                //string msg = commentTextView.Text == ""
+                      //? "You can now enter your comment"
+                      //: "You have already entered a comment";
 
                 // Controller within a controller
                 /*
@@ -116,16 +119,28 @@ namespace GetItDone.List
             var noAction = UIAlertAction.Create("No thank you!", UIAlertActionStyle.Cancel,//Cancel, null);
                 (action) =>
                 {
+                    string msg = commentTextView.Text == ""
+                    ? "No comment was entered"
+                    : "Your comment will be deleted";
+
+                    // Controller within a controller
+                    var cancelAction = UIAlertAction.Create("Delete", UIAlertActionStyle.Cancel, null);
+
+                        var controller2 = UIAlertController.Create(String.Format("Warning"), msg, UIAlertControllerStyle.Alert);
+                        controller2.AddAction(cancelAction);
+                        this.PresentViewController(controller2, true, null);
+                    
                     commentSwitch.On = false;
                     commentTextView.UserInteractionEnabled = false;
+                    commentTextView.Text = "";     
                 });
 
-            controller.AddAction(noAction);
             if (commentSwitch.On)
             {
                 controller.AddAction(yesAction);
             }
-
+            controller.AddAction(noAction);
+           
             var ppc = controller.PopoverPresentationController;
             if (ppc != null)
             {
