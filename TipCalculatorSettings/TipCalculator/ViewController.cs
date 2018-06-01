@@ -1,6 +1,6 @@
 ﻿using System;
-
 using UIKit;
+using Foundation;
 
 namespace TipCalculator
 {
@@ -11,9 +11,24 @@ namespace TipCalculator
         decimal tipAmount, taxAmount, total;
         int tipPercent, taxPercent = 0;
 
+        NSObject observer = null;
+
         protected ViewController(IntPtr handle) : base(handle)
         {
             // Note: this .ctor should not contain any initialization logic.
+        }
+
+        public override void ViewWillAppear (bool animated)
+        {
+            base.ViewWillAppear (animated);
+            // Update the values shown in view 1 from the StandardUserDefaults
+            RefreshFields ();
+
+            // Subscribe to the applicationWillEnterForeground notification
+            var app = UIApplication.SharedApplication;
+            // NSNotificationCenter.DefaultCenter.AddObserver (this, UIApplication.WillEnterForegroundNotification, "ApplicationWillEnterForeground", app);
+            // NSNotificationCenter.DefaultCenter.AddObserver (UIApplication.WillEnterForegroundNotification, ApplicationWillEnterForeground);
+            observer = NSNotificationCenter.DefaultCenter.AddObserver (aName: UIApplication.WillEnterForegroundNotification, notify: ApplicationWillEnterForeground, fromObject: app);
         }
 
         public override void DidReceiveMemoryWarning()
@@ -168,6 +183,30 @@ namespace TipCalculator
         private decimal CalculateTotalAmount(string totalA, decimal tipA, decimal taxA)
         {
             return Math.Round(Convert.ToDecimal(totalA) + tipA + taxA, 2);
+        }
+
+        #endregion
+
+        #region Settings
+        private void RefreshFields()
+        {
+            NSUserDefaults defaults = NSUserDefaults.StandardUserDefaults;
+
+            taxPercentageTextView.Text = defaults.StringForKey (Constants.TAX_PERCENTAGE);
+            serviceSlider.Value = defaults.FloatForKey (Constants.TIP_PERCENTAGE); //slider
+
+        //public const string CURRENCY_TYPE = "currencyType"; //make this into an array
+        //public const string BACKGROUND_COLOR = "backgroundColor";
+        }
+
+
+        // We will subscribe to the applicationWillEnterForeground notification
+        // so that this method is called when that notification occurs
+        private void ApplicationWillEnterForeground(NSNotification notification)
+        {
+            var defaults = NSUserDefaults.StandardUserDefaults;
+            defaults.Synchronize();
+            RefreshFields();            
         }
 
         #endregion

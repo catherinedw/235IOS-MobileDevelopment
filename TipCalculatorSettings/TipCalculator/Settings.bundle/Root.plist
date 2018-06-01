@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
@@ -12,47 +12,35 @@
 		</dict>
 		<dict>
 			<key>Type</key>
+			<string>PSSliderSpecifier</string>
+			<key>Title</key>
+			<string>tipPercentageDefault</string>
+			<key>Key</key>
+			<string>Key</string>
+			<key>DefaultValue</key>
+			<string>18</string>
+			<key>MinimumValue</key>
+			<real>12</real>
+			<key>MaximumValue</key>
+			<real>35</real>
+		</dict>
+		<dict>
+			<key>Type</key>
 			<string>PSTextFieldSpecifier</string>
 			<key>Title</key>
-			<string>Name</string>
-			<key>KeyboardType</key>
-			<string>Alphabet</string>
+			<string>Tax Percentage Default</string>
+			<key>Key</key>
+			<string>taxPercentageDefault</string>
 			<key>AutocapitalizationType</key>
 			<string>None</string>
 			<key>AutocorrectionType</key>
 			<string>No</string>
+			<key>KeyboardType</key>
+			<string>NumbersAndPunctuation</string>
 			<key>IsSecure</key>
 			<false/>
-			<key>Key</key>
-			<string>name_preference</string>
 			<key>DefaultValue</key>
-			<string></string>
-		</dict>
-		<dict>
-			<key>Type</key>
-			<string>PSToggleSwitchSpecifier</string>
-			<key>Title</key>
-			<string>Enabled</string>
-			<key>Key</key>
-			<string>enabled_preference</string>
-			<key>DefaultValue</key>
-			<true/>
-		</dict>
-		<dict>
-			<key>Type</key>
-			<string>PSSliderSpecifier</string>
-			<key>MaximumValue</key>
-			<integer>1</integer>
-			<key>MaximumValueImage</key>
-			<string></string>
-			<key>MinimumValue</key>
-			<integer>0</integer>
-			<key>MinimumValueImage</key>
-			<string></string>
-			<key>Key</key>
-			<string>slider_preference</string>
-			<key>DefaultValue</key>
-			<real>0.5</real>
+			<string>0</string>
 		</dict>
 	</array>
 	<key>StringsTable</key>
