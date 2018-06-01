@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip Calculator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="197" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="134.5" y="2.5" width="106" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount of Meals" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="198" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="28" y="165" width="133" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="4125" firstItem="198" firstAttribute="width" constant="133"/>
+                                    <constraint id="4126" firstItem="198" firstAttribute="height" constant="21"/>
+                                </constraints>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Service" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="199" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="28" y="201.5" width="71" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="4128" firstItem="199" firstAttribute="width" constant="71"/>
+                                </constraints>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Poor" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="200" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="119.5" y="217.5" width="36" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Excellent" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="201" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="246" y="217.5" width="72" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="5750" firstItem="201" firstAttribute="width" constant="72"/>
+                                </constraints>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="202" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="122.5" y="459" width="37.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip (%)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="203" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="28" y="274.5" width="71" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="4129" firstItem="203" firstAttribute="width" constant="71"/>
+                                    <constraint id="4130" firstItem="203" firstAttribute="height" constant="21"/>
+                                </constraints>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tax (%)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="204" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="28" y="311" width="71" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="4131" firstItem="204" firstAttribute="width" constant="71"/>
+                                    <constraint id="4132" firstItem="204" firstAttribute="height" constant="21"/>
+                                </constraints>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Percentage" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="205" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="94" y="356.5" width="87.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="206" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="257" y="357.5" width="60" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="18" minValue="10" maxValue="30" id="207" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="101" y="194.5" width="222" height="31"/>
+                                <connections>
+                                    <action selector="serviceSlider_ValueChanged:" destination="BYZ-38-t0r" id="943" eventType="valueChanged"/>
+                                </connections>
+                                <constraints>
+                                    <constraint id="4121" firstItem="207" firstAttribute="width" constant="212"/>
+                                </constraints>
+                            </slider>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="208" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="28" y="347" width="51" height="31"/>
+                                <connections>
+                                    <action selector="taxSwitch_ValueChanged:" destination="BYZ-38-t0r" id="944" eventType="valueChanged"/>
+                                    <action selector="taxSwitch_ActionSheet:" destination="BYZ-38-t0r" id="945" eventType="valueChanged"/>
+                                </connections>
+                            </switch>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="209" translatesAutoresizingMaskIntoConstraints="NO" borderStyle="roundedRect" placeholder="Enter Amount" textAlignment="right">
+                                <rect key="frame" x="182" y="161.5" width="151" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <constraints>
+                                    <constraint id="4124" firstItem="209" firstAttribute="width" constant="151"/>
+                                </constraints>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="210" translatesAutoresizingMaskIntoConstraints="NO" text="18">
+                                <rect key="frame" x="91.5" y="270" width="92" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <accessibility key="accessibilityConfiguration" hint="0%"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="211" translatesAutoresizingMaskIntoConstraints="NO" userInteractionEnabled="NO">
+                                <rect key="frame" x="91.5" y="309" width="92" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="212" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="241" y="275.5" width="92" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <accessibility key="accessibilityConfiguration" hint="0"/>
+                                <constraints>
+                                    <constraint id="5749" firstItem="212" firstAttribute="width" constant="92"/>
+                                </constraints>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="213" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="241" y="314.5" width="92" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <accessibility key="accessibilityConfiguration" hint="0"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="214" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="241" y="456.5" width="92" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="448" translatesAutoresizingMaskIntoConstraints="NO" image="TipImage">
+                                <rect key="frame" x="82" y="30.5" width="211" height="101"/>
+                                <constraints>
+                                    <constraint id="4122" firstItem="448" firstAttribute="width" constant="211"/>
+                                    <constraint id="4123" firstItem="448" firstAttribute="height" constant="101"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint id="4068" firstItem="214" firstAttribute="trailing" secondItem="213" secondAttribute="trailing"/>
+                            <constraint id="4069" firstItem="214" firstAttribute="trailing" secondItem="212" secondAttribute="trailing"/>
+                            <constraint id="4070" firstItem="214" firstAttribute="trailing" secondItem="209" secondAttribute="trailing"/>
+                            <constraint id="4071" firstItem="209" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="70"/>
+                            <constraint id="4072" firstItem="8bC-Xf-vdC" firstAttribute="centerY" secondItem="209" secondAttribute="centerY" constant="157"/>
+                            <constraint id="4073" firstItem="8bC-Xf-vdC" firstAttribute="centerY" secondItem="212" secondAttribute="centerY" constant="43"/>
+                            <constraint id="4074" firstItem="8bC-Xf-vdC" firstAttribute="centerY" secondItem="213" secondAttribute="centerY" constant="4"/>
+                            <constraint id="4075" firstItem="214" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="138"/>
+                            <constraint id="4076" firstItem="213" firstAttribute="width" secondItem="212" secondAttribute="width"/>
+                            <constraint id="4077" firstItem="214" firstAttribute="width" secondItem="212" secondAttribute="width"/>
+                            <constraint id="4078" firstItem="211" firstAttribute="width" secondItem="212" secondAttribute="width"/>
+                            <constraint id="4079" firstItem="210" firstAttribute="width" secondItem="212" secondAttribute="width"/>
+                            <constraint id="4080" firstItem="213" firstAttribute="height" secondItem="212" secondAttribute="height"/>
+                            <constraint id="4081" firstItem="214" firstAttribute="height" secondItem="212" secondAttribute="height"/>
+                            <constraint id="4082" firstItem="211" firstAttribute="height" secondItem="212" secondAttribute="height"/>
+                            <constraint id="4083" firstItem="210" firstAttribute="height" secondItem="212" secondAttribute="height"/>
+                            <constraint id="4087" firstItem="210" firstAttribute="centerX" secondItem="200" secondAttribute="centerX"/>
+                            <constraint id="4088" firstItem="211" firstAttribute="centerX" secondItem="200" secondAttribute="centerX"/>
+                            <constraint id="4089" firstItem="205" firstAttribute="centerX" secondItem="200" secondAttribute="centerX"/>
+                            <constraint id="4090" firstItem="199" firstAttribute="leading" secondItem="198" secondAttribute="leading"/>
+                            <constraint id="4091" firstItem="203" firstAttribute="leading" secondItem="198" secondAttribute="leading"/>
+                            <constraint id="4092" firstItem="204" firstAttribute="leading" secondItem="198" secondAttribute="leading"/>
+                            <constraint id="4093" firstItem="208" firstAttribute="leading" secondItem="198" secondAttribute="leading"/>
+                            <constraint id="4094" firstItem="197" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX"/>
+                            <constraint id="4095" firstItem="8bC-Xf-vdC" firstAttribute="centerY" secondItem="197" secondAttribute="centerY" constant="321"/>
+                            <constraint id="4097" firstItem="197" firstAttribute="centerX" secondItem="448" secondAttribute="centerX"/>
+                            <constraint id="4098" firstItem="448" firstAttribute="centerY" secondItem="197" secondAttribute="bottom" constant="58"/>
+                            <constraint id="4099" firstItem="198" firstAttribute="centerY" secondItem="448" secondAttribute="bottom" constant="44"/>
+                            <constraint id="4100" firstItem="199" firstAttribute="centerY" secondItem="198" secondAttribute="bottom" constant="26"/>
+                            <constraint id="4101" firstItem="8bC-Xf-vdC" firstAttribute="centerX" secondItem="198" secondAttribute="centerX" constant="93"/>
+                            <constraint id="4102" firstItem="203" firstAttribute="centerY" secondItem="199" secondAttribute="bottom" constant="63"/>
+                            <constraint id="4103" firstItem="204" firstAttribute="centerY" secondItem="203" secondAttribute="bottom" constant="26"/>
+                            <constraint id="4105" firstItem="207" firstAttribute="centerY" secondItem="209" secondAttribute="bottom" constant="18"/>
+                            <constraint id="4106" firstItem="201" firstAttribute="bottom" secondItem="200" secondAttribute="bottom"/>
+                            <constraint id="4107" firstItem="201" firstAttribute="centerY" secondItem="207" secondAttribute="bottom" constant="3"/>
+                            <constraint id="4108" firstItem="8bC-Xf-vdC" firstAttribute="centerX" secondItem="200" secondAttribute="centerX" constant="50"/>
+                            <constraint id="4109" firstItem="210" firstAttribute="centerY" secondItem="200" secondAttribute="bottom" constant="47"/>
+                            <constraint id="4110" firstItem="211" firstAttribute="centerY" secondItem="210" secondAttribute="bottom" constant="24"/>
+                            <constraint id="4111" firstItem="205" firstAttribute="centerY" secondItem="211" secondAttribute="bottom" constant="28"/>
+                            <constraint id="4112" firstItem="206" firstAttribute="centerY" secondItem="213" secondAttribute="bottom" constant="23"/>
+                            <constraint id="4113" firstItem="202" firstAttribute="centerY" secondItem="205" secondAttribute="bottom" constant="92"/>
+                            <constraint id="4114" firstItem="214" firstAttribute="leading" secondItem="202" secondAttribute="centerX" constant="100"/>
+                            <constraint id="4116" firstItem="207" firstAttribute="centerY" secondItem="209" secondAttribute="bottom" constant="18"/>
+                            <constraint id="4117" firstItem="208" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="29"/>
+                            <constraint id="4120" firstItem="207" firstAttribute="centerX" secondItem="199" secondAttribute="trailing" constant="113"/>
+                            <constraint id="4134" firstItem="201" firstAttribute="trailing" secondItem="207" secondAttribute="trailing"/>
+                            <constraint id="4135" firstItem="212" firstAttribute="centerX" secondItem="213" secondAttribute="centerX"/>
+                            <constraint id="4136" firstItem="206" firstAttribute="centerX" secondItem="213" secondAttribute="centerX"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection id="6382" property="gestureRecognizers" destination="6381"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="headerLabel" destination="197" id="name-outlet-197"/>
+                        <outlet property="amountLabel" destination="198" id="name-outlet-198"/>
+                        <outlet property="serviceLabel" destination="199" id="name-outlet-199"/>
+                        <outlet property="poorLabel" destination="200" id="name-outlet-200"/>
+                        <outlet property="excellentLabel" destination="201" id="name-outlet-201"/>
+                        <outlet property="tipLabel" destination="203" id="name-outlet-203"/>
+                        <outlet property="taxLabel" destination="204" id="name-outlet-204"/>
+                        <outlet property="PercentageLabel" destination="205" id="name-outlet-205"/>
+                        <outlet property="amountLabel" destination="206" id="name-outlet-206"/>
+                        <outlet property="totalLabel" destination="202" id="name-outlet-202"/>
+                        <outlet property="amountTextView" destination="209" id="name-outlet-209"/>
+                        <outlet property="serviceSlider" destination="207" id="name-outlet-207"/>
+                        <outlet property="taxSwitch" destination="208" id="name-outlet-208"/>
+                        <outlet property="tipPercentageTextView" destination="210" id="name-outlet-210"/>
+                        <outlet property="tipAmountTextView" destination="212" id="name-outlet-212"/>
+                        <outlet property="taxPercentageTextView" destination="211" id="name-outlet-211"/>
+                        <outlet property="taxAmountTextView" destination="213" id="name-outlet-213"/>
+                        <outlet property="totalTextView" destination="214" id="name-outlet-214"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="6381">
+                    <connections>
+                        <action selector="OnTapGestureRecognized:" destination="BYZ-38-t0r" id="6463"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="TipImage" width="150" height="99"/>
+    </resources>
+</document>
