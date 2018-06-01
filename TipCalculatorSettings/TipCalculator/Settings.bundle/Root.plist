@@ -14,15 +14,15 @@
 			<key>Type</key>
 			<string>PSSliderSpecifier</string>
 			<key>Title</key>
-			<string>tipPercentageDefault</string>
+			<string>Tip Percentage Default</string>
 			<key>Key</key>
-			<string>Key</string>
-			<key>DefaultValue</key>
-			<string>18</string>
+			<string>tipPercentageDefault</string>
 			<key>MinimumValue</key>
-			<real>12</real>
+			<real>10</real>
 			<key>MaximumValue</key>
-			<real>35</real>
+			<real>30</real>
+			<key>DefaultValue</key>
+			<integer>18</integer>
 		</dict>
 		<dict>
 			<key>Type</key>
@@ -41,6 +41,22 @@
 			<false/>
 			<key>DefaultValue</key>
 			<string>0</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>Title</key>
+			<string>Currency Type</string>
+			<key>Key</key>
+			<string>currencyType</string>
+			<key>DefaultValue</key>
+			<string>$</string>
+			<key>Values</key>
+			<array>
+				<string>Mex$</string>
+				<string>€</string>
+				<string>£</string>
+			</array>
 		</dict>
 	</array>
 	<key>StringsTable</key>
