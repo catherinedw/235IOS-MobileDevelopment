@@ -12,9 +12,9 @@ namespace TipCalculator
         /***variables***/
         decimal tipAmount, taxAmount, total;
         int tipPercent, taxPercent = 0;
-        string currency = "$";
-        //UIColor dColor = UIColor.Red;
-        NSObject[] dColors = new NSObject[3]; //= this.View.BackgroundColor.ToString();
+        string currency = "$", colorString;
+        UIColor dColor = UIColor.Red;
+        //NSObject[] dColors = new NSObject[3]; //= this.View.BackgroundColor.ToString();
         NSObject observer = null;
 
         protected ViewController(IntPtr handle) : base(handle)
@@ -50,6 +50,22 @@ namespace TipCalculator
             taxSwitch.On = false; //default of switch is off
             taxPercentageTextView.Text = taxPercent.ToString();
             //if (color != null)
+            //float red, green, blue;
+            //dColor.FromHex("#00FF00").ToUIColor();
+            switch (colorString.Length)
+            {
+                case 3: // #RGB
+                    {
+                        red = Convert.ToInt32(string.Format("{0}{0}", colorString.Substring(0, 1)), 16) / 255f;
+                        green = Convert.ToInt32(string.Format("{0}{0}", colorString.Substring(1, 1)), 16) / 255f;
+                        blue = Convert.ToInt32(string.Format("{0}{0}", colorString.Substring(2, 1)), 16) / 255f;
+                        return UIColor.FromRGBA(red, green, blue);
+                    }
+
+                default:
+                    throw new ArgumentOutOfRangeException(string.Format("Invalid color value {0} is invalid. It should be a hex value of the form #RBG, #RRGGBB", hexValue));
+
+            }
             //string hex = "color.";
             //nfloat red = Convert.ToInt32(string.Format("{0}{0}", hex.Substring(0, 1)), 16) / 255f;
             //nfloat green = Convert.ToInt32(string.Format("{0}{0}", hex.Substring(1, 1)), 16) / 255f;
@@ -57,9 +73,9 @@ namespace TipCalculator
             //
             //var color = UIColor.FromRGB(red, green, blue);
             //color = "red: 0.36f, green: 0.91f, blue: 0.09f"
-            UIColor color = UIColor.FromRGB(dColors[0], dColors[1], dColors[2]);
+            //UIColor color = UIColor.FromRGB(dColors[0].FloatValue, dColors[1].FloatValue, dColors[2]);
 
-            this.View.BackgroundColor = color;
+            this.View.BackgroundColor = UIColor.Red;
             //{
                 //View.BackgroundColor = UIColor.FromName(color);
                 //this.View.BackgroundColor = defaultColor;
@@ -218,7 +234,7 @@ namespace TipCalculator
             serviceSlider.Value = defaults.IntForKey (Constants.TIP_PERCENTAGE); //slider    //.FloatForKey
             tipPercentageTextView.Text = serviceSlider.Value.ToString();
             currency = defaults.StringForKey(Constants.CURRENCY_TYPE);
-            dColors = defaults.ArrayForKey(Constants.BACKGROUND_COLOR);
+            colorString = defaults.ArrayForKey(Constants.BACKGROUND_COLOR);
         }
 
 
