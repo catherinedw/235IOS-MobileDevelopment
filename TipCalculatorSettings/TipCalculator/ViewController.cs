@@ -229,7 +229,7 @@ namespace TipCalculator
         private void RefreshFields()
         {
             NSUserDefaults defaults = NSUserDefaults.StandardUserDefaults;
-
+            //taxSwitch.On = defaults.BoolForKey(Constants.HUMID_SWITCH_KEY);             //if (HumiditySwitch.On)             //{             //    HumidityField.Enabled = true;             //    HumidityField.Text = defaults.StringForKey(Constants.HUMID_PERCENT_KEY);             //}
             taxPercentageTextView.Text = defaults.IntForKey (Constants.TAX_PERCENTAGE).ToString();
             serviceSlider.Value = defaults.IntForKey (Constants.TIP_PERCENTAGE); //slider    //.FloatForKey
             tipPercentageTextView.Text = serviceSlider.Value.ToString();
