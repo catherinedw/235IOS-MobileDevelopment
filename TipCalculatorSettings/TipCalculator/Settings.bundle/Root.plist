@@ -17,12 +17,12 @@
 			<string>Tip Percentage Default</string>
 			<key>Key</key>
 			<string>tipPercentageDefault</string>
-			<key>MinimumValue</key>
-			<real>10</real>
-			<key>MaximumValue</key>
-			<real>30</real>
 			<key>DefaultValue</key>
 			<integer>18</integer>
+			<key>MinimumValue</key>
+			<integer>10</integer>
+			<key>MaximumValue</key>
+			<integer>30</integer>
 		</dict>
 		<dict>
 			<key>Type</key>
@@ -56,7 +56,21 @@
 				<string>Mex$</string>
 				<string>€</string>
 				<string>£</string>
+				<string>$</string>
 			</array>
+			<key>Titles</key>
+			<array>
+				<string>Peso</string>
+				<string>Euro</string>
+				<string>Pound</string>
+				<string>Dollar</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTextFieldSpecifier</string>
+			<key>Title</key>
+			<string>Title</string>
 		</dict>
 	</array>
 	<key>StringsTable</key>

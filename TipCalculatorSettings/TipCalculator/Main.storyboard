@@ -167,6 +167,23 @@
                                     <constraint id="4123" firstItem="448" firstAttribute="height" constant="101"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7177" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="122" y="581" width="118" height="30"/>
+                                <state key="normal" title="Reset Settings"/>
+                                <connections>
+                                    <action selector="resetButton_TouchUpInside:" destination="BYZ-38-t0r" id="7261" eventType="touchUpInside"/>
+                                </connections>
+                                <constraints>
+                                    <constraint id="7629" firstItem="7177" firstAttribute="width" constant="118"/>
+                                </constraints>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7178" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="148" y="524" width="77" height="30"/>
+                                <state key="normal" title="Settings"/>
+                                <connections>
+                                    <action selector="settingsButton_TouchUpInside:" destination="BYZ-38-t0r" id="7262" eventType="touchUpInside"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint id="4068" firstItem="214" firstAttribute="trailing" secondItem="213" secondAttribute="trailing"/>
@@ -217,6 +234,11 @@
                             <constraint id="4134" firstItem="201" firstAttribute="trailing" secondItem="207" secondAttribute="trailing"/>
                             <constraint id="4135" firstItem="212" firstAttribute="centerX" secondItem="213" secondAttribute="centerX"/>
                             <constraint id="4136" firstItem="206" firstAttribute="centerX" secondItem="213" secondAttribute="centerX"/>
+                            <constraint id="7623" firstItem="7178" firstAttribute="top" secondItem="202" secondAttribute="bottom" constant="44"/>
+                            <constraint id="7625" firstItem="7177" firstAttribute="top" secondItem="7178" secondAttribute="bottom" constant="27"/>
+                            <constraint id="7626" firstItem="7177" firstAttribute="width" secondItem="7178" secondAttribute="width"/>
+                            <constraint id="7627" firstItem="7177" firstAttribute="centerX" secondItem="7178" secondAttribute="centerX"/>
+                            <constraint id="7630" firstItem="8bC-Xf-vdC" firstAttribute="centerX" secondItem="7178" secondAttribute="centerX" constant="1"/>
                         </constraints>
                         <connections>
                             <outletCollection id="6382" property="gestureRecognizers" destination="6381"/>
@@ -241,6 +263,8 @@
                         <outlet property="taxPercentageTextView" destination="211" id="name-outlet-211"/>
                         <outlet property="taxAmountTextView" destination="213" id="name-outlet-213"/>
                         <outlet property="totalTextView" destination="214" id="name-outlet-214"/>
+                        <outlet property="resetButton" destination="7177" id="name-outlet-7177"/>
+                        <outlet property="settingsButton" destination="7178" id="name-outlet-7178"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

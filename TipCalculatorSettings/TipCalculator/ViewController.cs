@@ -10,6 +10,7 @@ namespace TipCalculator
         /***variables***/
         decimal tipAmount, taxAmount, total;
         int tipPercent, taxPercent = 0;
+        string currency = "$";
 
         NSObject observer = null;
 
@@ -49,12 +50,12 @@ namespace TipCalculator
             amountTextView.EditingDidEnd += (sender, e) => {
                 try //to validate number input
                 {
-                    tipAmount = CalculateTipAmount(amountTextView.Text, Convert.ToDecimal(serviceSlider.Value));
+                    tipAmount = CalculateTipAmount(amountTextView.Text, (int)serviceSlider.Value);//Convert.ToDecimal(serviceSlider.Value));
                     taxAmount = CalculateTaxAmount(amountTextView.Text, taxPercent);
                     total = CalculateTotalAmount(amountTextView.Text, tipAmount, taxAmount);
-                    tipAmountTextView.Text = "$" + tipAmount.ToString();
-                    taxAmountTextView.Text = "$" + taxAmount.ToString();
-                    totalTextView.Text = "$" + total.ToString();
+                    tipAmountTextView.Text = currency + tipAmount.ToString();
+                    taxAmountTextView.Text = currency + taxAmount.ToString();
+                    totalTextView.Text = currency + total.ToString();
                 }
                 //This catches values outside of the scope
                 catch (Exception ex)
@@ -70,8 +71,8 @@ namespace TipCalculator
                 serviceSlider.Value = tipPercent; //this changes the slider value to match the input
                 tipAmount = CalculateTipAmount(amountTextView.Text, tipPercent);
                 total = CalculateTotalAmount(amountTextView.Text, tipAmount, taxAmount);
-                tipAmountTextView.Text = "$" + tipAmount.ToString();
-                totalTextView.Text = "$" + total.ToString();
+                tipAmountTextView.Text = currency + tipAmount.ToString();
+                totalTextView.Text = currency + total.ToString();
                 ((UITextField)sender).ResignFirstResponder();
             };
 
@@ -82,8 +83,8 @@ namespace TipCalculator
                 {
                     taxAmount = CalculateTaxAmount(amountTextView.Text, Convert.ToDecimal(taxPercentageTextView.Text));
                     total = CalculateTotalAmount(amountTextView.Text, tipAmount, taxAmount);
-                    taxAmountTextView.Text = "$" + taxAmount.ToString();
-                    totalTextView.Text = "$" + total.ToString();
+                    taxAmountTextView.Text = currency + taxAmount.ToString();
+                    totalTextView.Text = currency + total.ToString();
                 }
                     ((UITextField)sender).ResignFirstResponder();
             };
@@ -97,13 +98,13 @@ namespace TipCalculator
 
         //slide the slider
         partial void serviceSlider_ValueChanged(UISlider sender)
-        {
+        {   
             int progress = (int)sender.Value;
             tipPercentageTextView.Text = progress.ToString();
             tipAmount = CalculateTipAmount(amountTextView.Text, Convert.ToDecimal(progress));
             total = CalculateTotalAmount(amountTextView.Text, tipAmount, taxAmount);
-            tipAmountTextView.Text = "$" + tipAmount.ToString();
-            totalTextView.Text = "$" + total.ToString();
+            tipAmountTextView.Text = currency + tipAmount.ToString();
+            totalTextView.Text = currency + total.ToString();
         }
 
         //switch change of value Event
@@ -122,8 +123,8 @@ namespace TipCalculator
                 taxPercentageTextView.Text = taxPercent.ToString();
                 taxAmount = CalculateTaxAmount(amountTextView.Text, taxPercent);
                 total = CalculateTotalAmount(amountTextView.Text, tipAmount, taxAmount);
-                taxAmountTextView.Text = "$" + taxAmount.ToString();
-                totalTextView.Text = "$" + total.ToString();
+                taxAmountTextView.Text = currency + taxAmount.ToString();
+                totalTextView.Text = currency + total.ToString();
             }
 
         }
@@ -192,9 +193,10 @@ namespace TipCalculator
         {
             NSUserDefaults defaults = NSUserDefaults.StandardUserDefaults;
 
-            taxPercentageTextView.Text = defaults.StringForKey (Constants.TAX_PERCENTAGE);
-            serviceSlider.Value = defaults.FloatForKey (Constants.TIP_PERCENTAGE); //slider
-
+            taxPercentageTextView.Text = defaults.IntForKey (Constants.TAX_PERCENTAGE).ToString();
+            serviceSlider.Value = defaults.IntForKey (Constants.TIP_PERCENTAGE); //slider    //.FloatForKey
+            tipPercentageTextView.Text = serviceSlider.Value.ToString();
+            currency = defaults.StringForKey(Constants.CURRENCY_TYPE);
         //public const string CURRENCY_TYPE = "currencyType"; //make this into an array
         //public const string BACKGROUND_COLOR = "backgroundColor";
         }
@@ -209,6 +211,21 @@ namespace TipCalculator
             RefreshFields();            
         }
 
+        partial void settingsButton_TouchUpInside(UIButton sender)
+        {
+            UIApplication.SharedApplication.OpenUrl(new NSUrl(UIApplication.OpenSettingsUrlString));
+        }
+
+        partial void resetButton_TouchUpInside(UIButton sender)
+        {
+            NSUserDefaults.StandardUserDefaults.RemoveObject(Constants.TAX_PERCENTAGE);
+            NSUserDefaults.StandardUserDefaults.RemoveObject(Constants.TIP_PERCENTAGE);
+            NSUserDefaults.StandardUserDefaults.RemoveObject(Constants.CURRENCY_TYPE);
+            RefreshFields();
+        }
         #endregion
+
+
+
     }
 }

@@ -39,11 +39,19 @@ namespace TipCalculator
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton resetButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel serviceLabel { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UISlider serviceSlider { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton settingsButton { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -85,9 +93,17 @@ namespace TipCalculator
         [GeneratedCode ("iOS Designer", "1.0")]
         partial void OnTapGestureRecognized (UIKit.UITapGestureRecognizer sender);
 
+        [Action ("resetButton_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void resetButton_TouchUpInside (UIKit.UIButton sender);
+
         [Action ("serviceSlider_ValueChanged:")]
         [GeneratedCode ("iOS Designer", "1.0")]
         partial void serviceSlider_ValueChanged (UIKit.UISlider sender);
+
+        [Action ("settingsButton_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void settingsButton_TouchUpInside (UIKit.UIButton sender);
 
         [Action ("taxSwitch_ActionSheet:")]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -129,6 +145,11 @@ namespace TipCalculator
                 poorLabel = null;
             }
 
+            if (resetButton != null) {
+                resetButton.Dispose ();
+                resetButton = null;
+            }
+
             if (serviceLabel != null) {
                 serviceLabel.Dispose ();
                 serviceLabel = null;
@@ -137,6 +158,11 @@ namespace TipCalculator
             if (serviceSlider != null) {
                 serviceSlider.Dispose ();
                 serviceSlider = null;
+            }
+
+            if (settingsButton != null) {
+                settingsButton.Dispose ();
+                settingsButton = null;
             }
 
             if (taxAmountTextView != null) {
