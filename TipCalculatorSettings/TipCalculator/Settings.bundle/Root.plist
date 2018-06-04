@@ -74,7 +74,31 @@
 			<key>Key</key>
 			<string>backgroundColor</string>
 			<key>DefaultValue</key>
-			<string>DefaultValue</string>
+			<string>red</string>
+			<key>Titles</key>
+			<array>
+				<string>blue</string>
+				<string>red</string>
+				<string>yellow</string>
+			</array>
+			<key>Values</key>
+			<array>
+				<array>
+					<integer>0</integer>
+					<integer>0</integer>
+					<integer>255</integer>
+				</array>
+				<array>
+					<integer>255</integer>
+					<integer>0</integer>
+					<integer>0</integer>
+				</array>
+				<array>
+					<integer>255</integer>
+					<integer>255</integer>
+					<integer>0</integer>
+				</array>
+			</array>
 		</dict>
 	</array>
 	<key>StringsTable</key>

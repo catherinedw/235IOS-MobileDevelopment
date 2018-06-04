@@ -1,6 +1,8 @@
 ﻿using System;
 using UIKit;
 using Foundation;
+using CoreGraphics;
+using System.Collections.Generic;
 
 namespace TipCalculator
 {
@@ -11,8 +13,8 @@ namespace TipCalculator
         decimal tipAmount, taxAmount, total;
         int tipPercent, taxPercent = 0;
         string currency = "$";
-         //defaultColor = UIColor.Yellow.CGColor;
-
+        //UIColor dColor = UIColor.Red;
+        NSObject[] dColors = new NSObject[3]; //= this.View.BackgroundColor.ToString();
         NSObject observer = null;
 
         protected ViewController(IntPtr handle) : base(handle)
@@ -47,7 +49,22 @@ namespace TipCalculator
             // Perform any additional setup after loading the view, typically from a nib.
             taxSwitch.On = false; //default of switch is off
             taxPercentageTextView.Text = taxPercent.ToString();
-            //View.BackgroundColor = UIColor.FromName(color);
+            //if (color != null)
+            //string hex = "color.";
+            //nfloat red = Convert.ToInt32(string.Format("{0}{0}", hex.Substring(0, 1)), 16) / 255f;
+            //nfloat green = Convert.ToInt32(string.Format("{0}{0}", hex.Substring(1, 1)), 16) / 255f;
+            //nfloat blue = Convert.ToInt32(string.Format("{0}{0}", hex.Substring(2, 1)), 16) / 255f;
+            //
+            //var color = UIColor.FromRGB(red, green, blue);
+            //color = "red: 0.36f, green: 0.91f, blue: 0.09f"
+            UIColor color = UIColor.FromRGB(dColors[0], dColors[1], dColors[2]);
+
+            this.View.BackgroundColor = color;
+            //{
+                //View.BackgroundColor = UIColor.FromName(color);
+                //this.View.BackgroundColor = defaultColor;
+            //}
+
 
 
             //When the meal amount gets edited
@@ -201,8 +218,7 @@ namespace TipCalculator
             serviceSlider.Value = defaults.IntForKey (Constants.TIP_PERCENTAGE); //slider    //.FloatForKey
             tipPercentageTextView.Text = serviceSlider.Value.ToString();
             currency = defaults.StringForKey(Constants.CURRENCY_TYPE);
-        //public const string CURRENCY_TYPE = "currencyType"; //make this into an array
-        //public const string BACKGROUND_COLOR = "backgroundColor";
+            dColors = defaults.ArrayForKey(Constants.BACKGROUND_COLOR);
         }
 
 
