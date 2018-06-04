@@ -10,7 +10,8 @@ namespace TipCalculator
         /***variables***/
         decimal tipAmount, taxAmount, total;
         int tipPercent, taxPercent = 0;
-        string currency = "$", defaultColor = "UIColor.Yellow.CGColor";
+        string currency = "$";
+         //defaultColor = UIColor.Yellow.CGColor;
 
         NSObject observer = null;
 
@@ -41,7 +42,7 @@ namespace TipCalculator
         #region View lifecycle
         public override void ViewDidLoad()
         {
-            this.View.Layer.BackgroundColor = defaultColor;
+            this.View.Layer.BackgroundColor = UIColor.Yellow.CGColor;
             base.ViewDidLoad();
             // Perform any additional setup after loading the view, typically from a nib.
             taxSwitch.On = false; //default of switch is off
