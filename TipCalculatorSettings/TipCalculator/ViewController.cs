@@ -94,7 +94,7 @@ namespace TipCalculator
         //This gets rid of the text when you are done editing
         partial void OnTapGestureRecognized(UITapGestureRecognizer sender)
         {
-            amountTextView.ResignFirstResponder();             tipPercentageTextView.ResignFirstResponder();             taxPercentageTextView.ResignFirstResponder();
+            amountTextView.ResignFirstResponder();             tipPercentageTextView.ResignFirstResponder();             //taxPercentageTextView.ResignFirstResponder();
         }
 
         //slide the slider

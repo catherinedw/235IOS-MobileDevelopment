@@ -11,6 +11,7 @@ namespace GetItDone.List
     {
         private string pathToDatabase;
         public string segmentValue = "!";
+        NSObject observer = null;
 
         protected ViewController(IntPtr handle) : base(handle)
         {
@@ -18,6 +19,18 @@ namespace GetItDone.List
             pathToDatabase = Path.Combine(documentsFolder, "happenings_db.db");
         }
 
+        public override void ViewWillAppear(bool animated)
+        {
+            base.ViewWillAppear(animated);
+            // Update the values shown in view 1 from the StandardUserDefaults
+            RefreshFields();
+
+            // Subscribe to the applicationWillEnterForeground notification
+            var app = UIApplication.SharedApplication;
+            // NSNotificationCenter.DefaultCenter.AddObserver (this, UIApplication.WillEnterForegroundNotification, "ApplicationWillEnterForeground", app);
+            // NSNotificationCenter.DefaultCenter.AddObserver (UIApplication.WillEnterForegroundNotification, ApplicationWillEnterForeground);
+            observer = NSNotificationCenter.DefaultCenter.AddObserver(aName: UIApplication.WillEnterForegroundNotification, notify: ApplicationWillEnterForeground, fromObject: app);
+        }
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
@@ -36,6 +49,12 @@ namespace GetItDone.List
         {
             base.DidReceiveMemoryWarning();
             // Release any cached data, images, etc that aren't in use.     
+        }
+
+        public override void ViewWillDisappear(bool animated)
+        {
+            base.ViewWillDisappear(animated);
+            NSNotificationCenter.DefaultCenter.RemoveObserver(observer);
         }
 
         private void SaveButton_Clicked(object sender, EventArgs e)
@@ -65,14 +84,18 @@ namespace GetItDone.List
         //picker 
         partial void DateTimeChanged(UIDatePicker sender)
         {
+            //sender.Locale = new NSLocale("NL");
             //Formatting for Date and Time
-            NSDateFormatter dateTimeformat = new NSDateFormatter();
-            dateTimeformat.DateStyle = NSDateFormatterStyle.Long;
-            dateTimeformat.TimeStyle = NSDateFormatterStyle.Medium;
-
+            NSDateFormatter dateTimeFormat = new NSDateFormatter();
+            dateTimeFormat.DateStyle = NSDateFormatterStyle.Long;
+            dateTimeFormat.TimeStyle = NSDateFormatterStyle.Short;
+            dateTimeFormat.Locale = new NSLocale("NL");
+            //[dateFormatter setLocale:[NSLocale currentLocale]];
+            //dateTimePicker1.Format = DateTimePickerFormat.Custom;
+            //dateTimePicker1.CustomFormat = "HH:mm:ss tt";
             var currentDate = NSDate.Now;
             datePickerView.MinimumDate = NSDate.Now;
-            dateLabel.Text = dateTimeformat.ToString(datePickerView.Date);
+            dateLabel.Text = dateTimeFormat.ToString(datePickerView.Date);
         }
 
         //This gets rid of the text when you are done editing
@@ -158,6 +181,24 @@ namespace GetItDone.List
                     segmentValue = segmentedControl.TitleAt(2);
                     break;
             }
+        }
+
+        private void RefreshFields()
+        {
+            NSUserDefaults defaults = NSUserDefaults.StandardUserDefaults;
+
+            locationTextView.Text = defaults.StringForKey(Constants.LOCATION_KEY);
+            string hoursPref = defaults.StringForKey(Constants.HOURS_KEY);
+            commentTextView.Text = defaults.BoolForKey(Constants.COMMENT_SWITCH_KEY) ? "Enter Comment Here" : "Disabled";
+        }
+
+        // We will subscribe to the applicationWillEnterForeground notification
+        // so that this method is called when that notification occurs
+        private void ApplicationWillEnterForeground(NSNotification notification)
+        {
+            var defaults = NSUserDefaults.StandardUserDefaults;
+            defaults.Synchronize();
+            RefreshFields();
         }
     }
 }

@@ -21,6 +21,14 @@ namespace GetItDone.List
             // Override point for customization after application launch.
             // If not required for your application you can safely delete this method
 
+            // Set default settings for this app, but only the first time it's run
+            var defaultsDictionary = new NSMutableDictionary();
+            defaultsDictionary.SetValueForKey((NSString)"Home", (NSString)Constants.LOCATION_KEY);
+            defaultsDictionary.SetValueForKey((NSString)"Medium", (NSString)Constants.HOURS_KEY);
+            defaultsDictionary.SetValueForKey((NSString)"True", (NSString)Constants.COMMENT_SWITCH_KEY);
+
+            NSUserDefaults.StandardUserDefaults.RegisterDefaults(defaultsDictionary);
+
             return true;
         }
 

@@ -116,6 +116,10 @@
     </Compile>
     <Compile Include="Classes\Happening.cs" />
     <Compile Include="HappeningTableViewSource.cs" />
+    <Compile Include="Constants.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Settings.bundle\Root.plist" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

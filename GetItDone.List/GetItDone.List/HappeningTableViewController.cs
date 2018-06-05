@@ -48,10 +48,12 @@ namespace GetItDone.List
                     happenings.Add(happening);
                     happenings = happenings.OrderBy(x => x.Date).ThenBy(x => x.Importance).ThenBy(x => x.Title).ToList();
 
-                    TableView.ReloadData();
                     //TableView.AlwaysBounceVertical = false;
 //TODO              There is a duplicate when you dont enter anything and return to table
                     TableView.Source = new HappeningTableViewSource(happenings, this);
+                    TableView.RowHeight = UITableView.AutomaticDimension;
+                    TableView.EstimatedRowHeight = 40f;
+                    TableView.ReloadData();
                 }
             }
         }
