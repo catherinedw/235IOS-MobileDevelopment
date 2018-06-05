@@ -1,7 +1,6 @@
 ﻿using System;
 using UIKit;
 using Foundation;
-using CoreGraphics;
 using System.Collections.Generic;
 
 namespace TipCalculator
@@ -13,8 +12,7 @@ namespace TipCalculator
         decimal tipAmount, taxAmount, total;
         int tipPercent, taxPercent = 0;
         string currency = "$", colorString;
-        UIColor dColor = UIColor.Red;
-        //NSObject[] dColors = new NSObject[3]; //= this.View.BackgroundColor.ToString();
+
         NSObject observer = null;
 
         protected ViewController(IntPtr handle) : base(handle)
@@ -44,44 +42,10 @@ namespace TipCalculator
         #region View lifecycle
         public override void ViewDidLoad()
         {
-            this.View.Layer.BackgroundColor = UIColor.Yellow.CGColor;
             base.ViewDidLoad();
             // Perform any additional setup after loading the view, typically from a nib.
             taxSwitch.On = false; //default of switch is off
             taxPercentageTextView.Text = taxPercent.ToString();
-            //if (color != null)
-            //float red, green, blue;
-            //dColor.FromHex("#00FF00").ToUIColor();
-            switch (colorString.Length)
-            {
-                case 3: // #RGB
-                    {
-                        red = Convert.ToInt32(string.Format("{0}{0}", colorString.Substring(0, 1)), 16) / 255f;
-                        green = Convert.ToInt32(string.Format("{0}{0}", colorString.Substring(1, 1)), 16) / 255f;
-                        blue = Convert.ToInt32(string.Format("{0}{0}", colorString.Substring(2, 1)), 16) / 255f;
-                        return UIColor.FromRGBA(red, green, blue);
-                    }
-
-                default:
-                    throw new ArgumentOutOfRangeException(string.Format("Invalid color value {0} is invalid. It should be a hex value of the form #RBG, #RRGGBB", hexValue));
-
-            }
-            //string hex = "color.";
-            //nfloat red = Convert.ToInt32(string.Format("{0}{0}", hex.Substring(0, 1)), 16) / 255f;
-            //nfloat green = Convert.ToInt32(string.Format("{0}{0}", hex.Substring(1, 1)), 16) / 255f;
-            //nfloat blue = Convert.ToInt32(string.Format("{0}{0}", hex.Substring(2, 1)), 16) / 255f;
-            //
-            //var color = UIColor.FromRGB(red, green, blue);
-            //color = "red: 0.36f, green: 0.91f, blue: 0.09f"
-            //UIColor color = UIColor.FromRGB(dColors[0].FloatValue, dColors[1].FloatValue, dColors[2]);
-
-            this.View.BackgroundColor = UIColor.Red;
-            //{
-                //View.BackgroundColor = UIColor.FromName(color);
-                //this.View.BackgroundColor = defaultColor;
-            //}
-
-
 
             //When the meal amount gets edited
             amountTextView.EditingDidEnd += (sender, e) => {
@@ -229,12 +193,33 @@ namespace TipCalculator
         private void RefreshFields()
         {
             NSUserDefaults defaults = NSUserDefaults.StandardUserDefaults;
-            //taxSwitch.On = defaults.BoolForKey(Constants.HUMID_SWITCH_KEY);             //if (HumiditySwitch.On)             //{             //    HumidityField.Enabled = true;             //    HumidityField.Text = defaults.StringForKey(Constants.HUMID_PERCENT_KEY);             //}
-            taxPercentageTextView.Text = defaults.IntForKey (Constants.TAX_PERCENTAGE).ToString();
-            serviceSlider.Value = defaults.IntForKey (Constants.TIP_PERCENTAGE); //slider    //.FloatForKey
+            taxSwitch.On = defaults.BoolForKey(Constants.TAX_SWITCH_KEY);             if (taxSwitch.On)             {
+                taxPercentageTextView.UserInteractionEnabled = true;
+                taxPercentageTextView.Text = defaults.StringForKey(Constants.TAX_PERCENTAGE_KEY);
+                taxAmountTextView.Text = currency + taxAmount.ToString();             }
+            taxPercentageTextView.Text = defaults.IntForKey (Constants.TAX_PERCENTAGE_KEY).ToString();
+            serviceSlider.Value = defaults.IntForKey (Constants.TIP_PERCENTAGE_KEY); //slider    //.FloatForKey
             tipPercentageTextView.Text = serviceSlider.Value.ToString();
-            currency = defaults.StringForKey(Constants.CURRENCY_TYPE);
-            colorString = defaults.ArrayForKey(Constants.BACKGROUND_COLOR);
+            currency = defaults.StringForKey(Constants.CURRENCY_TYPE_KEY);
+            tipAmountTextView.Text = currency + tipAmount.ToString();
+            totalTextView.Text = currency + total.ToString();
+
+            colorString = defaults.StringForKey(Constants.BACKGROUND_COLOR_KEY);
+            switch (colorString)
+            {
+                case "blue":
+                    this.View.Layer.BackgroundColor = UIColor.Blue.CGColor;
+                    break;
+                case "red":
+                    this.View.Layer.BackgroundColor = UIColor.Red.CGColor;
+                    break;
+                case "yellow":
+                    this.View.Layer.BackgroundColor = UIColor.Yellow.CGColor;
+                    break;
+                default:
+                    this.View.Layer.BackgroundColor = UIColor.Red.CGColor;
+                    break;
+            }
         }
 
 
@@ -254,14 +239,14 @@ namespace TipCalculator
 
         partial void resetButton_TouchUpInside(UIButton sender)
         {
-            NSUserDefaults.StandardUserDefaults.RemoveObject(Constants.TAX_PERCENTAGE);
-            NSUserDefaults.StandardUserDefaults.RemoveObject(Constants.TIP_PERCENTAGE);
-            NSUserDefaults.StandardUserDefaults.RemoveObject(Constants.CURRENCY_TYPE);
+            NSUserDefaults.StandardUserDefaults.RemoveObject(Constants.TAX_PERCENTAGE_KEY);
+            NSUserDefaults.StandardUserDefaults.RemoveObject(Constants.TAX_SWITCH_KEY);
+            NSUserDefaults.StandardUserDefaults.RemoveObject(Constants.TIP_PERCENTAGE_KEY);
+            NSUserDefaults.StandardUserDefaults.RemoveObject(Constants.CURRENCY_TYPE_KEY);
+            NSUserDefaults.StandardUserDefaults.RemoveObject(Constants.BACKGROUND_COLOR_KEY);
             RefreshFields();
         }
         #endregion
-
-
 
     }
 }
