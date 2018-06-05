@@ -197,6 +197,12 @@ namespace TipCalculator
                 taxPercentageTextView.UserInteractionEnabled = true;
                 taxPercentageTextView.Text = defaults.StringForKey(Constants.TAX_PERCENTAGE_KEY);
                 taxAmountTextView.Text = currency + taxAmount.ToString();             }
+            if (!taxSwitch.On)
+            {
+                taxPercentageTextView.UserInteractionEnabled = false;
+                taxPercentageTextView.Text = defaults.StringForKey(Constants.TAX_PERCENTAGE_KEY);
+                taxAmountTextView.Text = "";
+            }
             taxPercentageTextView.Text = defaults.IntForKey (Constants.TAX_PERCENTAGE_KEY).ToString();
             serviceSlider.Value = defaults.IntForKey (Constants.TIP_PERCENTAGE_KEY); //slider    //.FloatForKey
             tipPercentageTextView.Text = serviceSlider.Value.ToString();
