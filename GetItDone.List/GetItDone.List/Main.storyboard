@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="213">
-    <device id="ipad9_7" orientation="portrait">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -17,25 +17,25 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="516" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Title">
-                                <rect key="frame" x="20" y="344" width="728" height="30"/>
+                                <rect key="frame" x="16" y="67" width="288" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="517" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Date">
-                                <rect key="frame" x="20" y="514" width="728" height="30"/>
+                                <rect key="frame" x="16" y="277" width="288" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections/>
                             </textField>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="15" id="734" translatesAutoresizingMaskIntoConstraints="NO">
-                                <rect key="frame" x="251.5" y="382" width="265" height="124"/>
+                                <rect key="frame" x="27.5" y="112" width="265" height="150"/>
                                 <date key="date" timeIntervalSinceReferenceDate="332704801.65417802">
                                     <!--2011-07-18 18:00:01 +0000-->
                                 </date>
@@ -47,11 +47,11 @@
                                 </connections>
                                 <constraints>
                                     <constraint id="13705" firstItem="734" firstAttribute="width" constant="265"/>
-                                    <constraint id="13706" firstItem="734" firstAttribute="height" constant="124"/>
+                                    <constraint id="14555" firstAttribute="width" secondItem="734" secondAttribute="height" multiplier="53:30"/>
                                 </constraints>
                             </datePicker>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="3862" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Comment">
-                                <rect key="frame" x="20" y="627.5" width="728" height="60"/>
+                                <rect key="frame" x="16" y="367.5" width="288" height="60"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -60,20 +60,20 @@
                                 </constraints>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="3873" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Location">
-                                <rect key="frame" x="20" y="702.5" width="728" height="30"/>
+                                <rect key="frame" x="16" y="442.5" width="288" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="3874" translatesAutoresizingMaskIntoConstraints="NO">
-                                <rect key="frame" x="256" y="588.5" width="492" height="31"/>
+                                <rect key="frame" x="253" y="321.5" width="51" height="31"/>
                                 <connections>
                                     <action selector="partialvoidcommentSwitch_ValueChanged:" destination="BYZ-38-t0r" id="3884" eventType="valueChanged"/>
                                     <action selector="commentSwitch_ActionSheet:" destination="BYZ-38-t0r" id="6093" eventType="valueChanged"/>
                                 </connections>
                             </switch>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="3877">
-                                <rect key="frame" x="323.5" y="552" width="121" height="29"/>
+                                <rect key="frame" x="99.5" y="322" width="121" height="29"/>
                                 <segments>
                                     <segment title="!"/>
                                     <segment title="!!"/>
@@ -90,28 +90,22 @@
                         <constraints>
                             <constraint id="3863" firstItem="516" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin"/>
                             <constraint id="3864" firstItem="516" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin"/>
-                            <constraint id="3869" firstItem="8bC-Xf-vdC" firstAttribute="centerY" secondItem="516" secondAttribute="centerY" constant="153"/>
+                            <constraint id="3869" firstItem="8bC-Xf-vdC" firstAttribute="centerY" secondItem="516" secondAttribute="centerY" constant="158"/>
                             <constraint id="13692" firstItem="517" firstAttribute="width" secondItem="516" secondAttribute="width"/>
                             <constraint id="13693" firstItem="3862" firstAttribute="width" secondItem="516" secondAttribute="width"/>
                             <constraint id="13694" firstItem="3873" firstAttribute="width" secondItem="516" secondAttribute="width"/>
-                            <constraint id="13695" firstItem="3873" firstAttribute="centerX" secondItem="516" secondAttribute="centerX"/>
-                            <constraint id="13696" firstItem="517" firstAttribute="centerX" secondItem="516" secondAttribute="centerX"/>
-                            <constraint id="13697" firstItem="3862" firstAttribute="centerX" secondItem="516" secondAttribute="centerX"/>
-                            <constraint id="13698" firstItem="3877" firstAttribute="centerX" secondItem="516" secondAttribute="centerX"/>
-                            <constraint id="13699" firstItem="3873" firstAttribute="centerX" secondItem="516" secondAttribute="centerX"/>
-                            <constraint id="13700" firstItem="517" firstAttribute="centerX" secondItem="516" secondAttribute="centerX"/>
-                            <constraint id="13701" firstItem="3862" firstAttribute="centerX" secondItem="516" secondAttribute="centerX"/>
-                            <constraint id="13702" firstItem="3877" firstAttribute="centerX" secondItem="516" secondAttribute="centerX"/>
-                            <constraint id="13703" firstItem="734" firstAttribute="centerX" secondItem="516" secondAttribute="centerX"/>
-                            <constraint id="13704" firstItem="734" firstAttribute="top" secondItem="516" secondAttribute="bottom" constant="8"/>
-                            <constraint id="13707" firstItem="517" firstAttribute="top" secondItem="734" secondAttribute="bottom" constant="8"/>
-                            <constraint id="13708" firstItem="3877" firstAttribute="top" secondItem="517" secondAttribute="bottom" constant="8"/>
-                            <constraint id="13709" firstItem="3862" firstAttribute="top" secondItem="3874" secondAttribute="bottom" constant="8"/>
+                            <constraint id="13704" firstItem="734" firstAttribute="top" secondItem="516" secondAttribute="bottom" constant="15"/>
+                            <constraint id="13707" firstItem="517" firstAttribute="top" secondItem="734" secondAttribute="bottom" constant="15"/>
+                            <constraint id="13709" firstItem="3862" firstAttribute="top" secondItem="3874" secondAttribute="bottom" constant="15"/>
                             <constraint id="13710" firstItem="3873" firstAttribute="top" secondItem="3862" secondAttribute="bottom" constant="15"/>
                             <constraint id="13711" firstItem="8bC-Xf-vdC" firstAttribute="trailingMargin" secondItem="3874" secondAttribute="trailing" constant="2"/>
-                            <constraint id="13712" firstItem="3874" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="117"/>
-                            <constraint id="13989" firstItem="3877" firstAttribute="centerY" secondItem="517" secondAttribute="bottom" constant="22"/>
-                            <constraint id="13991" firstItem="3874" firstAttribute="centerY" secondItem="3877" secondAttribute="bottom" constant="24"/>
+                            <constraint id="14556" firstItem="517" firstAttribute="centerX" secondItem="516" secondAttribute="centerX"/>
+                            <constraint id="14557" firstItem="734" firstAttribute="centerX" secondItem="516" secondAttribute="centerX"/>
+                            <constraint id="14558" firstItem="3877" firstAttribute="centerX" secondItem="516" secondAttribute="centerX"/>
+                            <constraint id="14559" firstItem="3873" firstAttribute="centerX" secondItem="516" secondAttribute="centerX"/>
+                            <constraint id="14560" firstItem="3862" firstAttribute="centerX" secondItem="516" secondAttribute="centerX"/>
+                            <constraint id="14561" firstItem="3877" firstAttribute="top" secondItem="3874" secondAttribute="top" constant="0.5"/>
+                            <constraint id="14564" firstItem="3877" firstAttribute="top" secondItem="517" secondAttribute="bottom" constant="15"/>
                         </constraints>
                         <connections>
                             <outletCollection id="3882" property="gestureRecognizers" destination="3881"/>
@@ -144,26 +138,26 @@
             <objects>
                 <tableViewController id="204" sceneMemberID="viewController" customClass="HappeningTableViewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="206">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="209" reuseIdentifier="happeningCell" style="IBUITableViewCellStyleSubtitle" textLabel="10847" detailTextLabel="10848">
-                                <rect key="frame" x="0.0" y="28" width="768" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="209" id="210">
-                                    <rect key="frame" x="0.0" y="0.0" width="768" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="10847">
-                                            <rect key="frame" x="48" y="5" width="33.5" height="20.5"/>
+                                            <rect key="frame" x="16" y="5" width="33.5" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="10848" numberOfLines="2">
-                                            <rect key="frame" x="48" y="25.5" width="44" height="14.5"/>
+                                            <rect key="frame" x="16" y="25.5" width="44" height="14.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
@@ -194,7 +188,7 @@
             <objects>
                 <navigationController id="213" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="215">
-                        <rect key="frame" x="0.0" y="20" width="768" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
