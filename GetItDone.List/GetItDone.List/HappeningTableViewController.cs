@@ -21,8 +21,6 @@ namespace GetItDone.List
         {
             base.ViewDidLoad();
 
-            happenings = new List<Happening>();
-
             var documentsFolder = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
             pathToDatabase = Path.Combine(documentsFolder, "happenings_db.db");
 
@@ -39,10 +37,12 @@ namespace GetItDone.List
         {
             base.ViewDidAppear(animated);
 
+            happenings = new List<Happening>();
+
             using (var connection = new SQLite.SQLiteConnection(pathToDatabase))
             {
                 var query = connection.Table<Happening>();
-
+//YODO                //need to remove all the old info
                 foreach (Happening happening in query)
                 {
                     happenings.Add(happening);

@@ -127,8 +127,12 @@ namespace GetItDone.List
             var controller = UIAlertController.Create("Are You Sure You Want to Add a Comment?", null, UIAlertControllerStyle.ActionSheet);
             var controllerOff = UIAlertController.Create("Your comment will be delete?", null, UIAlertControllerStyle.ActionSheet);
 
-            var yesAction = UIAlertAction.Create("Yes, I'm Sure!", UIAlertActionStyle.Destructive, null);
-            var noAction = UIAlertAction.Create("No thank you!", UIAlertActionStyle.Cancel,
+            var yesAction = UIAlertAction.Create("Yes, I'm Sure!", UIAlertActionStyle.Destructive, //null);
+                (action) =>
+                {
+                    commentSwitch.On = true;
+                });
+            var noAction = UIAlertAction.Create("No, thank you!", UIAlertActionStyle.Cancel,
                 (action) =>
                 {
                     string msg = commentTextView.Text == ""
