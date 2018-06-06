@@ -93,9 +93,10 @@ namespace GetItDone.List
             // UNCOMMENT one of these to detail button accessory
             //cell.Accessory = UITableViewCellAccessory.DetailButton;
             //---- set the accessory
-//            cell.Accessory = item.CellAccessory;
-//            cell.Accessory = UITableViewCellAccessory.None; // to clear the accessory
+            //            cell.Accessory = item.CellAccessory;
+            //            cell.Accessory = UITableViewCellAccessory.None; // to clear the accessory
             //---- set the item text
+            cell.TextLabel.Font = UIFont.FromName("Gill Sans", 22f);
             cell.TextLabel.Text = item.Title;
 
             if (cellStyle == UITableViewCellStyle.Subtitle
