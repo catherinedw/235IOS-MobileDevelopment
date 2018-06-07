@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="213">
-    <device id="retina3_5" orientation="landscape">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -17,39 +17,26 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="516" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Title">
-                                <rect key="frame" x="285" y="69" width="175" height="30"/>
+                                <rect key="frame" x="16" y="67" width="288" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <constraints>
-                                    <constraint id="14968" firstItem="516" firstAttribute="width" constant="175"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="14968"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=compact-widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="14968"/>
-                                    </mask>
-                                </variation>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="517" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Date" misplaced="YES" ambiguous="YES">
-                                <rect key="frame" x="20" y="273" width="320" height="30"/>
+                                <rect key="frame" x="16" y="220" width="258" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections/>
                                 <constraints/>
                             </textField>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="15" id="734" translatesAutoresizingMaskIntoConstraints="NO">
-                                <rect key="frame" x="20" y="69" width="258" height="146"/>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="15" id="734" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES" ambiguous="YES">
+                                <rect key="frame" x="27" y="69" width="266" height="146"/>
                                 <date key="date" timeIntervalSinceReferenceDate="332704801.65417802">
                                     <!--2011-07-18 18:00:01 +0000-->
                                 </date>
@@ -62,17 +49,10 @@
                                 <constraints>
                                     <constraint id="14919" firstItem="734" firstAttribute="height" constant="146"/>
                                     <constraint id="14920" firstItem="734" firstAttribute="width" constant="258"/>
-                                    <constraint id="15267" firstItem="734" firstAttribute="height" constant="146"/>
-                                    <constraint id="15268" firstItem="734" firstAttribute="width" constant="258"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="14920"/>
-                                    </mask>
-                                </variation>
                             </datePicker>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="3862" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Comment" misplaced="YES" ambiguous="YES">
-                                <rect key="frame" x="20" y="363.5" width="440" height="60"/>
+                                <rect key="frame" x="16" y="310.5" width="288" height="60"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -81,20 +61,20 @@
                                 </constraints>
                             </textField>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="3874" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES" ambiguous="YES">
-                                <rect key="frame" x="409" y="317.5" width="51" height="31"/>
+                                <rect key="frame" x="253" y="264.5" width="51" height="31"/>
                                 <connections>
                                     <action selector="partialvoidcommentSwitch_ValueChanged:" destination="BYZ-38-t0r" id="3884" eventType="valueChanged"/>
                                     <action selector="commentSwitch_ActionSheet:" destination="BYZ-38-t0r" id="6093" eventType="valueChanged"/>
                                 </connections>
                             </switch>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="3873" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Location" misplaced="YES" ambiguous="YES">
-                                <rect key="frame" x="334.5" y="438.5" width="76.5" height="30"/>
+                                <rect key="frame" x="202" y="438.5" width="76.5" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="3877" misplaced="YES" ambiguous="YES">
-                                <rect key="frame" x="312" y="318" width="121" height="29"/>
+                                <rect key="frame" x="99.5" y="265" width="121" height="29"/>
                                 <segments>
                                     <segment title="!"/>
                                     <segment title="!!"/>
@@ -130,27 +110,23 @@
                             <constraint id="14877" firstItem="734" firstAttribute="top" secondItem="516" secondAttribute="bottom" constant="15"/>
                             <constraint id="14921" firstItem="734" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15"/>
                             <constraint id="14922" firstItem="734" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="5"/>
-                            <constraint id="14923" firstItem="734" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin"/>
                             <constraint id="14924" firstItem="734" firstAttribute="trailing" secondItem="516" secondAttribute="leading" constant="258"/>
-                            <constraint id="14969" firstItem="734" firstAttribute="top" secondItem="516" secondAttribute="top"/>
                             <constraint id="14972" firstItem="517" firstAttribute="leading" secondItem="734" secondAttribute="leading"/>
                             <constraint id="14976" firstItem="734" firstAttribute="width" secondItem="517" secondAttribute="width"/>
+                            <constraint id="15315" firstItem="517" firstAttribute="top" secondItem="734" secondAttribute="bottom" constant="5"/>
+                            <constraint id="15614" firstItem="734" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="11"/>
                         </constraints>
                         <connections>
                             <outletCollection id="3882" property="gestureRecognizers" destination="3881"/>
                         </connections>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="3863"/>
                                 <exclude reference="13693"/>
                                 <exclude reference="3869"/>
                                 <exclude reference="14557"/>
                                 <exclude reference="14922"/>
                                 <exclude reference="14921"/>
-                                <exclude reference="14877"/>
-                                <exclude reference="14923"/>
                                 <exclude reference="14924"/>
-                                <exclude reference="14969"/>
                                 <exclude reference="13692"/>
                                 <exclude reference="13694"/>
                                 <exclude reference="14556"/>
@@ -158,31 +134,33 @@
                                 <exclude reference="13710"/>
                                 <exclude reference="14976"/>
                                 <exclude reference="14972"/>
+                                <exclude reference="15315"/>
+                                <exclude reference="14558"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="constraints">
-                                <include reference="3863"/>
+                                <exclude reference="3863"/>
                                 <include reference="3869"/>
                                 <include reference="14557"/>
                                 <include reference="14921"/>
-                                <include reference="14877"/>
+                                <exclude reference="14877"/>
                                 <include reference="13692"/>
                                 <include reference="13693"/>
                                 <include reference="13694"/>
                                 <include reference="14556"/>
                                 <include reference="13707"/>
                                 <include reference="13710"/>
+                                <include reference="14558"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact-widthClass=compact">
                             <mask key="constraints">
                                 <exclude reference="13693"/>
                                 <include reference="14922"/>
-                                <include reference="14923"/>
-                                <include reference="14969"/>
                                 <include reference="14976"/>
                                 <include reference="14972"/>
+                                <include reference="15315"/>
                             </mask>
                         </variation>
                     </view>
@@ -213,26 +191,26 @@
             <objects>
                 <tableViewController id="204" sceneMemberID="viewController" customClass="HappeningTableViewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="206">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="209" reuseIdentifier="happeningCell" style="IBUITableViewCellStyleSubtitle" textLabel="10847" detailTextLabel="10848">
-                                <rect key="frame" x="0.0" y="28" width="480" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="209" id="210">
-                                    <rect key="frame" x="0.0" y="0.0" width="480" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="10847">
-                                            <rect key="frame" x="20" y="5" width="33.5" height="20.5"/>
+                                            <rect key="frame" x="16" y="5" width="33.5" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="10848" numberOfLines="2">
-                                            <rect key="frame" x="20" y="25.5" width="44" height="14.5"/>
+                                            <rect key="frame" x="16" y="25.5" width="44" height="14.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
@@ -263,7 +241,7 @@
             <objects>
                 <navigationController id="213" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="215">
-                        <rect key="frame" x="0.0" y="20" width="480" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
