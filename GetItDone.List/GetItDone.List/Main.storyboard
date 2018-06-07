@@ -22,21 +22,21 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="516" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Title">
-                                <rect key="frame" x="16" y="67" width="288" height="30"/>
+                                <rect key="frame" x="16" y="72" width="288" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="517" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Date" misplaced="YES" ambiguous="YES">
-                                <rect key="frame" x="16" y="220" width="258" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="517" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Date">
+                                <rect key="frame" x="16" y="278" width="288" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections/>
                                 <constraints/>
                             </textField>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="15" id="734" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES" ambiguous="YES">
-                                <rect key="frame" x="27" y="69" width="266" height="146"/>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="15" id="734" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="27" y="117" width="258" height="146"/>
                                 <date key="date" timeIntervalSinceReferenceDate="332704801.65417802">
                                     <!--2011-07-18 18:00:01 +0000-->
                                 </date>
@@ -51,8 +51,8 @@
                                     <constraint id="14920" firstItem="734" firstAttribute="width" constant="258"/>
                                 </constraints>
                             </datePicker>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="3862" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Comment" misplaced="YES" ambiguous="YES">
-                                <rect key="frame" x="16" y="310.5" width="288" height="60"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="3862" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Comment">
+                                <rect key="frame" x="16" y="368.5" width="288" height="60"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -60,21 +60,21 @@
                                     <constraint id="13714" firstItem="3862" firstAttribute="height" constant="60"/>
                                 </constraints>
                             </textField>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="3874" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES" ambiguous="YES">
-                                <rect key="frame" x="253" y="264.5" width="51" height="31"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="3874" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="253" y="322.5" width="51" height="31"/>
                                 <connections>
                                     <action selector="partialvoidcommentSwitch_ValueChanged:" destination="BYZ-38-t0r" id="3884" eventType="valueChanged"/>
                                     <action selector="commentSwitch_ActionSheet:" destination="BYZ-38-t0r" id="6093" eventType="valueChanged"/>
                                 </connections>
                             </switch>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="3873" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Location" misplaced="YES" ambiguous="YES">
-                                <rect key="frame" x="202" y="438.5" width="76.5" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="3873" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Location">
+                                <rect key="frame" x="16" y="443.5" width="288" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="3877" misplaced="YES" ambiguous="YES">
-                                <rect key="frame" x="99.5" y="265" width="121" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="3877">
+                                <rect key="frame" x="99.5" y="323" width="121" height="29"/>
                                 <segments>
                                     <segment title="!"/>
                                     <segment title="!!"/>
@@ -84,83 +84,61 @@
                                     <action selector="ImportanceChanged_SegmentedController:" destination="BYZ-38-t0r" id="12789" eventType="valueChanged"/>
                                 </connections>
                                 <constraints>
-                                    <constraint id="13990" firstItem="3877" firstAttribute="width" constant="121"/>
+                                    <constraint id="13990" firstItem="3877" firstAttribute="width" constant="121" ibExternalInspectedSegment="3"/>
                                 </constraints>
                             </segmentedControl>
                         </subviews>
                         <constraints>
-                            <constraint id="3863" firstItem="516" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin"/>
-                            <constraint id="3864" firstItem="516" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin"/>
-                            <constraint id="3869" firstItem="8bC-Xf-vdC" firstAttribute="centerY" secondItem="516" secondAttribute="centerY" constant="158"/>
+                            <constraint id="3869" firstItem="8bC-Xf-vdC" firstAttribute="centerY" secondItem="516" secondAttribute="centerY" constant="153"/>
                             <constraint id="13692" firstItem="517" firstAttribute="width" secondItem="516" secondAttribute="width"/>
-                            <constraint id="13693" firstItem="3862" firstAttribute="width" secondItem="516" secondAttribute="width"/>
-                            <constraint id="13694" firstItem="3873" firstAttribute="width" secondItem="516" secondAttribute="width"/>
                             <constraint id="13707" firstItem="517" firstAttribute="top" secondItem="734" secondAttribute="bottom" constant="15"/>
                             <constraint id="13709" firstItem="3862" firstAttribute="top" secondItem="3874" secondAttribute="bottom" constant="15"/>
                             <constraint id="13710" firstItem="3873" firstAttribute="top" secondItem="3862" secondAttribute="bottom" constant="15"/>
                             <constraint id="13711" firstItem="8bC-Xf-vdC" firstAttribute="trailingMargin" secondItem="3874" secondAttribute="trailing" constant="2"/>
-                            <constraint id="14556" firstItem="517" firstAttribute="centerX" secondItem="516" secondAttribute="centerX"/>
                             <constraint id="14557" firstItem="734" firstAttribute="centerX" secondItem="516" secondAttribute="centerX"/>
-                            <constraint id="14558" firstItem="3877" firstAttribute="centerX" secondItem="516" secondAttribute="centerX"/>
                             <constraint id="14559" firstItem="3873" firstAttribute="centerX" secondItem="516" secondAttribute="centerX"/>
                             <constraint id="14561" firstItem="3877" firstAttribute="top" secondItem="3874" secondAttribute="top" constant="0.5"/>
                             <constraint id="14564" firstItem="3877" firstAttribute="top" secondItem="517" secondAttribute="bottom" constant="15"/>
                             <constraint id="14838" firstItem="8bC-Xf-vdC" firstAttribute="leadingMargin" secondItem="3862" secondAttribute="leading"/>
                             <constraint id="14839" firstItem="3862" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin"/>
                             <constraint id="14877" firstItem="734" firstAttribute="top" secondItem="516" secondAttribute="bottom" constant="15"/>
-                            <constraint id="14921" firstItem="734" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15"/>
                             <constraint id="14922" firstItem="734" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="5"/>
-                            <constraint id="14924" firstItem="734" firstAttribute="trailing" secondItem="516" secondAttribute="leading" constant="258"/>
-                            <constraint id="14972" firstItem="517" firstAttribute="leading" secondItem="734" secondAttribute="leading"/>
-                            <constraint id="14976" firstItem="734" firstAttribute="width" secondItem="517" secondAttribute="width"/>
-                            <constraint id="15315" firstItem="517" firstAttribute="top" secondItem="734" secondAttribute="bottom" constant="5"/>
                             <constraint id="15614" firstItem="734" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="11"/>
+                            <constraint id="15906" firstItem="3873" firstAttribute="centerX" secondItem="517" secondAttribute="centerX"/>
+                            <constraint id="15907" firstItem="516" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin"/>
+                            <constraint id="15908" firstItem="516" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin"/>
+                            <constraint id="15910" firstItem="517" firstAttribute="width" secondItem="3873" secondAttribute="width"/>
+                            <constraint id="15911" firstItem="3877" firstAttribute="centerX" secondItem="3873" secondAttribute="centerX"/>
                         </constraints>
                         <connections>
                             <outletCollection id="3882" property="gestureRecognizers" destination="3881"/>
                         </connections>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="13693"/>
                                 <exclude reference="3869"/>
                                 <exclude reference="14557"/>
                                 <exclude reference="14922"/>
-                                <exclude reference="14921"/>
-                                <exclude reference="14924"/>
                                 <exclude reference="13692"/>
-                                <exclude reference="13694"/>
-                                <exclude reference="14556"/>
                                 <exclude reference="13707"/>
                                 <exclude reference="13710"/>
-                                <exclude reference="14976"/>
-                                <exclude reference="14972"/>
-                                <exclude reference="15315"/>
-                                <exclude reference="14558"/>
+                                <exclude reference="14877"/>
+                                <exclude reference="14559"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="constraints">
-                                <exclude reference="3863"/>
                                 <include reference="3869"/>
-                                <include reference="14557"/>
-                                <include reference="14921"/>
-                                <exclude reference="14877"/>
+                                <exclude reference="14557"/>
+                                <include reference="14877"/>
                                 <include reference="13692"/>
-                                <include reference="13693"/>
-                                <include reference="13694"/>
-                                <include reference="14556"/>
                                 <include reference="13707"/>
                                 <include reference="13710"/>
-                                <include reference="14558"/>
+                                <include reference="14559"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact-widthClass=compact">
                             <mask key="constraints">
-                                <exclude reference="13693"/>
                                 <include reference="14922"/>
-                                <include reference="14976"/>
-                                <include reference="14972"/>
-                                <include reference="15315"/>
                             </mask>
                         </variation>
                     </view>
