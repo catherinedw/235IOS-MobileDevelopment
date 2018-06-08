@@ -36,7 +36,7 @@
                                 <constraints/>
                             </textField>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="15" id="734" translatesAutoresizingMaskIntoConstraints="NO">
-                                <rect key="frame" x="31" y="114" width="258" height="146"/>
+                                <rect key="frame" x="31" y="104" width="258" height="146"/>
                                 <date key="date" timeIntervalSinceReferenceDate="332704801.65417802">
                                     <!--2011-07-18 18:00:01 +0000-->
                                 </date>
@@ -51,8 +51,8 @@
                                     <constraint id="14920" firstItem="734" firstAttribute="width" constant="258"/>
                                 </constraints>
                             </datePicker>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="3862" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Comment" misplaced="YES" ambiguous="YES">
-                                <rect key="frame" x="20" y="369" width="440" height="60"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="3862" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Comment">
+                                <rect key="frame" x="20" y="255" width="440" height="60"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -60,21 +60,21 @@
                                     <constraint id="13714" firstItem="3862" firstAttribute="height" constant="60"/>
                                 </constraints>
                             </textField>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="3874" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES" ambiguous="YES">
-                                <rect key="frame" x="255" y="325.5" width="51" height="31"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="3874" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="415" y="219" width="51" height="31"/>
                                 <connections>
                                     <action selector="partialvoidcommentSwitch_ValueChanged:" destination="BYZ-38-t0r" id="3884" eventType="valueChanged"/>
                                     <action selector="commentSwitch_ActionSheet:" destination="BYZ-38-t0r" id="6093" eventType="valueChanged"/>
                                 </connections>
                             </switch>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="3873" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Location">
-                                <rect key="frame" x="294" y="134" width="166" height="30"/>
+                                <rect key="frame" x="294" y="149" width="166" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="3877" misplaced="YES" ambiguous="YES">
-                                <rect key="frame" x="99.5" y="326" width="121" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="3877">
+                                <rect key="frame" x="294" y="194" width="121" height="29"/>
                                 <segments>
                                     <segment title="!"/>
                                     <segment title="!!"/>
@@ -100,7 +100,7 @@
                             <constraint id="15907" firstItem="516" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin"/>
                             <constraint id="15908" firstItem="516" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin"/>
                             <constraint id="16188" firstItem="516" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="5"/>
-                            <constraint id="16465" firstItem="734" firstAttribute="top" secondItem="516" secondAttribute="bottom" constant="15"/>
+                            <constraint id="16465" firstItem="734" firstAttribute="top" secondItem="516" secondAttribute="bottom" constant="5"/>
                             <constraint id="16745" firstItem="734" firstAttribute="trailing" secondItem="517" secondAttribute="leading" constant="-5"/>
                             <constraint id="16746" firstItem="517" firstAttribute="top" secondItem="516" secondAttribute="bottom" constant="5"/>
                             <constraint id="16867" firstItem="3862" firstAttribute="top" secondItem="3877" secondAttribute="bottom" constant="15"/>
@@ -111,9 +111,14 @@
                             <constraint id="17859" firstItem="3873" firstAttribute="width" secondItem="517" secondAttribute="width"/>
                             <constraint id="18147" firstItem="3877" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX"/>
                             <constraint id="18234" firstItem="734" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="11"/>
-                            <constraint id="18278" firstItem="3873" firstAttribute="top" secondItem="517" secondAttribute="bottom"/>
+                            <constraint id="18278" firstItem="3873" firstAttribute="top" secondItem="517" secondAttribute="bottom" constant="15"/>
                             <constraint id="18655" firstItem="3862" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin"/>
                             <constraint id="18656" firstItem="3862" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin"/>
+                            <constraint id="19352" firstItem="3873" firstAttribute="bottom" secondItem="3877" secondAttribute="top" constant="-15"/>
+                            <constraint id="19353" firstItem="734" firstAttribute="trailing" secondItem="3877" secondAttribute="leading" constant="-5"/>
+                            <constraint id="19355" firstItem="3877" firstAttribute="trailing" secondItem="3874" secondAttribute="leading"/>
+                            <constraint id="19356" firstItem="3862" firstAttribute="top" secondItem="734" secondAttribute="bottom" constant="5"/>
+                            <constraint id="19403" firstItem="3862" firstAttribute="top" secondItem="3874" secondAttribute="bottom" constant="5"/>
                         </constraints>
                         <connections>
                             <outletCollection id="3882" property="gestureRecognizers" destination="3881"/>
@@ -136,6 +141,11 @@
                                 <exclude reference="14564"/>
                                 <exclude reference="18147"/>
                                 <exclude reference="13711"/>
+                                <exclude reference="19352"/>
+                                <exclude reference="19353"/>
+                                <exclude reference="19355"/>
+                                <exclude reference="19356"/>
+                                <exclude reference="14561"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -150,6 +160,7 @@
                                 <include reference="14564"/>
                                 <include reference="18147"/>
                                 <include reference="13711"/>
+                                <include reference="14561"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact-widthClass=compact">
@@ -160,6 +171,10 @@
                                 <include reference="17234"/>
                                 <include reference="18234"/>
                                 <include reference="18278"/>
+                                <include reference="19352"/>
+                                <include reference="19353"/>
+                                <include reference="19355"/>
+                                <include reference="19356"/>
                             </mask>
                         </variation>
                     </view>
