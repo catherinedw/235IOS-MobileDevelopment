@@ -10,7 +10,8 @@ namespace GetItDone.List
     public partial class ViewController : UIViewController
     {
         private string pathToDatabase;
-        public string segmentValue = "!";
+        public string segmentValue = "!", hoursPref;
+        NSDateFormatterStyle timePref;
         NSObject observer = null;
 
         protected ViewController(IntPtr handle) : base(handle)
@@ -84,15 +85,12 @@ namespace GetItDone.List
         //picker 
         partial void DateTimeChanged(UIDatePicker sender)
         {
-            //sender.Locale = new NSLocale("NL");
             //Formatting for Date and Time
             NSDateFormatter dateTimeFormat = new NSDateFormatter();
             dateTimeFormat.DateStyle = NSDateFormatterStyle.Long;
-            dateTimeFormat.TimeStyle = NSDateFormatterStyle.Short;
-            dateTimeFormat.Locale = new NSLocale("NL");
-            //[dateFormatter setLocale:[NSLocale currentLocale]];
-            //dateTimePicker1.Format = DateTimePickerFormat.Custom;
-            //dateTimePicker1.CustomFormat = "HH:mm:ss tt";
+            dateTimeFormat.TimeStyle = timePref;
+            //dateTimePicker.Format = DateTimePickerFormat.Custom;
+            //dateTimePicker.CustomFormat = "HH:mm:ss tt";
             var currentDate = NSDate.Now;
             datePickerView.MinimumDate = NSDate.Now;
             dateLabel.Text = dateTimeFormat.ToString(datePickerView.Date);
@@ -192,8 +190,32 @@ namespace GetItDone.List
             NSUserDefaults defaults = NSUserDefaults.StandardUserDefaults;
 
             locationTextView.Text = defaults.StringForKey(Constants.LOCATION_KEY);
-            string hoursPref = defaults.StringForKey(Constants.HOURS_KEY);
+            hoursPref = defaults.StringForKey(Constants.HOURS_KEY);
             commentTextView.Text = defaults.BoolForKey(Constants.COMMENT_SWITCH_KEY) ? "Enter Comment Here" : "Disabled";
+            if (commentSwitch.On)             {
+                commentTextView.UserInteractionEnabled = true;             }
+            if (!commentSwitch.On)
+            {
+                commentTextView.UserInteractionEnabled = false;
+                commentTextView.Text = "";
+            }
+
+            hoursPref = defaults.StringForKey(Constants.HOURS_KEY);
+            switch (hoursPref)
+            {
+                case "short":
+                    timePref = NSDateFormatterStyle.Short;
+                    break;
+                case "medium":
+                    timePref = NSDateFormatterStyle.Medium;
+                    break;
+                case "large":
+                    timePref = NSDateFormatterStyle.Long;
+                    break;
+                default:
+                    timePref = NSDateFormatterStyle.Medium;
+                    break;
+            }
         }
 
         // We will subscribe to the applicationWillEnterForeground notification
