@@ -103,7 +103,8 @@ namespace GetItDone.List
                || cellStyle == UITableViewCellStyle.Value1
                || cellStyle == UITableViewCellStyle.Value2)
             {
-                cell.DetailTextLabel.Lines = 0;     
+                cell.DetailTextLabel.Lines =  0;
+                string importanceColor = item.Importance;
                 cell.DetailTextLabel.Text = item.Importance + ' ' + item.Date.ToString() + "- " + item.Location + Environment.NewLine + item.Comment;
             }
             // Add images to the cell

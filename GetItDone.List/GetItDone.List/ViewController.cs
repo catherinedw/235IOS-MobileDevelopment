@@ -129,7 +129,6 @@ namespace GetItDone.List
                 (action) =>
                 {
                     commentSwitch.On = true;
-                    //defaults.BoolForKey(Constants.COMMENT_SWITCH_KEY) = commentSwitch.On; 
                     commentTextView.Text = "";     
                 });
             var noAction = UIAlertAction.Create("No, thank you!", UIAlertActionStyle.Cancel,
