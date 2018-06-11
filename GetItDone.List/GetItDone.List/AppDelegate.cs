@@ -25,7 +25,7 @@ namespace GetItDone.List
             var defaultsDictionary = new NSMutableDictionary();
             defaultsDictionary.SetValueForKey((NSString)"Home", (NSString)Constants.LOCATION_KEY);
             defaultsDictionary.SetValueForKey((NSString)"Medium", (NSString)Constants.HOURS_KEY);
-            defaultsDictionary.SetValueForKey((NSString)"True", (NSString)Constants.COMMENT_SWITCH_KEY);
+            defaultsDictionary.SetValueForKey((NSString)"False", (NSString)Constants.COMMENT_SWITCH_KEY);
 
             NSUserDefaults.StandardUserDefaults.RegisterDefaults(defaultsDictionary);
 

@@ -24,11 +24,18 @@
 			<key>Key</key>
 			<string>location_preference</string>
 			<key>DefaultValue</key>
-			<string></string>
+			<string>Home</string>
 			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>Titles</key>
 			<array>
 				<string>Home</string>
 				<string>Office</string>
+			</array>
+			<key>Values</key>
+			<array>
+				<string>Home</string>
+				<string>New element</string>
 			</array>
 		</dict>
 		<dict>
@@ -40,6 +47,28 @@
 			<string>enabled_preference</string>
 			<key>DefaultValue</key>
 			<true/>
+		</dict>
+		<dict>
+			<key>Title</key>
+			<string>Hours</string>
+			<key>Key</key>
+			<string>hours_preference</string>
+			<key>DefaultValue</key>
+			<string>Medium</string>
+			<key>Titles</key>
+			<array>
+				<string>Short</string>
+				<string>Medium</string>
+				<string>Long</string>
+			</array>
+			<key>Values</key>
+			<array>
+				<string>Short</string>
+				<string>Medium</string>
+				<string>Long</string>
+			</array>
+			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
 		</dict>
 	</array>
 	<key>StringsTable</key>

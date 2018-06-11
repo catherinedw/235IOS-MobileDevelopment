@@ -197,19 +197,19 @@ namespace GetItDone.List
             if (!commentSwitch.On)
             {
                 commentTextView.UserInteractionEnabled = false;
-                commentTextView.Text = "";
+                //commentTextView.Text = "";
             }
 
             hoursPref = defaults.StringForKey(Constants.HOURS_KEY);
             switch (hoursPref)
             {
-                case "short":
+                case "Short":
                     timePref = NSDateFormatterStyle.Short;
                     break;
-                case "medium":
+                case "Medium":
                     timePref = NSDateFormatterStyle.Medium;
                     break;
-                case "large":
+                case "Large":
                     timePref = NSDateFormatterStyle.Long;
                     break;
                 default:
