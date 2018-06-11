@@ -129,6 +129,8 @@ namespace GetItDone.List
                 (action) =>
                 {
                     commentSwitch.On = true;
+                    //defaults.BoolForKey(Constants.COMMENT_SWITCH_KEY) = commentSwitch.On; 
+                    commentTextView.Text = "";     
                 });
             var noAction = UIAlertAction.Create("No, thank you!", UIAlertActionStyle.Cancel,
                 (action) =>
@@ -138,15 +140,15 @@ namespace GetItDone.List
                     : "Your comment will be deleted";
 
                     // Controller within a controller
-                    var cancelAction = UIAlertAction.Create("Delete", UIAlertActionStyle.Cancel, null);
+                    var cancelAction = UIAlertAction.Create("Got it!", UIAlertActionStyle.Cancel, null);
 
                         var controller2 = UIAlertController.Create(String.Format("Warning"), msg, UIAlertControllerStyle.Alert);
                         controller2.AddAction(cancelAction);
                         this.PresentViewController(controller2, true, null);
                     
                     commentSwitch.On = false;
-                    commentTextView.UserInteractionEnabled = false;
-                    commentTextView.Text = "";     
+                    commentTextView.Text = ""; 
+                    commentTextView.UserInteractionEnabled = false;    
                 });
 
             controller.AddAction(yesAction);
@@ -192,12 +194,13 @@ namespace GetItDone.List
             locationTextView.Text = defaults.StringForKey(Constants.LOCATION_KEY);
             hoursPref = defaults.StringForKey(Constants.HOURS_KEY);
             commentTextView.Text = defaults.BoolForKey(Constants.COMMENT_SWITCH_KEY) ? "Enter Comment Here" : "Disabled";
+            commentSwitch.On = defaults.BoolForKey(Constants.COMMENT_SWITCH_KEY);
             if (commentSwitch.On)             {
-                commentTextView.UserInteractionEnabled = true;             }
+                commentTextView.UserInteractionEnabled = true;
+                commentTextView.Text = "Enter Comment";             }
             if (!commentSwitch.On)
             {
                 commentTextView.UserInteractionEnabled = false;
-                //commentTextView.Text = "";
             }
 
             hoursPref = defaults.StringForKey(Constants.HOURS_KEY);
